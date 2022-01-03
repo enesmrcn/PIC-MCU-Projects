@@ -1,0 +1,267 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$/tmp/xcLEG49vi.o
+reset_vec CODE 0 0 0 1 2
+end_init CODE 0 B B 1 2
+config CONFIG 4 2007 2007 1 2
+$dist/default/production/eeprom.X.production.o
+cinit CODE 0 C C 4 2
+text1 CODE 0 4F 4F 6 2
+text2 CODE 0 55 55 3 2
+text3 CODE 0 38 38 17 2
+maintext CODE 0 10 10 28 2
+cstackBANK0 BANK0 1 C C 4 1
+intentry CODE 0 4 4 7 2
+bssBANK0 BANK0 1 10 10 1 1
+config CONFIG 4 2007 2007 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 11-4D 1
+BANK0 11-4D 1
+CONST 1-3 2
+CONST 58-3FF 2
+ENTRY 1-3 2
+ENTRY 58-3FF 2
+IDLOC 2000-2003 2
+STACK 11-4D 1
+CODE 1-3 2
+CODE 58-3FF 2
+SFR0 0-B 1
+SFR1 80-CD 1
+EEDATA 2100-213F 2
+STRCODE 1-3 2
+STRCODE 58-3FF 2
+STRING 1-3 2
+STRING 58-3FF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production/eeprom.X.production.o
+C cinit CODE >197:/tmp/xc44Qchkj.s
+C cinit CODE >200:/tmp/xc44Qchkj.s
+C cinit CODE >211:/tmp/xc44Qchkj.s
+D cinit CODE >212:/tmp/xc44Qchkj.s
+E cinit CODE >218:/tmp/xc44Qchkj.s
+E cinit CODE >220:/tmp/xc44Qchkj.s
+F cinit CODE >221:/tmp/xc44Qchkj.s
+4 intentry CODE >85:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+38 text3 CODE >85:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+38 text3 CODE >87:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+3D text3 CODE >89:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+40 text3 CODE >90:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+42 text3 CODE >92:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+45 text3 CODE >95:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+47 text3 CODE >96:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+55 text2 CODE >98:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+55 text2 CODE >100:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+56 text2 CODE >101:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+57 text2 CODE >102:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+4F text1 CODE >104:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+4F text1 CODE >106:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+52 text1 CODE >107:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+54 text1 CODE >108:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+10 maintext CODE >53:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+10 maintext CODE >55:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+12 maintext CODE >56:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+14 maintext CODE >57:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+16 maintext CODE >59:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+17 maintext CODE >63:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+1C maintext CODE >65:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+24 maintext CODE >67:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+29 maintext CODE >69:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+2D maintext CODE >71:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+2F maintext CODE >72:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+31 maintext CODE >73:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+33 maintext CODE >74:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+34 maintext CODE >75:/Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 0 0 ABS 0 - dist/default/production/eeprom.X.production.o
+__Hspace_0 58 0 ABS 0 - -
+__Hspace_1 11 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 400F 0 ABS 0 - -
+_myInterruptHandler 70 0 CODE 0 text3 dist/default/production/eeprom.X.production.o
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+_RD 440 0 ABS 0 - dist/default/production/eeprom.X.production.o
+_WR 441 0 ABS 0 - dist/default/production/eeprom.X.production.o
+__Hstrings 0 0 ABS 0 strings -
+_EEIF 444 0 ABS 0 - dist/default/production/eeprom.X.production.o
+_WREN 442 0 ABS 0 - dist/default/production/eeprom.X.production.o
+___sp 0 0 STACK 2 stack /tmp/xcLEG49vi.o
+_main 20 0 CODE 0 maintext dist/default/production/eeprom.X.production.o
+btemp 4E 0 ABS 0 - dist/default/production/eeprom.X.production.o
+start 16 0 CODE 0 init /tmp/xcLEG49vi.o
+__size_of_main 0 0 ABS 0 - dist/default/production/eeprom.X.production.o
+__Hpowerup 0 0 CODE 0 powerup -
+intlevel0 0 0 ENTRY 0 functab /tmp/xcLEG49vi.o
+intlevel1 0 0 ENTRY 0 functab /tmp/xcLEG49vi.o
+intlevel2 0 0 ENTRY 0 functab /tmp/xcLEG49vi.o
+intlevel3 0 0 ENTRY 0 functab /tmp/xcLEG49vi.o
+intlevel4 0 0 ENTRY 0 functab /tmp/xcLEG49vi.o
+intlevel5 0 0 ENTRY 0 functab /tmp/xcLEG49vi.o
+wtemp0 4E 0 ABS 0 - dist/default/production/eeprom.X.production.o
+__Hfunctab 0 0 ENTRY 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+_unlockProtection 9E 0 CODE 0 text1 dist/default/production/eeprom.X.production.o
+_EECON2 89 0 ABS 0 - dist/default/production/eeprom.X.production.o
+_EEDATA 8 0 ABS 0 - dist/default/production/eeprom.X.production.o
+__Lmaintext 0 0 ABS 0 maintext -
+___stackhi 0 0 ABS 0 - /tmp/xcLEG49vi.o
+___stacklo 0 0 ABS 0 - /tmp/xcLEG49vi.o
+start_initialization 18 0 CODE 0 cinit dist/default/production/eeprom.X.production.o
+__pcstackBANK0 C 0 BANK0 1 cstackBANK0 dist/default/production/eeprom.X.production.o
+__end_of_unlockProtection AA 0 CODE 0 text1 dist/default/production/eeprom.X.production.o
+__size_of_unlockProtection 0 0 ABS 0 - dist/default/production/eeprom.X.production.o
+__size_of_myInterruptHandler 0 0 ABS 0 - dist/default/production/eeprom.X.production.o
+___int_sp 0 0 STACK 2 stack /tmp/xcLEG49vi.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 BANK1 1 bank1 -
+__Hcinit 20 0 CODE 0 cinit -
+__Hstack 0 0 STACK 2 stack -
+__Hmaintext 0 0 ABS 0 maintext -
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4010 0 CONFIG 4 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 BANK1 1 bank1 -
+__Lcinit 18 0 CODE 0 cinit -
+__Lstack 0 0 STACK 2 stack -
+_INTCONbits B 0 ABS 0 - dist/default/production/eeprom.X.production.o
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 16 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 16 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_RA0 28 0 ABS 0 - dist/default/production/eeprom.X.production.o
+__S0 58 0 ABS 0 - -
+__S1 11 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+saved_w 4E 0 ABS 0 - dist/default/production/eeprom.X.production.o
+__Lintentry 8 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcLEG49vi.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__pmaintext 20 0 CODE 0 maintext dist/default/production/eeprom.X.production.o
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__Lend_init 16 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization 1C 0 CODE 0 cinit dist/default/production/eeprom.X.production.o
+__end_of_setEeprom B0 0 CODE 0 text2 dist/default/production/eeprom.X.production.o
+__Hintentry 16 0 CODE 0 intentry -
+__size_of_setEeprom 0 0 ABS 0 - dist/default/production/eeprom.X.production.o
+__Lstrings 0 0 ABS 0 strings -
+__Hreset_vec 2 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__ptext1 9E 0 CODE 0 text1 dist/default/production/eeprom.X.production.o
+__ptext2 AA 0 CODE 0 text2 dist/default/production/eeprom.X.production.o
+__ptext3 70 0 CODE 0 text3 dist/default/production/eeprom.X.production.o
+_setEeprom AA 0 CODE 0 text2 dist/default/production/eeprom.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__end_of__initialization 1C 0 CODE 0 cinit dist/default/production/eeprom.X.production.o
+__Lfunctab 0 0 ENTRY 0 functab -
+__Lclrtext 0 0 ABS 0 clrtext -
+__pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/default/production/eeprom.X.production.o
+__Hend_init 18 0 CODE 0 end_init -
+__end_of_main 70 0 CODE 0 maintext dist/default/production/eeprom.X.production.o
+_EEADR 9 0 ABS 0 - dist/default/production/eeprom.X.production.o
+_PORTB 6 0 ABS 0 - dist/default/production/eeprom.X.production.o
+_TRISA 85 0 ABS 0 - dist/default/production/eeprom.X.production.o
+_TRISB 86 0 ABS 0 - dist/default/production/eeprom.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+interrupt_function 8 0 CODE 0 intentry dist/default/production/eeprom.X.production.o
+__pintentry 8 0 CODE 0 intentry dist/default/production/eeprom.X.production.o
+__end_of_myInterruptHandler 9E 0 CODE 0 text3 dist/default/production/eeprom.X.production.o
+__initialization 18 0 CODE 0 cinit dist/default/production/eeprom.X.production.o
+__pbssBANK0 10 0 BANK0 1 bssBANK0 dist/default/production/eeprom.X.production.o
+_counter 10 0 BANK0 1 bssBANK0 dist/default/production/eeprom.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 4E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cstackBANK0 1 C C 5 1
+intentry 0 4 8 54 2
+reset_vec 0 0 0 1 2
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

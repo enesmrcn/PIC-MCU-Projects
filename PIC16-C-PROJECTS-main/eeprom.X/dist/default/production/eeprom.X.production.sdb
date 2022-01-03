@@ -1,0 +1,82 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F84A ]
+[d frameptr 0 ]
+"10 /Applications/microchip/xc8/v2.20/pic/sources/c90/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /Applications/microchip/xc8/v2.20/pic/sources/c90/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /Applications/microchip/xc8/v2.20/pic/sources/c90/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"53 /Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+[v _main main `(v  1 e 1 0 ]
+"85
+[v _myInterruptHandler myInterruptHandler `II(v  1 e 1 0 ]
+"98
+[v _setEeprom setEeprom `(v  1 e 1 0 ]
+"104
+[v _unlockProtection unlockProtection `(v  1 e 1 0 ]
+"210 /Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"272
+[v _EEDATA EEDATA `VEuc  1 e 1 @8 ]
+"279
+[v _EEADR EEADR `VEuc  1 e 1 @9 ]
+[s S46 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 EEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"329
+[s S55 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S60 . 1 `S46 1 . 1 0 `S55 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES60  1 e 1 @11 ]
+"454
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"498
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"604
+[v _EECON2 EECON2 `VEuc  1 e 1 @137 ]
+"626
+[v _EEIF EEIF `VEb  1 e 0 @1092 ]
+"656
+[v _RA0 RA0 `VEb  1 e 0 @40 ]
+"701
+[v _RD RD `VEb  1 e 0 @1088 ]
+"767
+[v _WR WR `VEb  1 e 0 @1089 ]
+"770
+[v _WREN WREN `VEb  1 e 0 @1090 ]
+"51 /Users/enesmercan/MPLABXProjects/github2/eeprom.X/main.c
+[v _counter counter `uc  1 e 1 0 ]
+"53
+[v _main main `(v  1 e 1 0 ]
+{
+"82
+} 0
+"104
+[v _unlockProtection unlockProtection `(v  1 e 1 0 ]
+{
+"108
+} 0
+"98
+[v _setEeprom setEeprom `(v  1 e 1 0 ]
+{
+"102
+} 0
+"85
+[v _myInterruptHandler myInterruptHandler `II(v  1 e 1 0 ]
+{
+"96
+} 0

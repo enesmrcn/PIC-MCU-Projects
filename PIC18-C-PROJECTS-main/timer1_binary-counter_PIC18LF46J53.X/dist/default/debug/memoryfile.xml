@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/debug\timer1_PIC18LF46J53.X.debug.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>65528</length>
+      <used>130</used>
+      <free>65398</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>3760</length>
+      <used>2</used>
+      <free>3758</free>
+    </memory>
+  </executable>
+</project>

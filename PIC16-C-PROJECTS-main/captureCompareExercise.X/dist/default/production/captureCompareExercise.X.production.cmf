@@ -1,0 +1,427 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$/tmp/xcAfzSRZW.o
+reset_vec CODE 0 0 0 3 2
+end_init CODE 0 E E 3 2
+config CONFIG 4 2007 2007 1 2
+$dist/default/production/captureCompareExercise.X.production.o
+cinit CODE 0 11 11 D 2
+text1 CODE 0 1D9 1D9 9 2
+text2 CODE 0 1B8 1B8 B 2
+text3 CODE 0 1E 1E D4 2
+text4 CODE 0 1C3 1C3 B 2
+text5 CODE 0 1E9 1E9 6 2
+text6 CODE 0 1A9 1A9 F 2
+text7 CODE 0 1CE 1CE B 2
+text8 CODE 0 1E2 1E2 7 2
+text9 CODE 0 F2 F2 9D 2
+idataCOMMON CODE 0 1EF 1EF 1 2
+maintext CODE 0 18F 18F 1A 2
+cstackCOMMON COMMON 1 70 70 9 1
+cstackBANK0 BANK0 1 20 20 11 1
+intentry CODE 0 4 4 A 2
+dataCOMMON COMMON 1 7C 7C 1 1
+bssCOMMON COMMON 1 79 79 3 1
+config CONFIG 4 2007 2007 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 31-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 31-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 3-3 2
+CONST 1F0-1FFF 2
+ENTRY 3-3 2
+ENTRY 1F0-1FFF 2
+IDLOC 2000-2003 2
+STACK 110-16F 1
+CODE 3-3 2
+CODE 1F0-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+COMMON 7D-7D 1
+EEDATA 2100-21FF 2
+STRCODE 3-3 2
+STRCODE 1F0-1FFF 2
+STRING 3-3 2
+STRING 1F0-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production/captureCompareExercise.X.production.o
+11 cinit CODE >395:/tmp/xcUt8rwHd.s
+11 cinit CODE >398:/tmp/xcUt8rwHd.s
+11 cinit CODE >421:/tmp/xcUt8rwHd.s
+16 cinit CODE >422:/tmp/xcUt8rwHd.s
+17 cinit CODE >426:/tmp/xcUt8rwHd.s
+18 cinit CODE >427:/tmp/xcUt8rwHd.s
+19 cinit CODE >428:/tmp/xcUt8rwHd.s
+1A cinit CODE >434:/tmp/xcUt8rwHd.s
+1A cinit CODE >436:/tmp/xcUt8rwHd.s
+1B cinit CODE >437:/tmp/xcUt8rwHd.s
+4 intentry CODE >49:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+F2 text9 CODE >5:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+F2 text9 CODE >13:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+F5 text9 CODE >14:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+F9 text9 CODE >15:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+104 text9 CODE >16:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+106 text9 CODE >17:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+106 text9 CODE >18:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+10A text9 CODE >19:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+115 text9 CODE >20:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+119 text9 CODE >22:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+121 text9 CODE >23:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+129 text9 CODE >24:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+12B text9 CODE >25:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+12C text9 CODE >26:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+135 text9 CODE >27:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+139 text9 CODE >25:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+13D text9 CODE >30:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+146 text9 CODE >31:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+158 text9 CODE >32:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+166 text9 CODE >33:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+167 text9 CODE >35:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+170 text9 CODE >36:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+176 text9 CODE >38:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+17B text9 CODE >39:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+186 text9 CODE >40:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+18E text9 CODE >41:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c
+1E2 text8 CODE >138:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1E2 text8 CODE >140:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1E5 text8 CODE >141:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1E6 text8 CODE >142:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1E8 text8 CODE >143:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1CE text7 CODE >165:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1CE text7 CODE >168:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1D1 text7 CODE >169:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1D2 text7 CODE >170:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1D3 text7 CODE >171:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1D4 text7 CODE >173:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1D5 text7 CODE >175:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1D8 text7 CODE >177:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1A9 text6 CODE >179:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1A9 text6 CODE >183:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1AC text6 CODE >184:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1AD text6 CODE >185:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1AE text6 CODE >186:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1AF text6 CODE >188:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1B0 text6 CODE >189:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1B4 text6 CODE >190:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1B7 text6 CODE >191:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1E9 text5 CODE >145:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1E9 text5 CODE >147:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1EC text5 CODE >148:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1EE text5 CODE >149:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1C3 text4 CODE >151:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1C3 text4 CODE >154:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1C6 text4 CODE >155:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1C7 text4 CODE >156:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1C8 text4 CODE >157:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1C9 text4 CODE >159:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1CA text4 CODE >161:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1CD text4 CODE >163:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1E text3 CODE >49:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1E text3 CODE >51:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+22 text3 CODE >53:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+23 text3 CODE >55:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+28 text3 CODE >58:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+2C text3 CODE >60:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+31 text3 CODE >62:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+34 text3 CODE >63:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+39 text3 CODE >65:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+3A text3 CODE >67:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+3E text3 CODE >69:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+80 text3 CODE >71:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+85 text3 CODE >73:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+86 text3 CODE >74:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+88 text3 CODE >77:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+8D text3 CODE >78:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+90 text3 CODE >80:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+95 text3 CODE >81:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+98 text3 CODE >82:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+9E text3 CODE >83:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+A3 text3 CODE >88:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+A5 text3 CODE >95:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+AB text3 CODE >97:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+B1 text3 CODE >99:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+B5 text3 CODE >100:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+B9 text3 CODE >102:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+BC text3 CODE >103:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+C1 text3 CODE >104:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+CC text3 CODE >108:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+CC text3 CODE >112:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+D2 text3 CODE >114:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+D7 text3 CODE >115:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+DE text3 CODE >116:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+E4 text3 CODE >117:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+EA text3 CODE >119:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+EB text3 CODE >122:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1B8 text2 CODE >151:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1B8 text2 CODE >154:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1BB text2 CODE >155:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1BC text2 CODE >156:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1BD text2 CODE >157:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1BE text2 CODE >159:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1BF text2 CODE >161:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1C2 text2 CODE >163:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1D9 text1 CODE >124:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1D9 text1 CODE >127:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1DC text1 CODE >130:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1DF text1 CODE >133:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1E0 text1 CODE >134:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1E1 text1 CODE >136:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+18F maintext CODE >27:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+18F maintext CODE >29:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+192 maintext CODE >30:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+195 maintext CODE >31:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+199 maintext CODE >33:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+19A maintext CODE >34:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+19B maintext CODE >36:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1A0 maintext CODE >37:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1A5 maintext CODE >40:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+1A5 maintext CODE >43:/Users/enesmercan/MPLABXProjects/github2/captureCompareExercise.X/main.c
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 2 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__size_of_setCaptureRising 0 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__size_ofi1_setCaptureRising 0 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__Hspace_0 1F0 0 ABS 0 - -
+__Hspace_1 7D 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 400F 0 ABS 0 - -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+_T1CONbits 10 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__Hstrings 0 0 ABS 0 strings -
+_TMR1 E 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+___sp 0 0 STACK 2 stack /tmp/xcAfzSRZW.o
+_flag 7C 0 COMMON 1 dataCOMMON dist/default/production/captureCompareExercise.X.production.o
+_main 31E 0 CODE 0 maintext dist/default/production/captureCompareExercise.X.production.o
+_time 79 0 COMMON 1 bssCOMMON dist/default/production/captureCompareExercise.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+start 1C 0 CODE 0 init /tmp/xcAfzSRZW.o
+__size_of___aldiv 0 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__size_of_main 0 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__Hpowerup 0 0 CODE 0 powerup -
+__HdataCOMMON 0 0 ABS 0 dataCOMMON -
+intlevel0 0 0 ENTRY 0 functab /tmp/xcAfzSRZW.o
+intlevel1 0 0 ENTRY 0 functab /tmp/xcAfzSRZW.o
+intlevel2 0 0 ENTRY 0 functab /tmp/xcAfzSRZW.o
+intlevel3 0 0 ENTRY 0 functab /tmp/xcAfzSRZW.o
+intlevel4 0 0 ENTRY 0 functab /tmp/xcAfzSRZW.o
+intlevel5 0 0 ENTRY 0 functab /tmp/xcAfzSRZW.o
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+___aldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production/captureCompareExercise.X.production.o
+wtemp0 7E 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__Hfunctab 0 0 ENTRY 0 functab -
+___aldiv@sign 21 0 BANK0 1 cstackBANK0 dist/default/production/captureCompareExercise.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext -
+__pidataCOMMON 3DE 0 CODE 0 idataCOMMON dist/default/production/captureCompareExercise.X.production.o
+__LdataCOMMON 0 0 ABS 0 dataCOMMON -
+_CCP1IF 62 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__Lmaintext 0 0 ABS 0 maintext -
+__end_of___aldiv 31E 0 CODE 0 text9 dist/default/production/captureCompareExercise.X.production.o
+___stackhi 0 0 ABS 0 - /tmp/xcAfzSRZW.o
+___stacklo 0 0 ABS 0 - /tmp/xcAfzSRZW.o
+__LidataCOMMON 0 0 ABS 0 idataCOMMON -
+start_initialization 22 0 CODE 0 cinit dist/default/production/captureCompareExercise.X.production.o
+___aldiv@quotient 22 0 BANK0 1 cstackBANK0 dist/default/production/captureCompareExercise.X.production.o
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production/captureCompareExercise.X.production.o
+_TMR1IF 60 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__size_of_setCaptureFalling 0 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+___int_sp 0 0 STACK 2 stack /tmp/xcAfzSRZW.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hcinit 3C 0 CODE 0 cinit -
+__Hstack 0 0 STACK 2 stack -
+__Hmaintext 0 0 ABS 0 maintext -
+_setCompare 352 0 CODE 0 text6 dist/default/production/captureCompareExercise.X.production.o
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4010 0 CONFIG 4 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lcinit 22 0 CODE 0 cinit -
+__Lstack 0 0 STACK 2 stack -
+__end_of_stopTimer 3DE 0 CODE 0 text5 dist/default/production/captureCompareExercise.X.production.o
+_INTCONbits B 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__size_of_stopTimer 0 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__size_of_runTimer 0 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 1C 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 1C 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_RC2 3A 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__S0 1F0 0 ABS 0 - -
+__S1 7D 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+saved_w 7E 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+_stopTimer 3D2 0 CODE 0 text5 dist/default/production/captureCompareExercise.X.production.o
+__HidataCOMMON 0 0 ABS 0 idataCOMMON -
+__Lintentry 8 0 CODE 0 intentry -
+__end_of_setCompare 370 0 CODE 0 text6 dist/default/production/captureCompareExercise.X.production.o
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcAfzSRZW.o
+__end_ofi1_setCaptureRising 39C 0 CODE 0 text4 dist/default/production/captureCompareExercise.X.production.o
+_myIntHandler 3C 0 CODE 0 text3 dist/default/production/captureCompareExercise.X.production.o
+_runTimer 3C4 0 CODE 0 text8 dist/default/production/captureCompareExercise.X.production.o
+_PIE1bits 8C 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+___aldiv 1E4 0 CODE 0 text9 dist/default/production/captureCompareExercise.X.production.o
+__end_of_runTimer 3D2 0 CODE 0 text8 dist/default/production/captureCompareExercise.X.production.o
+__pmaintext 31E 0 CODE 0 maintext dist/default/production/captureCompareExercise.X.production.o
+__end_of_setCaptureFalling 3B2 0 CODE 0 text7 dist/default/production/captureCompareExercise.X.production.o
+__size_of_setTimer 0 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
+i1_setCaptureRising 386 0 CODE 0 text4 dist/default/production/captureCompareExercise.X.production.o
+__size_of_myIntHandler 0 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__pbssCOMMON 79 0 COMMON 1 bssCOMMON dist/default/production/captureCompareExercise.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_PIR1bits C 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__Lend_init 1C 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization 34 0 CODE 0 cinit dist/default/production/captureCompareExercise.X.production.o
+__Hintentry 1C 0 CODE 0 intentry -
+__end_of_myIntHandler 1E4 0 CODE 0 text3 dist/default/production/captureCompareExercise.X.production.o
+__Lstrings 0 0 ABS 0 strings -
+?___aldiv 70 0 COMMON 1 cstackCOMMON dist/default/production/captureCompareExercise.X.production.o
+__Hreset_vec 6 0 CODE 0 reset_vec -
+_setTimer 3B2 0 CODE 0 text1 dist/default/production/captureCompareExercise.X.production.o
+__ptext1 3B2 0 CODE 0 text1 dist/default/production/captureCompareExercise.X.production.o
+__ptext2 370 0 CODE 0 text2 dist/default/production/captureCompareExercise.X.production.o
+__ptext3 3C 0 CODE 0 text3 dist/default/production/captureCompareExercise.X.production.o
+__ptext4 386 0 CODE 0 text4 dist/default/production/captureCompareExercise.X.production.o
+__ptext5 3D2 0 CODE 0 text5 dist/default/production/captureCompareExercise.X.production.o
+__ptext6 352 0 CODE 0 text6 dist/default/production/captureCompareExercise.X.production.o
+__ptext7 39C 0 CODE 0 text7 dist/default/production/captureCompareExercise.X.production.o
+__ptext8 3C4 0 CODE 0 text8 dist/default/production/captureCompareExercise.X.production.o
+__ptext9 1E4 0 CODE 0 text9 dist/default/production/captureCompareExercise.X.production.o
+__end_of_setTimer 3C4 0 CODE 0 text1 dist/default/production/captureCompareExercise.X.production.o
+___aldiv@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production/captureCompareExercise.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+_setCaptureRising 370 0 CODE 0 text2 dist/default/production/captureCompareExercise.X.production.o
+_setCaptureFalling 39C 0 CODE 0 text7 dist/default/production/captureCompareExercise.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__end_of__initialization 34 0 CODE 0 cinit dist/default/production/captureCompareExercise.X.production.o
+__Lfunctab 0 0 ENTRY 0 functab -
+__Lclrtext 0 0 ABS 0 clrtext -
+__size_of_setCompare 0 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production/captureCompareExercise.X.production.o
+__Hend_init 22 0 CODE 0 end_init -
+___aldiv@counter 20 0 BANK0 1 cstackBANK0 dist/default/production/captureCompareExercise.X.production.o
+__end_of_main 352 0 CODE 0 maintext dist/default/production/captureCompareExercise.X.production.o
+_CCPR1 15 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+_PORTB 6 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+_TRISB 86 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+_TRISC 87 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+interrupt_function 8 0 CODE 0 intentry dist/default/production/captureCompareExercise.X.production.o
+__pintentry 8 0 CODE 0 intentry dist/default/production/captureCompareExercise.X.production.o
+__initialization 22 0 CODE 0 cinit dist/default/production/captureCompareExercise.X.production.o
+__pdataCOMMON 7C 0 COMMON 1 dataCOMMON dist/default/production/captureCompareExercise.X.production.o
+_counter 7A 0 COMMON 1 bssCOMMON dist/default/production/captureCompareExercise.X.production.o
+__end_of_setCaptureRising 386 0 CODE 0 text2 dist/default/production/captureCompareExercise.X.production.o
+_CCP1CONbits 17 0 ABS 0 - dist/default/production/captureCompareExercise.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cstackCOMMON 1 70 70 D 1
+cstackBANK0 1 20 20 11 1
+intentry 0 4 8 1EC 2
+reset_vec 0 0 0 3 2
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

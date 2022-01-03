@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production/13_interruptPortB.X.production.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>2048</length>
+      <used>193</used>
+      <free>1855</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>224</length>
+      <used>11</used>
+      <free>213</free>
+    </memory>
+  </executable>
+</project>

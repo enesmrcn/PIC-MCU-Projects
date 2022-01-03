@@ -1,0 +1,1693 @@
+
+
+Microchip MPLAB XC8 Assembler V2.20 build 20200408173844 
+                                                                                               Thu Dec 24 19:20:13 2020
+
+Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1 
+     1                           	processor	16F877A
+     2                           	pagewidth 120
+     3                           	opt	flic
+     4                           	psect	idataCOMMON,global,class=CODE,delta=2,noexec
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     7                           	psect	dataCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     8                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     9                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1,noexec
+    10                           	psect	maintext,global,class=CODE,split=1,delta=2
+    11                           	psect	text1,local,class=CODE,merge=1,delta=2
+    12                           	psect	text2,local,class=CODE,merge=1,delta=2
+    13                           	psect	text3,local,class=CODE,merge=1,delta=2
+    14                           	psect	intentry,global,class=CODE,delta=2
+    15                           	psect	text4,local,class=CODE,merge=1,delta=2
+    16                           	psect	text5,local,class=CODE,merge=1,delta=2
+    17                           	psect	text6,local,class=CODE,merge=1,delta=2
+    18                           	psect	text7,local,class=CODE,merge=1,delta=2
+    19                           	psect	text8,local,class=CODE,merge=1,delta=2
+    20                           	psect	text9,local,class=CODE,merge=1,delta=2,group=1
+    21                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=2,noexec
+    22                           	dabs	1,0x7E,2
+    23  0000                     
+    24                           ; Version 2.20
+    25                           ; Generated 12/02/2020 GMT
+    26                           ; 
+    27                           ; Copyright © 2020, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    28                           ; All rights reserved.
+    29                           ; 
+    30                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    31                           ; 
+    32                           ; Redistribution and use in source and binary forms, with or without modification, are
+    33                           ; permitted provided that the following conditions are met:
+    34                           ; 
+    35                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    36                           ;        conditions and the following disclaimer.
+    37                           ; 
+    38                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    39                           ;        of conditions and the following disclaimer in the documentation and/or other
+    40                           ;        materials provided with the distribution.
+    41                           ; 
+    42                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    43                           ;        software without specific prior written permission.
+    44                           ; 
+    45                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    46                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    47                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    48                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    49                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    50                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    51                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    52                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    53                           ; 
+    54                           ; 
+    55                           ; Code-generator required, PIC16F877A Definitions
+    56                           ; 
+    57                           ; SFR Addresses
+    58  0000                     	;# 
+    59  0001                     	;# 
+    60  0002                     	;# 
+    61  0003                     	;# 
+    62  0004                     	;# 
+    63  0005                     	;# 
+    64  0006                     	;# 
+    65  0007                     	;# 
+    66  0008                     	;# 
+    67  0009                     	;# 
+    68  000A                     	;# 
+    69  000B                     	;# 
+    70  000C                     	;# 
+    71  000D                     	;# 
+    72  000E                     	;# 
+    73  000E                     	;# 
+    74  000F                     	;# 
+    75  0010                     	;# 
+    76  0011                     	;# 
+    77  0012                     	;# 
+    78  0013                     	;# 
+    79  0014                     	;# 
+    80  0015                     	;# 
+    81  0015                     	;# 
+    82  0016                     	;# 
+    83  0017                     	;# 
+    84  0018                     	;# 
+    85  0019                     	;# 
+    86  001A                     	;# 
+    87  001B                     	;# 
+    88  001B                     	;# 
+    89  001C                     	;# 
+    90  001D                     	;# 
+    91  001E                     	;# 
+    92  001F                     	;# 
+    93  0081                     	;# 
+    94  0085                     	;# 
+    95  0086                     	;# 
+    96  0087                     	;# 
+    97  0088                     	;# 
+    98  0089                     	;# 
+    99  008C                     	;# 
+   100  008D                     	;# 
+   101  008E                     	;# 
+   102  0091                     	;# 
+   103  0092                     	;# 
+   104  0093                     	;# 
+   105  0094                     	;# 
+   106  0098                     	;# 
+   107  0099                     	;# 
+   108  009C                     	;# 
+   109  009D                     	;# 
+   110  009E                     	;# 
+   111  009F                     	;# 
+   112  010C                     	;# 
+   113  010D                     	;# 
+   114  010E                     	;# 
+   115  010F                     	;# 
+   116  018C                     	;# 
+   117  018D                     	;# 
+   118  0000                     	;# 
+   119  0001                     	;# 
+   120  0002                     	;# 
+   121  0003                     	;# 
+   122  0004                     	;# 
+   123  0005                     	;# 
+   124  0006                     	;# 
+   125  0007                     	;# 
+   126  0008                     	;# 
+   127  0009                     	;# 
+   128  000A                     	;# 
+   129  000B                     	;# 
+   130  000C                     	;# 
+   131  000D                     	;# 
+   132  000E                     	;# 
+   133  000E                     	;# 
+   134  000F                     	;# 
+   135  0010                     	;# 
+   136  0011                     	;# 
+   137  0012                     	;# 
+   138  0013                     	;# 
+   139  0014                     	;# 
+   140  0015                     	;# 
+   141  0015                     	;# 
+   142  0016                     	;# 
+   143  0017                     	;# 
+   144  0018                     	;# 
+   145  0019                     	;# 
+   146  001A                     	;# 
+   147  001B                     	;# 
+   148  001B                     	;# 
+   149  001C                     	;# 
+   150  001D                     	;# 
+   151  001E                     	;# 
+   152  001F                     	;# 
+   153  0081                     	;# 
+   154  0085                     	;# 
+   155  0086                     	;# 
+   156  0087                     	;# 
+   157  0088                     	;# 
+   158  0089                     	;# 
+   159  008C                     	;# 
+   160  008D                     	;# 
+   161  008E                     	;# 
+   162  0091                     	;# 
+   163  0092                     	;# 
+   164  0093                     	;# 
+   165  0094                     	;# 
+   166  0098                     	;# 
+   167  0099                     	;# 
+   168  009C                     	;# 
+   169  009D                     	;# 
+   170  009E                     	;# 
+   171  009F                     	;# 
+   172  010C                     	;# 
+   173  010D                     	;# 
+   174  010E                     	;# 
+   175  010F                     	;# 
+   176  018C                     	;# 
+   177  018D                     	;# 
+   178                           
+   179                           	psect	idataCOMMON
+   180  01EF                     __pidataCOMMON:
+   181                           
+   182                           ;initializer for _flag
+   183  01EF  3401               	retlw	1
+   184  000E                     _TMR1	set	14
+   185  0015                     _CCPR1	set	21
+   186  000C                     _PIR1bits	set	12
+   187  0017                     _CCP1CONbits	set	23
+   188  0010                     _T1CONbits	set	16
+   189  000B                     _INTCONbits	set	11
+   190  0006                     _PORTB	set	6
+   191  0060                     _TMR1IF	set	96
+   192  003A                     _RC2	set	58
+   193  0062                     _CCP1IF	set	98
+   194  008C                     _PIE1bits	set	140
+   195  0087                     _TRISC	set	135
+   196  0086                     _TRISB	set	134
+   197                           
+   198                           	psect	cinit
+   199  0011                     start_initialization:	
+   200                           ; #config settings
+   201                           
+   202  0011                     __initialization:
+   203                           
+   204                           ; Initialize objects allocated to COMMON
+   205  0011  120A  118A  21EF  120A  118A  	fcall	__pidataCOMMON	;fetch initializer
+   206  0016  00FC               	movwf	__pdataCOMMON& (0+127)
+   207                           
+   208                           ; Clear objects allocated to COMMON
+   209  0017  01F9               	clrf	__pbssCOMMON& (0+127)
+   210  0018  01FA               	clrf	(__pbssCOMMON+1)& (0+127)
+   211  0019  01FB               	clrf	(__pbssCOMMON+2)& (0+127)
+   212  001A                     end_of_initialization:	
+   213                           ;End of C runtime variable initialization code
+   214                           
+   215  001A                     __end_of__initialization:
+   216  001A  0183               	clrf	3
+   217  001B  120A  118A  298F   	ljmp	_main	;jump to C main() function
+   218                           
+   219                           	psect	bssCOMMON
+   220  0079                     __pbssCOMMON:
+   221  0079                     _time:
+   222  0079                     	ds	1
+   223  007A                     _counter:
+   224  007A                     	ds	2
+   225                           
+   226                           	psect	dataCOMMON
+   227  007C                     __pdataCOMMON:
+   228  007C                     _flag:
+   229  007C                     	ds	1
+   230                           
+   231                           	psect	cstackCOMMON
+   232  0070                     __pcstackCOMMON:
+   233  0070                     ?_setTimer:
+   234  0070                     ?_setCaptureRising:	
+   235                           ; 1 bytes @ 0x0
+   236                           
+   237  0070                     ?_runTimer:	
+   238                           ; 1 bytes @ 0x0
+   239                           
+   240  0070                     ??_runTimer:	
+   241                           ; 1 bytes @ 0x0
+   242                           
+   243  0070                     ?_setCaptureFalling:	
+   244                           ; 1 bytes @ 0x0
+   245                           
+   246  0070                     ??_setCaptureFalling:	
+   247                           ; 1 bytes @ 0x0
+   248                           
+   249  0070                     ?_stopTimer:	
+   250                           ; 1 bytes @ 0x0
+   251                           
+   252  0070                     ??_stopTimer:	
+   253                           ; 1 bytes @ 0x0
+   254                           
+   255  0070                     ?_setCompare:	
+   256                           ; 1 bytes @ 0x0
+   257                           
+   258  0070                     ??_setCompare:	
+   259                           ; 1 bytes @ 0x0
+   260                           
+   261  0070                     ?_main:	
+   262                           ; 1 bytes @ 0x0
+   263                           
+   264  0070                     ?_myIntHandler:	
+   265                           ; 1 bytes @ 0x0
+   266                           
+   267  0070                     ?i1_setCaptureRising:	
+   268                           ; 1 bytes @ 0x0
+   269                           
+   270  0070                     ??i1_setCaptureRising:	
+   271                           ; 1 bytes @ 0x0
+   272                           
+   273  0070                     ?___aldiv:	
+   274                           ; 1 bytes @ 0x0
+   275                           
+   276  0070                     ___aldiv@divisor:	
+   277                           ; 4 bytes @ 0x0
+   278                           
+   279                           
+   280                           ; 4 bytes @ 0x0
+   281  0070                     	ds	4
+   282  0074                     ___aldiv@dividend:
+   283                           
+   284                           ; 4 bytes @ 0x4
+   285  0074                     	ds	4
+   286  0078                     ??___aldiv:
+   287                           
+   288                           ; 1 bytes @ 0x8
+   289  0078                     	ds	1
+   290                           
+   291                           	psect	cstackBANK0
+   292  0020                     __pcstackBANK0:
+   293  0020                     ___aldiv@counter:
+   294                           
+   295                           ; 1 bytes @ 0x0
+   296  0020                     	ds	1
+   297  0021                     ___aldiv@sign:
+   298                           
+   299                           ; 1 bytes @ 0x1
+   300  0021                     	ds	1
+   301  0022                     ___aldiv@quotient:
+   302                           
+   303                           ; 4 bytes @ 0x2
+   304  0022                     	ds	4
+   305  0026                     ??_myIntHandler:
+   306                           
+   307                           ; 1 bytes @ 0x6
+   308  0026                     	ds	11
+   309  0031                     ??_setTimer:
+   310  0031                     ??_setCaptureRising:	
+   311                           ; 1 bytes @ 0x11
+   312                           
+   313  0031                     ??_main:	
+   314                           ; 1 bytes @ 0x11
+   315                           
+   316                           
+   317                           	psect	maintext
+   318  018F                     __pmaintext:	
+   319                           ; 1 bytes @ 0x11
+   320 ;;
+   321 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   322 ;;
+   323 ;; *************** function _main *****************
+   324 ;; Defined at:
+   325 ;;		line 27 in file "main.c"
+   326 ;; Parameters:    Size  Location     Type
+   327 ;;		None
+   328 ;; Auto vars:     Size  Location     Type
+   329 ;;		None
+   330 ;; Return value:  Size  Location     Type
+   331 ;;                  1    wreg      void 
+   332 ;; Registers used:
+   333 ;;		wreg, status,2, status,0, pclath, cstack
+   334 ;; Tracked objects:
+   335 ;;		On entry : B00/0
+   336 ;;		On exit  : 0/0
+   337 ;;		Unchanged: 0/0
+   338 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   339 ;;      Params:         0       0       0       0       0
+   340 ;;      Locals:         0       0       0       0       0
+   341 ;;      Temps:          0       0       0       0       0
+   342 ;;      Totals:         0       0       0       0       0
+   343 ;;Total ram usage:        0 bytes
+   344 ;; Hardware stack levels required when called:    3
+   345 ;; This function calls:
+   346 ;;		_setCaptureRising
+   347 ;;		_setTimer
+   348 ;; This function is called by:
+   349 ;;		Startup code after reset
+   350 ;; This function uses a non-reentrant model
+   351 ;;
+   352                           
+   353                           
+   354                           ;psect for function _main
+   355  018F                     _main:
+   356  018F                     l850:	
+   357                           ;incstack = 0
+   358                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   359                           
+   360                           
+   361                           ;main.c: 29:     TRISB = 0;
+   362  018F  1683               	bsf	3,5	;RP0=1, select bank1
+   363  0190  1303               	bcf	3,6	;RP1=0, select bank1
+   364  0191  0186               	clrf	6	;volatile
+   365                           
+   366                           ;main.c: 30:     PORTB = 0;
+   367  0192  1283               	bcf	3,5	;RP0=0, select bank0
+   368  0193  1303               	bcf	3,6	;RP1=0, select bank0
+   369  0194  0186               	clrf	6	;volatile
+   370  0195                     l852:
+   371                           
+   372                           ;main.c: 31:     TRISC = 0x04;
+   373  0195  3004               	movlw	4
+   374  0196  1683               	bsf	3,5	;RP0=1, select bank1
+   375  0197  1303               	bcf	3,6	;RP1=0, select bank1
+   376  0198  0087               	movwf	7	;volatile
+   377  0199                     l854:
+   378                           
+   379                           ;main.c: 33:     INTCONbits.GIE = 1;
+   380  0199  178B               	bsf	11,7	;volatile
+   381  019A                     l856:
+   382                           
+   383                           ;main.c: 34:     INTCONbits.PEIE = 1;
+   384  019A  170B               	bsf	11,6	;volatile
+   385  019B                     l858:
+   386                           
+   387                           ;main.c: 36:     setTimer();
+   388  019B  120A  118A  21D9  120A  118A  	fcall	_setTimer
+   389  01A0                     l860:
+   390                           
+   391                           ;main.c: 37:     setCaptureRising();
+   392  01A0  120A  118A  21B8  120A  118A  	fcall	_setCaptureRising
+   393  01A5                     l49:	
+   394                           ;main.c: 40:     while (1)
+   395                           
+   396  01A5                     l50:	
+   397                           ;main.c: 41:     {;main.c: 43:     }
+   398                           
+   399  01A5  29A5               	goto	l49
+   400  01A6  120A  118A  280E   	ljmp	start
+   401  01A9                     __end_of_main:
+   402                           
+   403                           	psect	text1
+   404  01D9                     __ptext1:	
+   405 ;; *************** function _setTimer *****************
+   406 ;; Defined at:
+   407 ;;		line 124 in file "main.c"
+   408 ;; Parameters:    Size  Location     Type
+   409 ;;		None
+   410 ;; Auto vars:     Size  Location     Type
+   411 ;;		None
+   412 ;; Return value:  Size  Location     Type
+   413 ;;                  1    wreg      void 
+   414 ;; Registers used:
+   415 ;;		None
+   416 ;; Tracked objects:
+   417 ;;		On entry : 0/0
+   418 ;;		On exit  : 0/0
+   419 ;;		Unchanged: 0/0
+   420 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   421 ;;      Params:         0       0       0       0       0
+   422 ;;      Locals:         0       0       0       0       0
+   423 ;;      Temps:          0       0       0       0       0
+   424 ;;      Totals:         0       0       0       0       0
+   425 ;;Total ram usage:        0 bytes
+   426 ;; Hardware stack levels used:    1
+   427 ;; Hardware stack levels required when called:    2
+   428 ;; This function calls:
+   429 ;;		Nothing
+   430 ;; This function is called by:
+   431 ;;		_main
+   432 ;; This function uses a non-reentrant model
+   433 ;;
+   434                           
+   435                           
+   436                           ;psect for function _setTimer
+   437  01D9                     _setTimer:
+   438  01D9                     l806:	
+   439                           ;incstack = 0
+   440                           ; Regs used in _setTimer: []
+   441                           
+   442                           
+   443                           ;main.c: 127:     PIE1bits.TMR1IE = 1;
+   444  01D9  1683               	bsf	3,5	;RP0=1, select bank1
+   445  01DA  1303               	bcf	3,6	;RP1=0, select bank1
+   446  01DB  140C               	bsf	12,0	;volatile
+   447                           
+   448                           ;main.c: 130:     T1CONbits.TMR1CS = 0;
+   449  01DC  1283               	bcf	3,5	;RP0=0, select bank0
+   450  01DD  1303               	bcf	3,6	;RP1=0, select bank0
+   451  01DE  1090               	bcf	16,1	;volatile
+   452                           
+   453                           ;main.c: 133:     T1CONbits.T1CKPS0 = 0;
+   454  01DF  1210               	bcf	16,4	;volatile
+   455                           
+   456                           ;main.c: 134:     T1CONbits.T1CKPS1 = 0;
+   457  01E0  1290               	bcf	16,5	;volatile
+   458  01E1                     l73:
+   459  01E1  0008               	return
+   460  01E2                     __end_of_setTimer:
+   461                           
+   462                           	psect	text2
+   463  01B8                     __ptext2:	
+   464 ;; *************** function _setCaptureRising *****************
+   465 ;; Defined at:
+   466 ;;		line 151 in file "main.c"
+   467 ;; Parameters:    Size  Location     Type
+   468 ;;		None
+   469 ;; Auto vars:     Size  Location     Type
+   470 ;;		None
+   471 ;; Return value:  Size  Location     Type
+   472 ;;                  1    wreg      void 
+   473 ;; Registers used:
+   474 ;;		None
+   475 ;; Tracked objects:
+   476 ;;		On entry : 0/0
+   477 ;;		On exit  : 0/0
+   478 ;;		Unchanged: 0/0
+   479 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   480 ;;      Params:         0       0       0       0       0
+   481 ;;      Locals:         0       0       0       0       0
+   482 ;;      Temps:          0       0       0       0       0
+   483 ;;      Totals:         0       0       0       0       0
+   484 ;;Total ram usage:        0 bytes
+   485 ;; Hardware stack levels used:    1
+   486 ;; Hardware stack levels required when called:    2
+   487 ;; This function calls:
+   488 ;;		Nothing
+   489 ;; This function is called by:
+   490 ;;		_main
+   491 ;; This function uses a non-reentrant model
+   492 ;;
+   493                           
+   494                           
+   495                           ;psect for function _setCaptureRising
+   496  01B8                     _setCaptureRising:
+   497  01B8                     l808:	
+   498                           ;incstack = 0
+   499                           ; Regs used in _setCaptureRising: []
+   500                           
+   501                           
+   502                           ;main.c: 154:     CCP1CONbits.CCP1M3 = 0;
+   503  01B8  1283               	bcf	3,5	;RP0=0, select bank0
+   504  01B9  1303               	bcf	3,6	;RP1=0, select bank0
+   505  01BA  1197               	bcf	23,3	;volatile
+   506                           
+   507                           ;main.c: 155:     CCP1CONbits.CCP1M2 = 1;
+   508  01BB  1517               	bsf	23,2	;volatile
+   509                           
+   510                           ;main.c: 156:     CCP1CONbits.CCP1M1 = 0;
+   511  01BC  1097               	bcf	23,1	;volatile
+   512                           
+   513                           ;main.c: 157:     CCP1CONbits.CCP1M0 = 1;
+   514  01BD  1417               	bsf	23,0	;volatile
+   515                           
+   516                           ;main.c: 159:     PIR1bits.CCP1IF = 0;
+   517  01BE  110C               	bcf	12,2	;volatile
+   518                           
+   519                           ;main.c: 161:     PIE1bits.CCP1IE = 1;
+   520  01BF  1683               	bsf	3,5	;RP0=1, select bank1
+   521  01C0  1303               	bcf	3,6	;RP1=0, select bank1
+   522  01C1  150C               	bsf	12,2	;volatile
+   523  01C2                     l82:
+   524  01C2  0008               	return
+   525  01C3                     __end_of_setCaptureRising:
+   526                           
+   527                           	psect	text3
+   528  001E                     __ptext3:	
+   529 ;; *************** function _myIntHandler *****************
+   530 ;; Defined at:
+   531 ;;		line 49 in file "main.c"
+   532 ;; Parameters:    Size  Location     Type
+   533 ;;		None
+   534 ;; Auto vars:     Size  Location     Type
+   535 ;;		None
+   536 ;; Return value:  Size  Location     Type
+   537 ;;                  1    wreg      void 
+   538 ;; Registers used:
+   539 ;;		wreg, status,2, status,0, pclath, cstack
+   540 ;; Tracked objects:
+   541 ;;		On entry : 0/0
+   542 ;;		On exit  : 0/0
+   543 ;;		Unchanged: 0/0
+   544 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   545 ;;      Params:         0       0       0       0       0
+   546 ;;      Locals:         0       0       0       0       0
+   547 ;;      Temps:          0      11       0       0       0
+   548 ;;      Totals:         0      11       0       0       0
+   549 ;;Total ram usage:       11 bytes
+   550 ;; Hardware stack levels used:    1
+   551 ;; Hardware stack levels required when called:    1
+   552 ;; This function calls:
+   553 ;;		___aldiv
+   554 ;;		_runTimer
+   555 ;;		_setCaptureFalling
+   556 ;;		_setCompare
+   557 ;;		_stopTimer
+   558 ;;		i1_setCaptureRising
+   559 ;; This function is called by:
+   560 ;;		Interrupt level 1
+   561 ;; This function uses a non-reentrant model
+   562 ;;
+   563                           
+   564                           
+   565                           ;psect for function _myIntHandler
+   566  001E                     _myIntHandler:
+   567  001E                     i1l862:
+   568                           
+   569                           ;main.c: 51:     if (CCP1IF)
+   570  001E  1D0C               	btfss	12,2	;volatile
+   571  001F  2821               	goto	u33_21
+   572  0020  2822               	goto	u33_20
+   573  0021                     u33_21:
+   574  0021  28CC               	goto	i1l906
+   575  0022                     u33_20:
+   576  0022                     i1l864:
+   577                           
+   578                           ;main.c: 52:     {;main.c: 53:         CCP1IF = 0;
+   579  0022  110C               	bcf	12,2	;volatile
+   580  0023                     i1l866:
+   581                           
+   582                           ;main.c: 55:         if (flag == 1)
+   583  0023  037C               	decf	_flag,w
+   584  0024  1D03               	btfss	3,2
+   585  0025  2827               	goto	u34_21
+   586  0026  2828               	goto	u34_20
+   587  0027                     u34_21:
+   588  0027  28A5               	goto	i1l894
+   589  0028                     u34_20:
+   590  0028                     i1l868:
+   591                           
+   592                           ;main.c: 56:         {;main.c: 58:             if (RC2)
+   593  0028  1D07               	btfss	7,2	;volatile
+   594  0029  282B               	goto	u35_21
+   595  002A  282C               	goto	u35_20
+   596  002B                     u35_21:
+   597  002B  283A               	goto	i1l59
+   598  002C                     u35_20:
+   599  002C                     i1l870:
+   600                           
+   601                           ;main.c: 59:             {;main.c: 60:                 runTimer();
+   602  002C  120A  118A  21E2  120A  118A  	fcall	_runTimer
+   603  0031                     i1l872:
+   604                           
+   605                           ;main.c: 62:                 PIE1bits.CCP1IE = 0;
+   606  0031  1683               	bsf	3,5	;RP0=1, select bank1
+   607  0032  1303               	bcf	3,6	;RP1=0, select bank1
+   608  0033  110C               	bcf	12,2	;volatile
+   609                           
+   610                           ;main.c: 63:                 setCaptureFalling();
+   611  0034  120A  118A  21CE  120A  118A  	fcall	_setCaptureFalling
+   612                           
+   613                           ;main.c: 65:             }
+   614  0039  28CC               	goto	i1l906
+   615  003A                     i1l59:	
+   616                           ;main.c: 67:             else if (RC2 == 0)
+   617                           
+   618  003A  1907               	btfsc	7,2	;volatile
+   619  003B  283D               	goto	u36_21
+   620  003C  283E               	goto	u36_20
+   621  003D                     u36_21:
+   622  003D  28CC               	goto	i1l63
+   623  003E                     u36_20:
+   624  003E                     i1l874:
+   625                           
+   626                           ;main.c: 68:             {;main.c: 69:                 time = (65536 * counter + CCPR1) 
+      +                          / 1000000;
+   627  003E  3000               	movlw	0
+   628  003F  00F3               	movwf	___aldiv@divisor+3
+   629  0040  300F               	movlw	15
+   630  0041  00F2               	movwf	___aldiv@divisor+2
+   631  0042  3042               	movlw	66
+   632  0043  00F1               	movwf	___aldiv@divisor+1
+   633  0044  3040               	movlw	64
+   634  0045  00F0               	movwf	___aldiv@divisor
+   635  0046  0815               	movf	21,w	;volatile
+   636  0047  00A6               	movwf	??_myIntHandler
+   637  0048  0816               	movf	22,w	;volatile
+   638  0049  00A7               	movwf	??_myIntHandler+1
+   639  004A  01A8               	clrf	??_myIntHandler+2
+   640  004B  01A9               	clrf	??_myIntHandler+3
+   641  004C  087A               	movf	_counter,w
+   642  004D  00AA               	movwf	??_myIntHandler+4
+   643  004E  087B               	movf	_counter+1,w
+   644  004F  00AB               	movwf	??_myIntHandler+5
+   645  0050  01AC               	clrf	??_myIntHandler+6
+   646  0051  01AD               	clrf	??_myIntHandler+7
+   647  0052  3010               	movlw	16
+   648  0053                     u37_25:
+   649  0053  1003               	clrc
+   650  0054  0DAA               	rlf	??_myIntHandler+4,f
+   651  0055  0DAB               	rlf	??_myIntHandler+5,f
+   652  0056  0DAC               	rlf	??_myIntHandler+6,f
+   653  0057  0DAD               	rlf	??_myIntHandler+7,f
+   654  0058                     u37_20:
+   655  0058  3EFF               	addlw	-1
+   656  0059  1D03               	skipz
+   657  005A  2853               	goto	u37_25
+   658  005B  082A               	movf	??_myIntHandler+4,w
+   659  005C  07A6               	addwf	??_myIntHandler,f
+   660  005D  082B               	movf	??_myIntHandler+5,w
+   661  005E  1803               	skipnc
+   662  005F  0F2B               	incfsz	??_myIntHandler+5,w
+   663  0060  2862               	goto	u38_20
+   664  0061  2863               	goto	u38_21
+   665  0062                     u38_20:
+   666  0062  07A7               	addwf	??_myIntHandler+1,f
+   667  0063                     u38_21:
+   668  0063  082C               	movf	??_myIntHandler+6,w
+   669  0064  1803               	skipnc
+   670  0065  0F2C               	incfsz	??_myIntHandler+6,w
+   671  0066  2868               	goto	u38_22
+   672  0067  2869               	goto	u38_23
+   673  0068                     u38_22:
+   674  0068  07A8               	addwf	??_myIntHandler+2,f
+   675  0069                     u38_23:
+   676  0069  082D               	movf	??_myIntHandler+7,w
+   677  006A  1803               	skipnc
+   678  006B  0A2D               	incf	??_myIntHandler+7,w
+   679  006C  07A9               	addwf	??_myIntHandler+3,f
+   680  006D  0829               	movf	??_myIntHandler+3,w
+   681  006E  00F7               	movwf	___aldiv@dividend+3
+   682  006F  0828               	movf	??_myIntHandler+2,w
+   683  0070  00F6               	movwf	___aldiv@dividend+2
+   684  0071  0827               	movf	??_myIntHandler+1,w
+   685  0072  00F5               	movwf	___aldiv@dividend+1
+   686  0073  0826               	movf	??_myIntHandler,w
+   687  0074  00F4               	movwf	___aldiv@dividend
+   688  0075  120A  118A  20F2  120A  118A  	fcall	___aldiv
+   689  007A  0870               	movf	?___aldiv,w
+   690  007B  1283               	bcf	3,5	;RP0=0, select bank0
+   691  007C  1303               	bcf	3,6	;RP1=0, select bank0
+   692  007D  00AE               	movwf	??_myIntHandler+8
+   693  007E  082E               	movf	??_myIntHandler+8,w
+   694  007F  00F9               	movwf	_time
+   695  0080                     i1l876:
+   696                           
+   697                           ;main.c: 71:                 if (time >= 255)
+   698  0080  0A79               	incf	_time,w
+   699  0081  1D03               	btfss	3,2
+   700  0082  2884               	goto	u39_21
+   701  0083  2885               	goto	u39_20
+   702  0084                     u39_21:
+   703  0084  2888               	goto	i1l880
+   704  0085                     u39_20:
+   705  0085                     i1l878:
+   706                           
+   707                           ;main.c: 72:                 {;main.c: 73:                     time = 0;
+   708  0085  01F9               	clrf	_time
+   709                           
+   710                           ;main.c: 74:                     counter = 0;
+   711  0086  01FA               	clrf	_counter
+   712  0087  01FB               	clrf	_counter+1
+   713  0088                     i1l880:
+   714                           
+   715                           ;main.c: 77:                 stopTimer();
+   716  0088  120A  118A  21E9  120A  118A  	fcall	_stopTimer
+   717  008D                     i1l882:
+   718                           
+   719                           ;main.c: 78:                 PORTB |= 0x01;
+   720  008D  1283               	bcf	3,5	;RP0=0, select bank0
+   721  008E  1303               	bcf	3,6	;RP1=0, select bank0
+   722  008F  1406               	bsf	6,0	;volatile
+   723  0090                     i1l884:
+   724                           
+   725                           ;main.c: 80:                 runTimer();
+   726  0090  120A  118A  21E2  120A  118A  	fcall	_runTimer
+   727  0095                     i1l886:
+   728                           
+   729                           ;main.c: 81:                 PIE1bits.CCP1IE = 0;
+   730  0095  1683               	bsf	3,5	;RP0=1, select bank1
+   731  0096  1303               	bcf	3,6	;RP1=0, select bank1
+   732  0097  110C               	bcf	12,2	;volatile
+   733  0098                     i1l888:
+   734                           
+   735                           ;main.c: 82:                 flag = 2;
+   736  0098  3002               	movlw	2
+   737  0099  1283               	bcf	3,5	;RP0=0, select bank0
+   738  009A  1303               	bcf	3,6	;RP1=0, select bank0
+   739  009B  00A6               	movwf	??_myIntHandler
+   740  009C  0826               	movf	??_myIntHandler,w
+   741  009D  00FC               	movwf	_flag
+   742  009E                     i1l890:
+   743                           
+   744                           ;main.c: 83:                 setCompare();
+   745  009E  120A  118A  21A9  120A  118A  	fcall	_setCompare
+   746  00A3                     i1l892:
+   747                           
+   748                           ;main.c: 88:                 time = 0;
+   749  00A3  01F9               	clrf	_time
+   750  00A4  28CC               	goto	i1l906
+   751  00A5                     i1l894:
+   752  00A5  3002               	movlw	2
+   753  00A6  067C               	xorwf	_flag,w
+   754  00A7  1D03               	btfss	3,2
+   755  00A8  28AA               	goto	u40_21
+   756  00A9  28AB               	goto	u40_20
+   757  00AA                     u40_21:
+   758  00AA  28CC               	goto	i1l906
+   759  00AB                     u40_20:
+   760  00AB                     i1l896:
+   761                           
+   762                           ;main.c: 96:         {;main.c: 97:             if (counter == 0)
+   763  00AB  087A               	movf	_counter,w
+   764  00AC  047B               	iorwf	_counter+1,w
+   765  00AD  1D03               	btfss	3,2
+   766  00AE  28B0               	goto	u41_21
+   767  00AF  28B1               	goto	u41_20
+   768  00B0                     u41_21:
+   769  00B0  28CC               	goto	i1l63
+   770  00B1                     u41_20:
+   771  00B1                     i1l898:
+   772                           
+   773                           ;main.c: 98:             {;main.c: 99:                 PORTB &= ~(0x01);
+   774  00B1  30FE               	movlw	254
+   775  00B2  00A6               	movwf	??_myIntHandler
+   776  00B3  0826               	movf	??_myIntHandler,w
+   777  00B4  0586               	andwf	6,f	;volatile
+   778                           
+   779                           ;main.c: 100:                 PORTB |= 0xf0;
+   780  00B5  30F0               	movlw	240
+   781  00B6  00A6               	movwf	??_myIntHandler
+   782  00B7  0826               	movf	??_myIntHandler,w
+   783  00B8  0486               	iorwf	6,f	;volatile
+   784  00B9                     i1l900:
+   785                           
+   786                           ;main.c: 102:                 PIE1bits.CCP1IE = 0;
+   787  00B9  1683               	bsf	3,5	;RP0=1, select bank1
+   788  00BA  1303               	bcf	3,6	;RP1=0, select bank1
+   789  00BB  110C               	bcf	12,2	;volatile
+   790  00BC                     i1l902:
+   791                           
+   792                           ;main.c: 103:                 setCaptureRising();
+   793  00BC  120A  118A  21C3  120A  118A  	fcall	i1_setCaptureRising
+   794  00C1                     i1l904:
+   795                           
+   796                           ;main.c: 104:                 counter = flag = 1;
+   797  00C1  3001               	movlw	1
+   798  00C2  00FC               	movwf	_flag
+   799  00C3  1283               	bcf	3,5	;RP0=0, select bank0
+   800  00C4  1303               	bcf	3,6	;RP1=0, select bank0
+   801  00C5  00A6               	movwf	??_myIntHandler
+   802  00C6  01A7               	clrf	??_myIntHandler+1
+   803  00C7  0826               	movf	??_myIntHandler,w
+   804  00C8  00FA               	movwf	_counter
+   805  00C9  0827               	movf	??_myIntHandler+1,w
+   806  00CA  00FB               	movwf	_counter+1
+   807  00CB  28CC               	goto	i1l906
+   808  00CC                     i1l63:
+   809  00CC                     i1l906:
+   810                           
+   811                           ;main.c: 112:     if (TMR1IF)
+   812  00CC  1283               	bcf	3,5	;RP0=0, select bank0
+   813  00CD  1303               	bcf	3,6	;RP1=0, select bank0
+   814  00CE  1C0C               	btfss	12,0	;volatile
+   815  00CF  28D1               	goto	u42_21
+   816  00D0  28D2               	goto	u42_20
+   817  00D1                     u42_21:
+   818  00D1  28EB               	goto	i1l70
+   819  00D2                     u42_20:
+   820  00D2                     i1l908:
+   821                           
+   822                           ;main.c: 113:     {;main.c: 114:         if (flag == 1)
+   823  00D2  037C               	decf	_flag,w
+   824  00D3  1D03               	btfss	3,2
+   825  00D4  28D6               	goto	u43_21
+   826  00D5  28D7               	goto	u43_20
+   827  00D6                     u43_21:
+   828  00D6  28DE               	goto	i1l912
+   829  00D7                     u43_20:
+   830  00D7                     i1l910:
+   831                           
+   832                           ;main.c: 115:             counter++;
+   833  00D7  3001               	movlw	1
+   834  00D8  07FA               	addwf	_counter,f
+   835  00D9  1803               	skipnc
+   836  00DA  0AFB               	incf	_counter+1,f
+   837  00DB  3000               	movlw	0
+   838  00DC  07FB               	addwf	_counter+1,f
+   839  00DD  28EA               	goto	i1l916
+   840  00DE                     i1l912:
+   841  00DE  3002               	movlw	2
+   842  00DF  067C               	xorwf	_flag,w
+   843  00E0  1D03               	btfss	3,2
+   844  00E1  28E3               	goto	u44_21
+   845  00E2  28E4               	goto	u44_20
+   846  00E3                     u44_21:
+   847  00E3  28EA               	goto	i1l916
+   848  00E4                     u44_20:
+   849  00E4                     i1l914:
+   850                           
+   851                           ;main.c: 117:             counter--;
+   852  00E4  3001               	movlw	1
+   853  00E5  02FA               	subwf	_counter,f
+   854  00E6  3000               	movlw	0
+   855  00E7  1C03               	skipc
+   856  00E8  03FB               	decf	_counter+1,f
+   857  00E9  02FB               	subwf	_counter+1,f
+   858  00EA                     i1l916:
+   859                           
+   860                           ;main.c: 119:         TMR1IF = 0;
+   861  00EA  100C               	bcf	12,0	;volatile
+   862  00EB                     i1l70:
+   863  00EB  0830               	movf	??_myIntHandler+10,w
+   864  00EC  008A               	movwf	10
+   865  00ED  0E2F               	swapf	(??_myIntHandler+9)^0,w
+   866  00EE  0083               	movwf	3
+   867  00EF  0EFE               	swapf	btemp,f
+   868  00F0  0E7E               	swapf	btemp,w
+   869  00F1  0009               	retfie
+   870  00F2                     __end_of_myIntHandler:
+   871                           
+   872                           	psect	intentry
+   873  0004                     __pintentry:	
+   874                           ;incstack = 0
+   875                           ; Regs used in _myIntHandler: [wreg+status,2+status,0+pclath+cstack]
+   876                           
+   877  0004                     interrupt_function:
+   878  007E                     saved_w	set	btemp
+   879  0004  00FE               	movwf	btemp
+   880  0005  0E03               	swapf	3,w
+   881  0006  1283               	bcf	3,5	;RP0=0, select bank0
+   882  0007  1303               	bcf	3,6	;RP1=0, select bank0
+   883  0008  00AF               	movwf	??_myIntHandler+9
+   884  0009  080A               	movf	10,w
+   885  000A  00B0               	movwf	??_myIntHandler+10
+   886  000B  120A  118A  281E   	ljmp	_myIntHandler
+   887                           
+   888                           	psect	text4
+   889  01C3                     __ptext4:	
+   890 ;; *************** function i1_setCaptureRising *****************
+   891 ;; Defined at:
+   892 ;;		line 151 in file "main.c"
+   893 ;; Parameters:    Size  Location     Type
+   894 ;;		None
+   895 ;; Auto vars:     Size  Location     Type
+   896 ;;		None
+   897 ;; Return value:  Size  Location     Type
+   898 ;;                  1    wreg      void 
+   899 ;; Registers used:
+   900 ;;		None
+   901 ;; Tracked objects:
+   902 ;;		On entry : 0/0
+   903 ;;		On exit  : 0/0
+   904 ;;		Unchanged: 0/0
+   905 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   906 ;;      Params:         0       0       0       0       0
+   907 ;;      Locals:         0       0       0       0       0
+   908 ;;      Temps:          0       0       0       0       0
+   909 ;;      Totals:         0       0       0       0       0
+   910 ;;Total ram usage:        0 bytes
+   911 ;; Hardware stack levels used:    1
+   912 ;; This function calls:
+   913 ;;		Nothing
+   914 ;; This function is called by:
+   915 ;;		_myIntHandler
+   916 ;; This function uses a non-reentrant model
+   917 ;;
+   918                           
+   919                           
+   920                           ;psect for function i1_setCaptureRising
+   921  01C3                     i1_setCaptureRising:
+   922  01C3                     i1l736:	
+   923                           ;incstack = 0
+   924                           ; Regs used in i1_setCaptureRising: []
+   925                           
+   926                           
+   927                           ;main.c: 154:     CCP1CONbits.CCP1M3 = 0;
+   928  01C3  1283               	bcf	3,5	;RP0=0, select bank0
+   929  01C4  1303               	bcf	3,6	;RP1=0, select bank0
+   930  01C5  1197               	bcf	23,3	;volatile
+   931                           
+   932                           ;main.c: 155:     CCP1CONbits.CCP1M2 = 1;
+   933  01C6  1517               	bsf	23,2	;volatile
+   934                           
+   935                           ;main.c: 156:     CCP1CONbits.CCP1M1 = 0;
+   936  01C7  1097               	bcf	23,1	;volatile
+   937                           
+   938                           ;main.c: 157:     CCP1CONbits.CCP1M0 = 1;
+   939  01C8  1417               	bsf	23,0	;volatile
+   940                           
+   941                           ;main.c: 159:     PIR1bits.CCP1IF = 0;
+   942  01C9  110C               	bcf	12,2	;volatile
+   943                           
+   944                           ;main.c: 161:     PIE1bits.CCP1IE = 1;
+   945  01CA  1683               	bsf	3,5	;RP0=1, select bank1
+   946  01CB  1303               	bcf	3,6	;RP1=0, select bank1
+   947  01CC  150C               	bsf	12,2	;volatile
+   948  01CD                     i1l82:
+   949  01CD  0008               	return
+   950  01CE                     __end_ofi1_setCaptureRising:
+   951                           
+   952                           	psect	text5
+   953  01E9                     __ptext5:	
+   954 ;; *************** function _stopTimer *****************
+   955 ;; Defined at:
+   956 ;;		line 145 in file "main.c"
+   957 ;; Parameters:    Size  Location     Type
+   958 ;;		None
+   959 ;; Auto vars:     Size  Location     Type
+   960 ;;		None
+   961 ;; Return value:  Size  Location     Type
+   962 ;;                  1    wreg      void 
+   963 ;; Registers used:
+   964 ;;		status,2
+   965 ;; Tracked objects:
+   966 ;;		On entry : 0/0
+   967 ;;		On exit  : 0/0
+   968 ;;		Unchanged: 0/0
+   969 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   970 ;;      Params:         0       0       0       0       0
+   971 ;;      Locals:         0       0       0       0       0
+   972 ;;      Temps:          0       0       0       0       0
+   973 ;;      Totals:         0       0       0       0       0
+   974 ;;Total ram usage:        0 bytes
+   975 ;; Hardware stack levels used:    1
+   976 ;; This function calls:
+   977 ;;		Nothing
+   978 ;; This function is called by:
+   979 ;;		_myIntHandler
+   980 ;; This function uses a non-reentrant model
+   981 ;;
+   982                           
+   983                           
+   984                           ;psect for function _stopTimer
+   985  01E9                     _stopTimer:
+   986  01E9                     i1l690:	
+   987                           ;incstack = 0
+   988                           ; Regs used in _stopTimer: [status,2]
+   989                           
+   990                           
+   991                           ;main.c: 147:     T1CONbits.TMR1ON = 0;
+   992  01E9  1283               	bcf	3,5	;RP0=0, select bank0
+   993  01EA  1303               	bcf	3,6	;RP1=0, select bank0
+   994  01EB  1010               	bcf	16,0	;volatile
+   995  01EC                     i1l692:
+   996                           
+   997                           ;main.c: 148:     TMR1 = 0;
+   998  01EC  018E               	clrf	14	;volatile
+   999  01ED  018F               	clrf	15	;volatile
+  1000  01EE                     i1l79:
+  1001  01EE  0008               	return
+  1002  01EF                     __end_of_stopTimer:
+  1003                           
+  1004                           	psect	text6
+  1005  01A9                     __ptext6:	
+  1006 ;; *************** function _setCompare *****************
+  1007 ;; Defined at:
+  1008 ;;		line 179 in file "main.c"
+  1009 ;; Parameters:    Size  Location     Type
+  1010 ;;		None
+  1011 ;; Auto vars:     Size  Location     Type
+  1012 ;;		None
+  1013 ;; Return value:  Size  Location     Type
+  1014 ;;                  1    wreg      void 
+  1015 ;; Registers used:
+  1016 ;;		None
+  1017 ;; Tracked objects:
+  1018 ;;		On entry : 0/0
+  1019 ;;		On exit  : 0/0
+  1020 ;;		Unchanged: 0/0
+  1021 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1022 ;;      Params:         0       0       0       0       0
+  1023 ;;      Locals:         0       0       0       0       0
+  1024 ;;      Temps:          0       0       0       0       0
+  1025 ;;      Totals:         0       0       0       0       0
+  1026 ;;Total ram usage:        0 bytes
+  1027 ;; Hardware stack levels used:    1
+  1028 ;; This function calls:
+  1029 ;;		Nothing
+  1030 ;; This function is called by:
+  1031 ;;		_myIntHandler
+  1032 ;; This function uses a non-reentrant model
+  1033 ;;
+  1034                           
+  1035                           
+  1036                           ;psect for function _setCompare
+  1037  01A9                     _setCompare:
+  1038  01A9                     i1l694:	
+  1039                           ;incstack = 0
+  1040                           ; Regs used in _setCompare: []
+  1041                           
+  1042                           
+  1043                           ;main.c: 183:     CCP1CONbits.CCP1M3 = 1;
+  1044  01A9  1283               	bcf	3,5	;RP0=0, select bank0
+  1045  01AA  1303               	bcf	3,6	;RP1=0, select bank0
+  1046  01AB  1597               	bsf	23,3	;volatile
+  1047                           
+  1048                           ;main.c: 184:     CCP1CONbits.CCP1M2 = 0;
+  1049  01AC  1117               	bcf	23,2	;volatile
+  1050                           
+  1051                           ;main.c: 185:     CCP1CONbits.CCP1M1 = 1;
+  1052  01AD  1497               	bsf	23,1	;volatile
+  1053                           
+  1054                           ;main.c: 186:     CCP1CONbits.CCP1M0 = 0;
+  1055  01AE  1017               	bcf	23,0	;volatile
+  1056                           
+  1057                           ;main.c: 188:     PIR1bits.CCP1IF = 0;
+  1058  01AF  110C               	bcf	12,2	;volatile
+  1059                           
+  1060                           ;main.c: 189:     CCPR1 = 65535;
+  1061  01B0  30FF               	movlw	255
+  1062  01B1  0096               	movwf	22	;volatile
+  1063  01B2  30FF               	movlw	255
+  1064  01B3  0095               	movwf	21	;volatile
+  1065                           
+  1066                           ;main.c: 190:     PIE1bits.CCP1IE = 1;
+  1067  01B4  1683               	bsf	3,5	;RP0=1, select bank1
+  1068  01B5  1303               	bcf	3,6	;RP1=0, select bank1
+  1069  01B6  150C               	bsf	12,2	;volatile
+  1070  01B7                     i1l88:
+  1071  01B7  0008               	return
+  1072  01B8                     __end_of_setCompare:
+  1073                           
+  1074                           	psect	text7
+  1075  01CE                     __ptext7:	
+  1076 ;; *************** function _setCaptureFalling *****************
+  1077 ;; Defined at:
+  1078 ;;		line 165 in file "main.c"
+  1079 ;; Parameters:    Size  Location     Type
+  1080 ;;		None
+  1081 ;; Auto vars:     Size  Location     Type
+  1082 ;;		None
+  1083 ;; Return value:  Size  Location     Type
+  1084 ;;                  1    wreg      void 
+  1085 ;; Registers used:
+  1086 ;;		None
+  1087 ;; Tracked objects:
+  1088 ;;		On entry : 0/0
+  1089 ;;		On exit  : 0/0
+  1090 ;;		Unchanged: 0/0
+  1091 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1092 ;;      Params:         0       0       0       0       0
+  1093 ;;      Locals:         0       0       0       0       0
+  1094 ;;      Temps:          0       0       0       0       0
+  1095 ;;      Totals:         0       0       0       0       0
+  1096 ;;Total ram usage:        0 bytes
+  1097 ;; Hardware stack levels used:    1
+  1098 ;; This function calls:
+  1099 ;;		Nothing
+  1100 ;; This function is called by:
+  1101 ;;		_myIntHandler
+  1102 ;; This function uses a non-reentrant model
+  1103 ;;
+  1104                           
+  1105                           
+  1106                           ;psect for function _setCaptureFalling
+  1107  01CE                     _setCaptureFalling:
+  1108  01CE                     i1l688:	
+  1109                           ;incstack = 0
+  1110                           ; Regs used in _setCaptureFalling: []
+  1111                           
+  1112                           
+  1113                           ;main.c: 168:     CCP1CONbits.CCP1M3 = 0;
+  1114  01CE  1283               	bcf	3,5	;RP0=0, select bank0
+  1115  01CF  1303               	bcf	3,6	;RP1=0, select bank0
+  1116  01D0  1197               	bcf	23,3	;volatile
+  1117                           
+  1118                           ;main.c: 169:     CCP1CONbits.CCP1M2 = 1;
+  1119  01D1  1517               	bsf	23,2	;volatile
+  1120                           
+  1121                           ;main.c: 170:     CCP1CONbits.CCP1M1 = 0;
+  1122  01D2  1097               	bcf	23,1	;volatile
+  1123                           
+  1124                           ;main.c: 171:     CCP1CONbits.CCP1M0 = 0;
+  1125  01D3  1017               	bcf	23,0	;volatile
+  1126                           
+  1127                           ;main.c: 173:     PIR1bits.CCP1IF = 0;
+  1128  01D4  110C               	bcf	12,2	;volatile
+  1129                           
+  1130                           ;main.c: 175:     PIE1bits.CCP1IE = 1;
+  1131  01D5  1683               	bsf	3,5	;RP0=1, select bank1
+  1132  01D6  1303               	bcf	3,6	;RP1=0, select bank1
+  1133  01D7  150C               	bsf	12,2	;volatile
+  1134  01D8                     i1l85:
+  1135  01D8  0008               	return
+  1136  01D9                     __end_of_setCaptureFalling:
+  1137                           
+  1138                           	psect	text8
+  1139  01E2                     __ptext8:	
+  1140 ;; *************** function _runTimer *****************
+  1141 ;; Defined at:
+  1142 ;;		line 138 in file "main.c"
+  1143 ;; Parameters:    Size  Location     Type
+  1144 ;;		None
+  1145 ;; Auto vars:     Size  Location     Type
+  1146 ;;		None
+  1147 ;; Return value:  Size  Location     Type
+  1148 ;;                  1    wreg      void 
+  1149 ;; Registers used:
+  1150 ;;		status,2
+  1151 ;; Tracked objects:
+  1152 ;;		On entry : 0/0
+  1153 ;;		On exit  : 0/0
+  1154 ;;		Unchanged: 0/0
+  1155 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1156 ;;      Params:         0       0       0       0       0
+  1157 ;;      Locals:         0       0       0       0       0
+  1158 ;;      Temps:          0       0       0       0       0
+  1159 ;;      Totals:         0       0       0       0       0
+  1160 ;;Total ram usage:        0 bytes
+  1161 ;; Hardware stack levels used:    1
+  1162 ;; This function calls:
+  1163 ;;		Nothing
+  1164 ;; This function is called by:
+  1165 ;;		_myIntHandler
+  1166 ;; This function uses a non-reentrant model
+  1167 ;;
+  1168                           
+  1169                           
+  1170                           ;psect for function _runTimer
+  1171  01E2                     _runTimer:
+  1172  01E2                     i1l684:	
+  1173                           ;incstack = 0
+  1174                           ; Regs used in _runTimer: [status,2]
+  1175                           
+  1176                           
+  1177                           ;main.c: 140:     TMR1IF = 0;
+  1178  01E2  1283               	bcf	3,5	;RP0=0, select bank0
+  1179  01E3  1303               	bcf	3,6	;RP1=0, select bank0
+  1180  01E4  100C               	bcf	12,0	;volatile
+  1181                           
+  1182                           ;main.c: 141:     T1CONbits.TMR1ON = 1;
+  1183  01E5  1410               	bsf	16,0	;volatile
+  1184  01E6                     i1l686:
+  1185                           
+  1186                           ;main.c: 142:     TMR1 = 0;
+  1187  01E6  018E               	clrf	14	;volatile
+  1188  01E7  018F               	clrf	15	;volatile
+  1189  01E8                     i1l76:
+  1190  01E8  0008               	return
+  1191  01E9                     __end_of_runTimer:
+  1192                           
+  1193                           	psect	text9
+  1194  00F2                     __ptext9:	
+  1195 ;; *************** function ___aldiv *****************
+  1196 ;; Defined at:
+  1197 ;;		line 5 in file "/Applications/microchip/xc8/v2.20/pic/sources/c90/common/aldiv.c"
+  1198 ;; Parameters:    Size  Location     Type
+  1199 ;;  divisor         4    0[COMMON] long 
+  1200 ;;  dividend        4    4[COMMON] long 
+  1201 ;; Auto vars:     Size  Location     Type
+  1202 ;;  quotient        4    2[BANK0 ] long 
+  1203 ;;  sign            1    1[BANK0 ] unsigned char 
+  1204 ;;  counter         1    0[BANK0 ] unsigned char 
+  1205 ;; Return value:  Size  Location     Type
+  1206 ;;                  4    0[COMMON] long 
+  1207 ;; Registers used:
+  1208 ;;		wreg, status,2, status,0
+  1209 ;; Tracked objects:
+  1210 ;;		On entry : 0/0
+  1211 ;;		On exit  : 0/0
+  1212 ;;		Unchanged: 0/0
+  1213 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1214 ;;      Params:         8       0       0       0       0
+  1215 ;;      Locals:         0       6       0       0       0
+  1216 ;;      Temps:          1       0       0       0       0
+  1217 ;;      Totals:         9       6       0       0       0
+  1218 ;;Total ram usage:       15 bytes
+  1219 ;; Hardware stack levels used:    1
+  1220 ;; This function calls:
+  1221 ;;		Nothing
+  1222 ;; This function is called by:
+  1223 ;;		_myIntHandler
+  1224 ;; This function uses a non-reentrant model
+  1225 ;;
+  1226                           
+  1227                           
+  1228                           ;psect for function ___aldiv
+  1229  00F2                     ___aldiv:
+  1230  00F2                     i1l810:	
+  1231                           ;incstack = 0
+  1232                           ; Regs used in ___aldiv: [wreg+status,2+status,0]
+  1233                           
+  1234  00F2  1283               	bcf	3,5	;RP0=0, select bank0
+  1235  00F3  1303               	bcf	3,6	;RP1=0, select bank0
+  1236  00F4  01A1               	clrf	___aldiv@sign
+  1237  00F5                     i1l812:
+  1238  00F5  1FF3               	btfss	___aldiv@divisor+3,7
+  1239  00F6  28F8               	goto	u23_21
+  1240  00F7  28F9               	goto	u23_20
+  1241  00F8                     u23_21:
+  1242  00F8  2906               	goto	i1l239
+  1243  00F9                     u23_20:
+  1244  00F9                     i1l814:
+  1245  00F9  09F0               	comf	___aldiv@divisor,f
+  1246  00FA  09F1               	comf	___aldiv@divisor+1,f
+  1247  00FB  09F2               	comf	___aldiv@divisor+2,f
+  1248  00FC  09F3               	comf	___aldiv@divisor+3,f
+  1249  00FD  0AF0               	incf	___aldiv@divisor,f
+  1250  00FE  1903               	skipnz
+  1251  00FF  0AF1               	incf	___aldiv@divisor+1,f
+  1252  0100  1903               	skipnz
+  1253  0101  0AF2               	incf	___aldiv@divisor+2,f
+  1254  0102  1903               	skipnz
+  1255  0103  0AF3               	incf	___aldiv@divisor+3,f
+  1256  0104  01A1               	clrf	___aldiv@sign
+  1257  0105  0AA1               	incf	___aldiv@sign,f
+  1258  0106                     i1l239:
+  1259  0106  1FF7               	btfss	___aldiv@dividend+3,7
+  1260  0107  2909               	goto	u24_21
+  1261  0108  290A               	goto	u24_20
+  1262  0109                     u24_21:
+  1263  0109  2919               	goto	i1l820
+  1264  010A                     u24_20:
+  1265  010A                     i1l816:
+  1266  010A  09F4               	comf	___aldiv@dividend,f
+  1267  010B  09F5               	comf	___aldiv@dividend+1,f
+  1268  010C  09F6               	comf	___aldiv@dividend+2,f
+  1269  010D  09F7               	comf	___aldiv@dividend+3,f
+  1270  010E  0AF4               	incf	___aldiv@dividend,f
+  1271  010F  1903               	skipnz
+  1272  0110  0AF5               	incf	___aldiv@dividend+1,f
+  1273  0111  1903               	skipnz
+  1274  0112  0AF6               	incf	___aldiv@dividend+2,f
+  1275  0113  1903               	skipnz
+  1276  0114  0AF7               	incf	___aldiv@dividend+3,f
+  1277  0115                     i1l818:
+  1278  0115  3001               	movlw	1
+  1279  0116  00F8               	movwf	??___aldiv
+  1280  0117  0878               	movf	??___aldiv,w
+  1281  0118  06A1               	xorwf	___aldiv@sign,f
+  1282  0119                     i1l820:
+  1283  0119  3000               	movlw	0
+  1284  011A  00A5               	movwf	___aldiv@quotient+3
+  1285  011B  3000               	movlw	0
+  1286  011C  00A4               	movwf	___aldiv@quotient+2
+  1287  011D  3000               	movlw	0
+  1288  011E  00A3               	movwf	___aldiv@quotient+1
+  1289  011F  3000               	movlw	0
+  1290  0120  00A2               	movwf	___aldiv@quotient
+  1291  0121                     i1l822:
+  1292  0121  0873               	movf	___aldiv@divisor+3,w
+  1293  0122  0472               	iorwf	___aldiv@divisor+2,w
+  1294  0123  0471               	iorwf	___aldiv@divisor+1,w
+  1295  0124  0470               	iorwf	___aldiv@divisor,w
+  1296  0125  1903               	skipnz
+  1297  0126  2928               	goto	u25_21
+  1298  0127  2929               	goto	u25_20
+  1299  0128                     u25_21:
+  1300  0128  2976               	goto	i1l842
+  1301  0129                     u25_20:
+  1302  0129                     i1l824:
+  1303  0129  01A0               	clrf	___aldiv@counter
+  1304  012A  0AA0               	incf	___aldiv@counter,f
+  1305  012B  2939               	goto	i1l828
+  1306  012C                     i1l826:
+  1307  012C  3001               	movlw	1
+  1308  012D  00F8               	movwf	??___aldiv
+  1309  012E                     u26_25:
+  1310  012E  1003               	clrc
+  1311  012F  0DF0               	rlf	___aldiv@divisor,f
+  1312  0130  0DF1               	rlf	___aldiv@divisor+1,f
+  1313  0131  0DF2               	rlf	___aldiv@divisor+2,f
+  1314  0132  0DF3               	rlf	___aldiv@divisor+3,f
+  1315  0133  0BF8               	decfsz	??___aldiv,f
+  1316  0134  292E               	goto	u26_25
+  1317  0135  3001               	movlw	1
+  1318  0136  00F8               	movwf	??___aldiv
+  1319  0137  0878               	movf	??___aldiv,w
+  1320  0138  07A0               	addwf	___aldiv@counter,f
+  1321  0139                     i1l828:
+  1322  0139  1FF3               	btfss	___aldiv@divisor+3,7
+  1323  013A  293C               	goto	u27_21
+  1324  013B  293D               	goto	u27_20
+  1325  013C                     u27_21:
+  1326  013C  292C               	goto	i1l826
+  1327  013D                     u27_20:
+  1328  013D                     i1l830:
+  1329  013D  3001               	movlw	1
+  1330  013E  00F8               	movwf	??___aldiv
+  1331  013F                     u28_25:
+  1332  013F  1003               	clrc
+  1333  0140  0DA2               	rlf	___aldiv@quotient,f
+  1334  0141  0DA3               	rlf	___aldiv@quotient+1,f
+  1335  0142  0DA4               	rlf	___aldiv@quotient+2,f
+  1336  0143  0DA5               	rlf	___aldiv@quotient+3,f
+  1337  0144  0BF8               	decfsz	??___aldiv,f
+  1338  0145  293F               	goto	u28_25
+  1339  0146                     i1l832:
+  1340  0146  0873               	movf	___aldiv@divisor+3,w
+  1341  0147  0277               	subwf	___aldiv@dividend+3,w
+  1342  0148  1D03               	skipz
+  1343  0149  2954               	goto	u29_25
+  1344  014A  0872               	movf	___aldiv@divisor+2,w
+  1345  014B  0276               	subwf	___aldiv@dividend+2,w
+  1346  014C  1D03               	skipz
+  1347  014D  2954               	goto	u29_25
+  1348  014E  0871               	movf	___aldiv@divisor+1,w
+  1349  014F  0275               	subwf	___aldiv@dividend+1,w
+  1350  0150  1D03               	skipz
+  1351  0151  2954               	goto	u29_25
+  1352  0152  0870               	movf	___aldiv@divisor,w
+  1353  0153  0274               	subwf	___aldiv@dividend,w
+  1354  0154                     u29_25:
+  1355  0154  1C03               	skipc
+  1356  0155  2957               	goto	u29_21
+  1357  0156  2958               	goto	u29_20
+  1358  0157                     u29_21:
+  1359  0157  2967               	goto	i1l838
+  1360  0158                     u29_20:
+  1361  0158                     i1l834:
+  1362  0158  0870               	movf	___aldiv@divisor,w
+  1363  0159  02F4               	subwf	___aldiv@dividend,f
+  1364  015A  0871               	movf	___aldiv@divisor+1,w
+  1365  015B  1C03               	skipc
+  1366  015C  0F71               	incfsz	___aldiv@divisor+1,w
+  1367  015D  02F5               	subwf	___aldiv@dividend+1,f
+  1368  015E  0872               	movf	___aldiv@divisor+2,w
+  1369  015F  1C03               	skipc
+  1370  0160  0F72               	incfsz	___aldiv@divisor+2,w
+  1371  0161  02F6               	subwf	___aldiv@dividend+2,f
+  1372  0162  0873               	movf	___aldiv@divisor+3,w
+  1373  0163  1C03               	skipc
+  1374  0164  0F73               	incfsz	___aldiv@divisor+3,w
+  1375  0165  02F7               	subwf	___aldiv@dividend+3,f
+  1376  0166                     i1l836:
+  1377  0166  1422               	bsf	___aldiv@quotient,0
+  1378  0167                     i1l838:
+  1379  0167  3001               	movlw	1
+  1380  0168                     u30_25:
+  1381  0168  1003               	clrc
+  1382  0169  0CF3               	rrf	___aldiv@divisor+3,f
+  1383  016A  0CF2               	rrf	___aldiv@divisor+2,f
+  1384  016B  0CF1               	rrf	___aldiv@divisor+1,f
+  1385  016C  0CF0               	rrf	___aldiv@divisor,f
+  1386  016D  3EFF               	addlw	-1
+  1387  016E  1D03               	skipz
+  1388  016F  2968               	goto	u30_25
+  1389  0170                     i1l840:
+  1390  0170  3001               	movlw	1
+  1391  0171  02A0               	subwf	___aldiv@counter,f
+  1392  0172  1D03               	btfss	3,2
+  1393  0173  2975               	goto	u31_21
+  1394  0174  2976               	goto	u31_20
+  1395  0175                     u31_21:
+  1396  0175  293D               	goto	i1l830
+  1397  0176                     u31_20:
+  1398  0176                     i1l842:
+  1399  0176  0821               	movf	___aldiv@sign,w
+  1400  0177  1903               	btfsc	3,2
+  1401  0178  297A               	goto	u32_21
+  1402  0179  297B               	goto	u32_20
+  1403  017A                     u32_21:
+  1404  017A  2986               	goto	i1l846
+  1405  017B                     u32_20:
+  1406  017B                     i1l844:
+  1407  017B  09A2               	comf	___aldiv@quotient,f
+  1408  017C  09A3               	comf	___aldiv@quotient+1,f
+  1409  017D  09A4               	comf	___aldiv@quotient+2,f
+  1410  017E  09A5               	comf	___aldiv@quotient+3,f
+  1411  017F  0AA2               	incf	___aldiv@quotient,f
+  1412  0180  1903               	skipnz
+  1413  0181  0AA3               	incf	___aldiv@quotient+1,f
+  1414  0182  1903               	skipnz
+  1415  0183  0AA4               	incf	___aldiv@quotient+2,f
+  1416  0184  1903               	skipnz
+  1417  0185  0AA5               	incf	___aldiv@quotient+3,f
+  1418  0186                     i1l846:
+  1419  0186  0825               	movf	___aldiv@quotient+3,w
+  1420  0187  00F3               	movwf	?___aldiv+3
+  1421  0188  0824               	movf	___aldiv@quotient+2,w
+  1422  0189  00F2               	movwf	?___aldiv+2
+  1423  018A  0823               	movf	___aldiv@quotient+1,w
+  1424  018B  00F1               	movwf	?___aldiv+1
+  1425  018C  0822               	movf	___aldiv@quotient,w
+  1426  018D  00F0               	movwf	?___aldiv
+  1427  018E                     i1l249:
+  1428  018E  0008               	return
+  1429  018F                     __end_of___aldiv:
+  1430  007E                     btemp	set	126	;btemp
+  1431  007E                     wtemp0	set	126
+  1432                           
+  1433                           	psect	config
+  1434                           
+  1435                           ;Config register CONFIG @ 0x2007
+  1436                           ;	Oscillator Selection bits
+  1437                           ;	FOSC = XT, XT oscillator
+  1438                           ;	Watchdog Timer Enable bit
+  1439                           ;	WDTE = OFF, WDT disabled
+  1440                           ;	Power-up Timer Enable bit
+  1441                           ;	PWRTE = OFF, PWRT disabled
+  1442                           ;	Brown-out Reset Enable bit
+  1443                           ;	BOREN = ON, BOR enabled
+  1444                           ;	Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit
+  1445                           ;	LVP = OFF, RB3 is digital I/O, HV on MCLR must be used for programming
+  1446                           ;	Data EEPROM Memory Code Protection bit
+  1447                           ;	CPD = OFF, Data EEPROM code protection off
+  1448                           ;	Flash Program Memory Write Enable bits
+  1449                           ;	WRT = OFF, Write protection off; all program memory may be written to by EECON control
+  1450                           ;	In-Circuit Debugger Mode bit
+  1451                           ;	DEBUG = 0x1, unprogrammed default
+  1452                           ;	Flash Program Memory Code Protection bit
+  1453                           ;	CP = OFF, Code protection off
+  1454  2007                     	org	8199
+  1455  2007  3F79               	dw	16249
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        1
+    BSS         3
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      9      13
+    BANK0            80     17      17
+    BANK1            80      0       0
+    BANK3            96      0       0
+    BANK2            96      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _myIntHandler in COMMON
+
+    _myIntHandler->___aldiv
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _myIntHandler in BANK0
+
+    _myIntHandler->___aldiv
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _myIntHandler in BANK1
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _myIntHandler in BANK3
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _myIntHandler in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0       0
+                   _setCaptureRising
+                           _setTimer
+ ---------------------------------------------------------------------------------
+ (1) _setTimer                                             0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _setCaptureRising                                     0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (2) _myIntHandler                                        11    11      0     452
+                                              6 BANK0     11    11      0
+                            ___aldiv
+                           _runTimer
+                  _setCaptureFalling
+                         _setCompare
+                          _stopTimer
+                 i1_setCaptureRising
+ ---------------------------------------------------------------------------------
+ (3) i1_setCaptureRising                                   0     0      0       0
+ ---------------------------------------------------------------------------------
+ (3) _stopTimer                                            0     0      0       0
+ ---------------------------------------------------------------------------------
+ (3) _setCompare                                           0     0      0       0
+ ---------------------------------------------------------------------------------
+ (3) _setCaptureFalling                                    0     0      0       0
+ ---------------------------------------------------------------------------------
+ (3) _runTimer                                             0     0      0       0
+ ---------------------------------------------------------------------------------
+ (3) ___aldiv                                             15     7      8     452
+                                              0 COMMON     9     1      8
+                                              0 BANK0      6     6      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _setCaptureRising
+   _setTimer
+
+ _myIntHandler (ROOT)
+   ___aldiv
+   _runTimer
+   _setCaptureFalling
+   _setCompare
+   _stopTimer
+   i1_setCaptureRising
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BANK3               60      0       0       9        0.0%
+BITBANK3            60      0       0       8        0.0%
+SFR3                 0      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+BANK2               60      0       0      11        0.0%
+BITBANK2            60      0       0      10        0.0%
+SFR2                 0      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK1            50      0       0       6        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR1              0      0       0       2        0.0%
+BANK0               50     11      11       5       21.2%
+BITBANK0            50      0       0       4        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+COMMON               E      9       D       1       92.9%
+BITCOMMON            E      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+DATA                 0      0      1E      12        0.0%
+ABS                  0      0      1E       3        0.0%
+NULL                 0      0       0       0        0.0%
+STACK                0      0       0       2        0.0%
+EEDATA             100      0       0       0        0.0%
+
+
+Microchip Technology PIC Macro Assembler V2.20 build 20200408173844 
+Symbol Table                                                                                   Thu Dec 24 19:20:13 2020
+
+ __size_of_setCaptureFalling 000B                           l50 01A5                           l73 01E1  
+                         l49 01A5                           l82 01C2                          l806 01D9  
+                        l808 01B8                          l850 018F                          l860 01A0  
+                        l852 0195                          l854 0199                          l856 019A  
+                        l858 019B                          _RC2 003A                         i1l70 00EB  
+                       i1l63 00CC                         i1l82 01CD                         i1l59 003A  
+                       i1l76 01E8                         i1l85 01D8                         i1l79 01EE  
+                       i1l88 01B7                         _TMR1 000E                         _flag 007C  
+                       _main 018F                         _time 0079                         btemp 007E  
+                       start 000E              __end_of___aldiv 018F                        ?_main 0070  
+                      _CCPR1 0015                        i1l239 0106                        i1l249 018E  
+                      i1l810 00F2                        i1l820 0119                        i1l812 00F5  
+                      i1l900 00B9                        i1l830 013D                        i1l822 0121  
+                      i1l814 00F9                        i1l910 00D7                        i1l902 00BC  
+                      i1l840 0170                        i1l832 0146                        i1l824 0129  
+                      i1l816 010A                        i1l736 01C3                        i1l912 00DE  
+                      i1l904 00C1                        i1l834 0158                        i1l826 012C  
+                      i1l842 0176                        i1l818 0115                        i1l690 01E9  
+                      i1l914 00E4                        i1l906 00CC                        i1l844 017B  
+                      i1l836 0166                        i1l828 0139                        i1l684 01E2  
+                      i1l692 01EC                        i1l916 00EA                        i1l908 00D2  
+                      i1l846 0186                        i1l838 0167                        i1l686 01E6  
+                      i1l694 01A9                        i1l870 002C                        i1l862 001E  
+                      i1l688 01CE                        i1l880 0088                        i1l872 0031  
+                      i1l864 0022                        i1l890 009E                        i1l882 008D  
+                      i1l874 003E                        i1l866 0023                        i1l892 00A3  
+                      i1l884 0090                        i1l876 0080                        i1l868 0028  
+                      i1l886 0095                        i1l878 0085                        i1l894 00A5  
+                      i1l896 00AB                        i1l888 0098                        i1l898 00B1  
+                      u30_25 0168                        u31_20 0176                        u23_20 00F9  
+                      u31_21 0175                        u23_21 00F8                        u32_20 017B  
+                      u24_20 010A                        u40_20 00AB                        u32_21 017A  
+                      u24_21 0109                        u40_21 00AA                        u25_20 0129  
+                      u41_20 00B1                        u33_20 0022                        u25_21 0128  
+                      u41_21 00B0                        u33_21 0021                        u42_20 00D2  
+                      u34_20 0028                        u42_21 00D1                        u34_21 0027  
+                      u26_25 012E                        u27_20 013D                        u43_20 00D7  
+                      u35_20 002C                        u27_21 013C                        u43_21 00D6  
+                      u35_21 002B                        _PORTB 0006                        u44_20 00E4  
+                      u36_20 003E                        u44_21 00E3                        u36_21 003D  
+                      u28_25 013F                        u29_20 0158                        u37_20 0058  
+                      u29_21 0157                        u29_25 0154                        u37_25 0053  
+                      u38_20 0062                        u38_21 0063                        u38_22 0068  
+                      u38_23 0069                        u39_20 0085                        u39_21 0084  
+                      _TRISB 0086                        _TRISC 0087           i1_setCaptureRising 01C3  
+                      pclath 000A          ?i1_setCaptureRising 0070                        status 0003  
+                      wtemp0 007E              __initialization 0011                 __end_of_main 01A9  
+       ??i1_setCaptureRising 0070     __end_of_setCaptureRising 01C3                       ??_main 0031  
+                     _CCP1IF 0062                       _TMR1IF 0060                    ??___aldiv 0078  
+              ?_myIntHandler 0070             __end_of_setTimer 01E2                 __pdataCOMMON 007C  
+                     saved_w 007E             __end_of_runTimer 01E9      __end_of__initialization 001A  
+             __pcstackCOMMON 0070               ??_myIntHandler 0026                   __pmaintext 018F  
+                 __pintentry 0004           __size_of_stopTimer 0006                    ?_setTimer 0070  
+                    ___aldiv 00F2                    ?_runTimer 0070                      __ptext1 01D9  
+                    __ptext2 01B8                      __ptext3 001E                      __ptext4 01C3  
+                    __ptext5 01E9                      __ptext6 01A9                      __ptext7 01CE  
+                    __ptext8 01E2                      __ptext9 00F2            ?_setCaptureRising 0070  
+                  _T1CONbits 0010                      _counter 007A             ___aldiv@dividend 0074  
+         ??_setCaptureRising 0031                   _setCompare 01A9         end_of_initialization 001A  
+       __end_of_myIntHandler 00F2                   ??_setTimer 0031             ___aldiv@quotient 0022  
+                 ??_runTimer 0070            __end_of_stopTimer 01EF  __size_ofi1_setCaptureRising 000B  
+                _CCP1CONbits 0017                __pidataCOMMON 01EF          start_initialization 0011  
+                ?_setCompare 0070                  __pbssCOMMON 0079                    ___latbits 0002  
+              __pcstackBANK0 0020        __size_of_myIntHandler 00D4                     ?___aldiv 0070  
+          __size_of_setTimer 0009          __size_of_setCompare 000F                 _myIntHandler 001E  
+          __size_of_runTimer 0007              ___aldiv@divisor 0070            interrupt_function 0004  
+            ___aldiv@counter 0020    __size_of_setCaptureRising 000B                     _PIE1bits 008C  
+                   _PIR1bits 000C                    _stopTimer 01E9   __end_ofi1_setCaptureRising 01CE  
+           __size_of___aldiv 009D            _setCaptureFalling 01CE           ?_setCaptureFalling 0070  
+                 ?_stopTimer 0070                 ??_setCompare 0070          ??_setCaptureFalling 0070  
+              __size_of_main 001A                     _setTimer 01D9                     _runTimer 01E2  
+  __end_of_setCaptureFalling 01D9           __end_of_setCompare 01B8                   _INTCONbits 000B  
+                   intlevel1 0000             _setCaptureRising 01B8                  ??_stopTimer 0070  
+               ___aldiv@sign 0021  

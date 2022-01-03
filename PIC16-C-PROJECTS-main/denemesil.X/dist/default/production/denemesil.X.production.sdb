@@ -1,0 +1,125 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"10 /Applications/microchip/xc8/v2.20/pic/sources/c90/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /Applications/microchip/xc8/v2.20/pic/sources/c90/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /Applications/microchip/xc8/v2.20/pic/sources/c90/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"21 /Users/enesmercan/MPLABXProjects/github2/denemesil.X/main.c
+[v _main main `(v  1 e 1 0 ]
+"61
+[v _myIntHandler myIntHandler `II(v  1 e 1 0 ]
+"81
+[v _servoLeft servoLeft `(v  1 e 1 0 ]
+"88
+[v _servoRight servoRight `(v  1 e 1 0 ]
+"95
+[v _servoMiddle servoMiddle `(v  1 e 1 0 ]
+[v i1_servoMiddle servoMiddle `(v  1 e 1 0 ]
+"216 /Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f877a.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"278
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+[s S28 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"477
+[s S37 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S42 . 1 `S28 1 . 1 0 `S37 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES42  1 e 1 @11 ]
+"892
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @21 ]
+[s S87 . 1 `uc 1 CCP1M 1 0 :4:0 
+`uc 1 CCP1Y 1 0 :1:4 
+`uc 1 CCP1X 1 0 :1:5 
+]
+"924
+[s S91 . 1 `uc 1 CCP1M0 1 0 :1:0 
+`uc 1 CCP1M1 1 0 :1:1 
+`uc 1 CCP1M2 1 0 :1:2 
+`uc 1 CCP1M3 1 0 :1:3 
+]
+[u S96 . 1 `S87 1 . 1 0 `S91 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES96  1 e 1 @23 ]
+"1375
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1816
+[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+"2446
+[v _CCP1M2 CCP1M2 `VEb  1 e 0 @186 ]
+"2449
+[v _CCP1M3 CCP1M3 `VEb  1 e 0 @187 ]
+"2569
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"2629
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"2686
+[v _RB4 RB4 `VEb  1 e 0 @52 ]
+"2689
+[v _RB5 RB5 `VEb  1 e 0 @53 ]
+"2692
+[v _RB6 RB6 `VEb  1 e 0 @54 ]
+"2701
+[v _RBIF RBIF `VEb  1 e 0 @88 ]
+"2872
+[v _T2CKPS0 T2CKPS0 `VEb  1 e 0 @144 ]
+"2875
+[v _T2CKPS1 T2CKPS1 `VEb  1 e 0 @145 ]
+"2902
+[v _TMR2ON TMR2ON `VEb  1 e 0 @146 ]
+"2905
+[v _TOUTPS0 TOUTPS0 `VEb  1 e 0 @147 ]
+"2908
+[v _TOUTPS1 TOUTPS1 `VEb  1 e 0 @148 ]
+"2911
+[v _TOUTPS2 TOUTPS2 `VEb  1 e 0 @149 ]
+"2914
+[v _TOUTPS3 TOUTPS3 `VEb  1 e 0 @150 ]
+"21 /Users/enesmercan/MPLABXProjects/github2/denemesil.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"58
+} 0
+"95
+[v _servoMiddle servoMiddle `(v  1 e 1 0 ]
+{
+"101
+} 0
+"61
+[v _myIntHandler myIntHandler `II(v  1 e 1 0 ]
+{
+"79
+} 0
+"95
+[v i1_servoMiddle servoMiddle `(v  1 e 1 0 ]
+{
+"101
+} 0
+"88
+[v _servoRight servoRight `(v  1 e 1 0 ]
+{
+"94
+} 0
+"81
+[v _servoLeft servoLeft `(v  1 e 1 0 ]
+{
+"87
+} 0

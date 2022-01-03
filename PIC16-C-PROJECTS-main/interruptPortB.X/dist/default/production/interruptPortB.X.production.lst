@@ -1,0 +1,621 @@
+
+
+Microchip MPLAB XC8 Assembler V2.20 build 20200408173844 
+                                                                                               Wed Dec 23 18:47:32 2020
+
+Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1 
+     1                           	processor	16F84A
+     2                           	pagewidth 120
+     3                           	opt	flic
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     6                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1,noexec
+     7                           	psect	maintext,global,class=CODE,split=1,delta=2
+     8                           	psect	text1,local,class=CODE,merge=1,delta=2
+     9                           	psect	text2,local,class=CODE,merge=1,delta=2
+    10                           	psect	intentry,global,class=CODE,delta=2
+    11                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=2,noexec
+    12                           	dabs	1,0x4E,2
+    13  0000                     
+    14                           ; Version 2.20
+    15                           ; Generated 12/02/2020 GMT
+    16                           ; 
+    17                           ; Copyright © 2020, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    18                           ; All rights reserved.
+    19                           ; 
+    20                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    21                           ; 
+    22                           ; Redistribution and use in source and binary forms, with or without modification, are
+    23                           ; permitted provided that the following conditions are met:
+    24                           ; 
+    25                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    26                           ;        conditions and the following disclaimer.
+    27                           ; 
+    28                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    29                           ;        of conditions and the following disclaimer in the documentation and/or other
+    30                           ;        materials provided with the distribution.
+    31                           ; 
+    32                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    33                           ;        software without specific prior written permission.
+    34                           ; 
+    35                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    36                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    37                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    38                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    39                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    40                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    41                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    42                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    43                           ; 
+    44                           ; 
+    45                           ; Code-generator required, PIC16F84A Definitions
+    46                           ; 
+    47                           ; SFR Addresses
+    48  0000                     	;# 
+    49  0001                     	;# 
+    50  0002                     	;# 
+    51  0003                     	;# 
+    52  0004                     	;# 
+    53  0005                     	;# 
+    54  0006                     	;# 
+    55  0008                     	;# 
+    56  0009                     	;# 
+    57  000A                     	;# 
+    58  000B                     	;# 
+    59  0081                     	;# 
+    60  0085                     	;# 
+    61  0086                     	;# 
+    62  0088                     	;# 
+    63  0089                     	;# 
+    64  0000                     	;# 
+    65  0001                     	;# 
+    66  0002                     	;# 
+    67  0003                     	;# 
+    68  0004                     	;# 
+    69  0005                     	;# 
+    70  0006                     	;# 
+    71  0008                     	;# 
+    72  0009                     	;# 
+    73  000A                     	;# 
+    74  000B                     	;# 
+    75  0081                     	;# 
+    76  0085                     	;# 
+    77  0086                     	;# 
+    78  0088                     	;# 
+    79  0089                     	;# 
+    80  0005                     _PORTAbits	set	5
+    81  000B                     _INTCONbits	set	11
+    82  0006                     _PORTB	set	6
+    83  0005                     _PORTA	set	5
+    84  0058                     _RBIF	set	88
+    85  0037                     _RB7	set	55
+    86  0036                     _RB6	set	54
+    87  0035                     _RB5	set	53
+    88  0034                     _RB4	set	52
+    89  0086                     _TRISB	set	134
+    90  0085                     _TRISA	set	133
+    91                           
+    92                           	psect	cinit
+    93  000C                     start_initialization:	
+    94                           ; #config settings
+    95                           
+    96  000C                     __initialization:
+    97  000C                     end_of_initialization:	
+    98                           ;End of C runtime variable initialization code
+    99                           
+   100  000C                     __end_of__initialization:
+   101  000C  0183               	clrf	3
+   102  000D  2868               	ljmp	_main	;jump to C main() function
+   103                           
+   104                           	psect	cstackCOMMON
+   105  0000                     __pcstackCOMMON:
+   106  0000                     ??_setupInterrupt:
+   107                           
+   108                           	psect	cstackBANK0
+   109  000C                     __pcstackBANK0:	
+   110                           ; 1 bytes @ 0x0
+   111                           
+   112  000C                     ?_setupInterrupt:
+   113  000C                     ?_main:	
+   114                           ; 1 bytes @ 0x0
+   115                           
+   116  000C                     ?_myInterruptHandler:	
+   117                           ; 1 bytes @ 0x0
+   118                           
+   119  000C                     ??_myInterruptHandler:	
+   120                           ; 1 bytes @ 0x0
+   121                           
+   122                           
+   123                           ; 1 bytes @ 0x0
+   124  000C                     	ds	5
+   125  0011                     ??_main:
+   126                           
+   127                           ; 1 bytes @ 0x5
+   128  0011                     	ds	3
+   129                           
+   130                           	psect	maintext
+   131  0068                     __pmaintext:	
+   132 ;;
+   133 ;;Main: autosize = 0, tempsize = 3, incstack = 0, save=0
+   134 ;;
+   135 ;; *************** function _main *****************
+   136 ;; Defined at:
+   137 ;;		line 67 in file "main.c"
+   138 ;; Parameters:    Size  Location     Type
+   139 ;;		None
+   140 ;; Auto vars:     Size  Location     Type
+   141 ;;		None
+   142 ;; Return value:  Size  Location     Type
+   143 ;;                  1    wreg      void 
+   144 ;; Registers used:
+   145 ;;		wreg, status,2, status,0, pclath, cstack
+   146 ;; Tracked objects:
+   147 ;;		On entry : B00/0
+   148 ;;		On exit  : 0/0
+   149 ;;		Unchanged: 0/0
+   150 ;; Data sizes:     COMMON   BANK0
+   151 ;;      Params:         0       0
+   152 ;;      Locals:         0       0
+   153 ;;      Temps:          0       3
+   154 ;;      Totals:         0       3
+   155 ;;Total ram usage:        3 bytes
+   156 ;; Hardware stack levels required when called:    2
+   157 ;; This function calls:
+   158 ;;		_setupInterrupt
+   159 ;; This function is called by:
+   160 ;;		Startup code after reset
+   161 ;; This function uses a non-reentrant model
+   162 ;;
+   163                           
+   164                           
+   165                           ;psect for function _main
+   166  0068                     _main:
+   167  0068                     l683:	
+   168                           ;incstack = 0
+   169                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   170                           
+   171                           
+   172                           ;main.c: 69:     TRISA = 0;
+   173  0068  1683               	bsf	3,5	;RP0=1, select bank1
+   174  0069  0185               	clrf	5	;volatile
+   175  006A                     l685:
+   176                           
+   177                           ;main.c: 70:     TRISB = 0xF0;
+   178  006A  30F0               	movlw	240
+   179  006B  0086               	movwf	6	;volatile
+   180  006C                     l687:
+   181                           
+   182                           ;main.c: 71:     PORTA = 0;
+   183  006C  1283               	bcf	3,5	;RP0=0, select bank0
+   184  006D  0185               	clrf	5	;volatile
+   185  006E                     l689:
+   186                           
+   187                           ;main.c: 73:     setupInterrupt();
+   188  006E  2083               	fcall	_setupInterrupt
+   189  006F                     l691:
+   190                           
+   191                           ;main.c: 76:     {;main.c: 77:         PORTB ^= 0x02;
+   192  006F  3002               	movlw	2
+   193  0070  1283               	bcf	3,5	;RP0=0, select bank0
+   194  0071  0091               	movwf	??_main
+   195  0072  0811               	movf	??_main,w
+   196  0073  0686               	xorwf	6,f	;volatile
+   197  0074                     l693:
+   198                           
+   199                           ;main.c: 78:         _delay((unsigned long)((500)*(4000000/4000.0)));
+   200  0074  3003               	movlw	3
+   201  0075  0093               	movwf	??_main+2
+   202  0076  308A               	movlw	138
+   203  0077  0092               	movwf	??_main+1
+   204  0078  3055               	movlw	85
+   205  0079  0091               	movwf	??_main
+   206  007A                     u277:
+   207  007A  0B91               	decfsz	??_main,f
+   208  007B  287A               	goto	u277
+   209  007C  0B92               	decfsz	??_main+1,f
+   210  007D  287A               	goto	u277
+   211  007E  0B93               	decfsz	??_main+2,f
+   212  007F  287A               	goto	u277
+   213  0080  2881               	nop2
+   214  0081  286F               	goto	l691
+   215  0082  280B               	ljmp	start
+   216  0083                     __end_of_main:
+   217                           
+   218                           	psect	text1
+   219  0083                     __ptext1:	
+   220 ;; *************** function _setupInterrupt *****************
+   221 ;; Defined at:
+   222 ;;		line 122 in file "main.c"
+   223 ;; Parameters:    Size  Location     Type
+   224 ;;		None
+   225 ;; Auto vars:     Size  Location     Type
+   226 ;;		None
+   227 ;; Return value:  Size  Location     Type
+   228 ;;                  1    wreg      void 
+   229 ;; Registers used:
+   230 ;;		None
+   231 ;; Tracked objects:
+   232 ;;		On entry : 0/0
+   233 ;;		On exit  : 0/0
+   234 ;;		Unchanged: 0/0
+   235 ;; Data sizes:     COMMON   BANK0
+   236 ;;      Params:         0       0
+   237 ;;      Locals:         0       0
+   238 ;;      Temps:          0       0
+   239 ;;      Totals:         0       0
+   240 ;;Total ram usage:        0 bytes
+   241 ;; Hardware stack levels used:    1
+   242 ;; Hardware stack levels required when called:    1
+   243 ;; This function calls:
+   244 ;;		Nothing
+   245 ;; This function is called by:
+   246 ;;		_main
+   247 ;; This function uses a non-reentrant model
+   248 ;;
+   249                           
+   250                           
+   251                           ;psect for function _setupInterrupt
+   252  0083                     _setupInterrupt:
+   253  0083                     l681:	
+   254                           ;incstack = 0
+   255                           ; Regs used in _setupInterrupt: []
+   256                           
+   257                           
+   258                           ;main.c: 124:     INTCONbits.GIE = 1;
+   259  0083  178B               	bsf	11,7	;volatile
+   260                           
+   261                           ;main.c: 125:     INTCONbits.RBIF = 0;
+   262  0084  100B               	bcf	11,0	;volatile
+   263                           
+   264                           ;main.c: 126:     INTCONbits.RBIE = 1;
+   265  0085  158B               	bsf	11,3	;volatile
+   266  0086                     l47:
+   267  0086  0008               	return
+   268  0087                     __end_of_setupInterrupt:
+   269                           
+   270                           	psect	text2
+   271  000E                     __ptext2:	
+   272 ;; *************** function _myInterruptHandler *****************
+   273 ;; Defined at:
+   274 ;;		line 85 in file "main.c"
+   275 ;; Parameters:    Size  Location     Type
+   276 ;;		None
+   277 ;; Auto vars:     Size  Location     Type
+   278 ;;		None
+   279 ;; Return value:  Size  Location     Type
+   280 ;;                  1    wreg      void 
+   281 ;; Registers used:
+   282 ;;		wreg, status,2, status,0
+   283 ;; Tracked objects:
+   284 ;;		On entry : 0/0
+   285 ;;		On exit  : 0/0
+   286 ;;		Unchanged: 0/0
+   287 ;; Data sizes:     COMMON   BANK0
+   288 ;;      Params:         0       0
+   289 ;;      Locals:         0       0
+   290 ;;      Temps:          0       5
+   291 ;;      Totals:         0       5
+   292 ;;Total ram usage:        5 bytes
+   293 ;; Hardware stack levels used:    1
+   294 ;; This function calls:
+   295 ;;		Nothing
+   296 ;; This function is called by:
+   297 ;;		Interrupt level 1
+   298 ;; This function uses a non-reentrant model
+   299 ;;
+   300                           
+   301                           
+   302                           ;psect for function _myInterruptHandler
+   303  000E                     _myInterruptHandler:
+   304  000E                     i1l695:
+   305                           
+   306                           ;main.c: 87:     if (INTCONbits.RBIF)
+   307  000E  1C0B               	btfss	11,0	;volatile
+   308  000F  2811               	goto	u14_21
+   309  0010  2812               	goto	u14_20
+   310  0011                     u14_21:
+   311  0011  285E               	goto	i1l719
+   312  0012                     u14_20:
+   313  0012                     i1l697:
+   314                           
+   315                           ;main.c: 88:     {;main.c: 89:         INTCONbits.RBIE = 0;
+   316  0012  118B               	bcf	11,3	;volatile
+   317                           
+   318                           ;main.c: 91:         if ( RB4 == 0)
+   319  0013  1A06               	btfsc	6,4	;volatile
+   320  0014  2816               	goto	u15_21
+   321  0015  2817               	goto	u15_20
+   322  0016                     u15_21:
+   323  0016  2822               	goto	i1l701
+   324  0017                     u15_20:
+   325  0017                     i1l699:
+   326                           
+   327                           ;main.c: 92:         {;main.c: 93:             PORTAbits.RA0 = ~ (PORTAbits.RA0);
+   328  0017  1003               	clrc
+   329  0018  1C05               	btfss	5,0	;volatile
+   330  0019  1403               	setc
+   331  001A  1803               	btfsc	3,0
+   332  001B  281D               	goto	u16_21
+   333  001C  2820               	goto	u16_20
+   334  001D                     u16_21:
+   335  001D  1283               	bcf	3,5	;RP0=0, select bank0
+   336  001E  1405               	bsf	5,0	;volatile
+   337  001F  2822               	goto	u17_24
+   338  0020                     u16_20:
+   339  0020  1283               	bcf	3,5	;RP0=0, select bank0
+   340  0021  1005               	bcf	5,0	;volatile
+   341  0022                     u17_24:
+   342  0022                     i1l701:
+   343                           
+   344                           ;main.c: 96:         if ( RB5 == 0)
+   345  0022  1A86               	btfsc	6,5	;volatile
+   346  0023  2825               	goto	u18_21
+   347  0024  2826               	goto	u18_20
+   348  0025                     u18_21:
+   349  0025  2831               	goto	i1l705
+   350  0026                     u18_20:
+   351  0026                     i1l703:
+   352                           
+   353                           ;main.c: 97:         {;main.c: 98:             PORTAbits.RA1 = ~ (PORTAbits.RA1);
+   354  0026  1003               	clrc
+   355  0027  1C85               	btfss	5,1	;volatile
+   356  0028  1403               	setc
+   357  0029  1803               	btfsc	3,0
+   358  002A  282C               	goto	u19_21
+   359  002B  282F               	goto	u19_20
+   360  002C                     u19_21:
+   361  002C  1283               	bcf	3,5	;RP0=0, select bank0
+   362  002D  1485               	bsf	5,1	;volatile
+   363  002E  2831               	goto	u20_24
+   364  002F                     u19_20:
+   365  002F  1283               	bcf	3,5	;RP0=0, select bank0
+   366  0030  1085               	bcf	5,1	;volatile
+   367  0031                     u20_24:
+   368  0031                     i1l705:
+   369                           
+   370                           ;main.c: 101:         if ( RB6 == 0)
+   371  0031  1B06               	btfsc	6,6	;volatile
+   372  0032  2834               	goto	u21_21
+   373  0033  2835               	goto	u21_20
+   374  0034                     u21_21:
+   375  0034  2840               	goto	i1l709
+   376  0035                     u21_20:
+   377  0035                     i1l707:
+   378                           
+   379                           ;main.c: 102:         {;main.c: 103:             PORTAbits.RA2 = ~ (PORTAbits.RA2);
+   380  0035  1003               	clrc
+   381  0036  1D05               	btfss	5,2	;volatile
+   382  0037  1403               	setc
+   383  0038  1803               	btfsc	3,0
+   384  0039  283B               	goto	u22_21
+   385  003A  283E               	goto	u22_20
+   386  003B                     u22_21:
+   387  003B  1283               	bcf	3,5	;RP0=0, select bank0
+   388  003C  1505               	bsf	5,2	;volatile
+   389  003D  2840               	goto	u23_24
+   390  003E                     u22_20:
+   391  003E  1283               	bcf	3,5	;RP0=0, select bank0
+   392  003F  1105               	bcf	5,2	;volatile
+   393  0040                     u23_24:
+   394  0040                     i1l709:
+   395                           
+   396                           ;main.c: 106:         if ( RB7 == 0)
+   397  0040  1B86               	btfsc	6,7	;volatile
+   398  0041  2843               	goto	u24_21
+   399  0042  2844               	goto	u24_20
+   400  0043                     u24_21:
+   401  0043  284F               	goto	i1l713
+   402  0044                     u24_20:
+   403  0044                     i1l711:
+   404                           
+   405                           ;main.c: 107:         {;main.c: 108:             PORTAbits.RA3 = ~ (PORTAbits.RA3);
+   406  0044  1003               	clrc
+   407  0045  1D85               	btfss	5,3	;volatile
+   408  0046  1403               	setc
+   409  0047  1803               	btfsc	3,0
+   410  0048  284A               	goto	u25_21
+   411  0049  284D               	goto	u25_20
+   412  004A                     u25_21:
+   413  004A  1283               	bcf	3,5	;RP0=0, select bank0
+   414  004B  1585               	bsf	5,3	;volatile
+   415  004C  284F               	goto	u26_24
+   416  004D                     u25_20:
+   417  004D  1283               	bcf	3,5	;RP0=0, select bank0
+   418  004E  1185               	bcf	5,3	;volatile
+   419  004F                     u26_24:
+   420  004F                     i1l713:
+   421                           
+   422                           ;main.c: 112:         INTCONbits.RBIF = 0;
+   423  004F  100B               	bcf	11,0	;volatile
+   424  0050                     i1l715:
+   425                           
+   426                           ;main.c: 113:         INTCONbits.RBIE = 1;
+   427  0050  158B               	bsf	11,3	;volatile
+   428  0051                     i1l717:
+   429                           
+   430                           ;main.c: 114:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+   431  0051  3006               	movlw	6
+   432  0052  008E               	movwf	??_myInterruptHandler+2
+   433  0053  3013               	movlw	19
+   434  0054  008D               	movwf	??_myInterruptHandler+1
+   435  0055  30AD               	movlw	173
+   436  0056  008C               	movwf	??_myInterruptHandler
+   437  0057                     u28_27:
+   438  0057  0B8C               	decfsz	??_myInterruptHandler,f
+   439  0058  2857               	goto	u28_27
+   440  0059  0B8D               	decfsz	??_myInterruptHandler+1,f
+   441  005A  2857               	goto	u28_27
+   442  005B  0B8E               	decfsz	??_myInterruptHandler+2,f
+   443  005C  2857               	goto	u28_27
+   444  005D  285E               	nop2
+   445  005E                     i1l719:
+   446                           
+   447                           ;main.c: 118:     RBIF = 0;
+   448  005E  100B               	bcf	11,0	;volatile
+   449  005F                     i1l721:
+   450                           
+   451                           ;main.c: 119:     PORTA = 0;
+   452  005F  1283               	bcf	3,5	;RP0=0, select bank0
+   453  0060  0185               	clrf	5	;volatile
+   454  0061                     i1l44:
+   455  0061  0810               	movf	??_myInterruptHandler+4,w
+   456  0062  008A               	movwf	10
+   457  0063  0E0F               	swapf	(??_myInterruptHandler+3)^0,w
+   458  0064  0083               	movwf	3
+   459  0065  0ECE               	swapf	btemp,f
+   460  0066  0E4E               	swapf	btemp,w
+   461  0067  0009               	retfie
+   462  0068                     __end_of_myInterruptHandler:
+   463  004E                     btemp	set	78	;btemp
+   464  004E                     wtemp0	set	78
+   465                           
+   466                           	psect	intentry
+   467  0004                     __pintentry:	
+   468                           ;incstack = 0
+   469                           ; Regs used in _myInterruptHandler: [wreg+status,2+status,0]
+   470                           
+   471  0004                     interrupt_function:
+   472  004E                     saved_w	set	btemp
+   473  0004  00CE               	movwf	btemp
+   474  0005  0E03               	swapf	3,w
+   475  0006  1283               	bcf	3,5	;RP0=0, select bank0
+   476  0007  008F               	movwf	??_myInterruptHandler+3
+   477  0008  080A               	movf	10,w
+   478  0009  0090               	movwf	??_myInterruptHandler+4
+   479  000A  280E               	ljmp	_myInterruptHandler
+   480                           
+   481                           	psect	config
+   482                           
+   483                           ;Config register CONFIG @ 0x2007
+   484                           ;	Oscillator Selection bits
+   485                           ;	FOSC = XT, XT oscillator
+   486                           ;	Watchdog Timer
+   487                           ;	WDTE = OFF, WDT disabled
+   488                           ;	Power-up Timer Enable bit
+   489                           ;	PWRTE = OFF, Power-up Timer is disabled
+   490                           ;	Code Protection bit
+   491                           ;	CP = OFF, Code protection disabled
+   492  2007                     	org	8199
+   493  2007  3FF9               	dw	16377
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON            0      0       0
+    BANK0            66      8       8
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _myInterruptHandler in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _myInterruptHandler in BANK0
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 3     3      0       0
+                                              5 BANK0      3     3      0
+                     _setupInterrupt
+ ---------------------------------------------------------------------------------
+ (1) _setupInterrupt                                       0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (2) _myInterruptHandler                                   5     5      0       0
+                                              0 BANK0      5     5      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _setupInterrupt
+
+ _myInterruptHandler (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            0      0       0       0        0.0%
+EEDATA              40      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BANK0               42      8       8       3       12.1%
+ABS                  0      0       0       4        0.0%
+BITBANK0            42      0       0       5        0.0%
+DATA                 0      0       0       6        0.0%
+
+
+Microchip Technology PIC Macro Assembler V2.20 build 20200408173844 
+Symbol Table                                                                                   Wed Dec 23 18:47:32 2020
+
+                         l47 0086                          l681 0083                          l691 006F  
+                        l683 0068                          l693 0074                          l685 006A  
+                        l687 006C                          l689 006E                          _RB4 0034  
+                        _RB5 0035                          _RB6 0036                          _RB7 0037  
+                        u277 007A                         _RBIF 0058                         i1l44 0061  
+                       _main 0068                         btemp 004E                         start 000B  
+                      ?_main 000C                        i1l701 0022                        i1l711 0044  
+                      i1l703 0026                        i1l721 005F                        i1l713 004F  
+                      i1l705 0031                        i1l715 0050                        i1l707 0035  
+                      i1l717 0051                        i1l709 0040                        i1l719 005E  
+                      i1l695 000E                        i1l697 0012                        i1l699 0017  
+                      u20_24 0031                        u21_20 0035                        u21_21 0034  
+                      u22_20 003E                        u14_20 0012                        u22_21 003B  
+                      u14_21 0011                        u15_20 0017                        u15_21 0016  
+                      u23_24 0040                        u24_20 0044                        u16_20 0020  
+                      u24_21 0043                        u16_21 001D                        u25_20 004D  
+                      u25_21 004A                        u17_24 0022                        u18_20 0026  
+                      u18_21 0025                        u26_24 004F                        u19_20 002F  
+                      u19_21 002C                        _PORTA 0005                        _PORTB 0006  
+                      u28_27 0057                        _TRISA 0085                        _TRISB 0086  
+                      pclath 000A                        status 0003                        wtemp0 004E  
+            __initialization 000C                 __end_of_main 0083                       ??_main 0011  
+           ??_setupInterrupt 0000   __end_of_myInterruptHandler 0068                       saved_w 004E  
+    __end_of__initialization 000C               __pcstackCOMMON 0000                   __pmaintext 0068  
+                 __pintentry 0004                      __ptext1 0083                      __ptext2 000E  
+       end_of_initialization 000C                    _PORTAbits 0005           _myInterruptHandler 000E  
+        ?_myInterruptHandler 000C         ??_myInterruptHandler 000C          start_initialization 000C  
+    __size_of_setupInterrupt 0004                    ___latbits 0000                __pcstackBANK0 000C  
+          interrupt_function 0004               _setupInterrupt 0083       __end_of_setupInterrupt 0087  
+              __size_of_main 001B  __size_of_myInterruptHandler 005A                   _INTCONbits 000B  
+            ?_setupInterrupt 000C                     intlevel1 0000  

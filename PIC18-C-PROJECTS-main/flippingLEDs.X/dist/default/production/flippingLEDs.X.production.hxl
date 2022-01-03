@@ -1,0 +1,34 @@
+### HEXMate logfile and output summary ###
+### OP Code find / replace / delete results ###
+ Search results for MOVLB 15 (010Fh & FFFFFFFFh):
+  No occurances found.
+
+### Memory Usage ###
+ Unused memory ranges:
+  4h - FC9h
+  1000h - 1FFFFFh
+  200008h - 2FFFFFh
+  30000Eh - 30003Fh
+  
+ dist/default/production/flippingLEDs.X.production.hex ranges:
+  0h - 3h
+  FCAh - FFFh
+  200000h - 200007h
+  300000h - 30000Dh
+  
+### Hex Memory Map ###
+ Legend:
+  - = Unused memory
+  F = Filled ROM
+  S = Stored serial code
+  A = Stored ASCII string
+  R = Reserved for checksum
+  C = Stored checksum result
+  T = Trailing code
+  & = Find & replace opcode
+  X = Find & delete opcode
+  1 = dist/default/production/flippingLEDs.X.production.hex
+00000000: 1111------------------------------------------------------------
+00000FC0: ----------111111111111111111111111111111111111111111111111111111
+00200000: 11111111--------------------------------------------------------
+00300000: 11111111111111--------------------------------------------------

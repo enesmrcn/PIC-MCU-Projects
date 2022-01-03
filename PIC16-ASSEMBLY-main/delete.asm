@@ -1,0 +1,39 @@
+
+    LIST P = 16F628A
+    INCLUDE "P16F628A.INC"
+    
+    __CONFIG _FOSC_INTOSCIO & _WDTE_ON & _PWRTE_OFF & _MCLRE_ON & 
+    _BOREN_OFF & _LVP_OFF & _CPD_OFF & _CP_OFF
+
+    ORG H'00'
+    
+    
+    CBLOCK  20h
+SAYI1, SAYI2, MASKPORTA
+    ENDC
+    
+    CLRF    PORTB
+    BANKSEL TRISB
+    CLRF    TRISB
+    MOVLW   H'FF'
+    MOVWF   TRISA
+    BANKSEL PORTA
+    MOVLW   H'07'
+    MOVWF   CMCON
+    
+    
+START
+    
+TEST_PORTA
+    MOVF    PORTA, W
+    ANDLW   B'00010001'
+    MOVWF   MASKPORTA
+    
+    MOVLW   H'00'
+    XORWF   MASKPORTA, W
+    BTFSS   STATUS, Z
+    GOTO    TEST_PORTA
+    
+BRIGHT
+    MOVLW   H'01'
+    MOVWF   PORTB

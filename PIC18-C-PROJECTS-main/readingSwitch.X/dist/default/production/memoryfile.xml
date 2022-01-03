@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production/readingSwitch.X.production.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>4096</length>
+      <used>86</used>
+      <free>4010</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>512</length>
+      <used>1</used>
+      <free>511</free>
+    </memory>
+  </executable>
+</project>

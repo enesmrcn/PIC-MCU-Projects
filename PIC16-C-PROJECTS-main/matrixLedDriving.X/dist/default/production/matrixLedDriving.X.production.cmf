@@ -1,0 +1,316 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$/tmp/xce0GUdzU.o
+end_init CODE 0 0 0 3 2
+config CONFIG 4 2007 2007 1 2
+$dist/default/production/matrixLedDriving.X.production.o
+cinit CODE 0 7D6 7D6 2A 2
+text1 CODE 0 75D 75D 15 2
+idataCOMMON CODE 0 737 737 4 2
+maintext CODE 0 772 772 64 2
+cstackCOMMON COMMON 1 70 70 A 1
+inittext CODE 0 74A 74A 13 2
+idataBANK0 CODE 0 73B 73B F 2
+dataBANK0 BANK0 1 20 20 F 1
+dataCOMMON COMMON 1 7A 7A 4 1
+config CONFIG 4 2007 2007 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 2F-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 2F-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 3-736 2
+CONST 800-1FFF 2
+ENTRY 3-736 2
+ENTRY 800-1FFF 2
+IDLOC 2000-2003 2
+STACK 110-16F 1
+CODE 3-736 2
+CODE 800-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+EEDATA 2100-21FF 2
+STRCODE 3-736 2
+STRCODE 800-1FFF 2
+STRING 3-736 2
+STRING 800-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production/matrixLedDriving.X.production.o
+7D6 cinit CODE >390:/tmp/xcAmGjaDj.s
+7D6 cinit CODE >393:/tmp/xcAmGjaDj.s
+7D6 cinit CODE >442:/tmp/xcAmGjaDj.s
+7D7 cinit CODE >443:/tmp/xcAmGjaDj.s
+7D8 cinit CODE >444:/tmp/xcAmGjaDj.s
+7D9 cinit CODE >445:/tmp/xcAmGjaDj.s
+7DA cinit CODE >446:/tmp/xcAmGjaDj.s
+7DB cinit CODE >447:/tmp/xcAmGjaDj.s
+7DC cinit CODE >448:/tmp/xcAmGjaDj.s
+7DD cinit CODE >449:/tmp/xcAmGjaDj.s
+7DE cinit CODE >450:/tmp/xcAmGjaDj.s
+7DF cinit CODE >451:/tmp/xcAmGjaDj.s
+7E4 cinit CODE >455:/tmp/xcAmGjaDj.s
+7E9 cinit CODE >456:/tmp/xcAmGjaDj.s
+7EA cinit CODE >457:/tmp/xcAmGjaDj.s
+7EF cinit CODE >458:/tmp/xcAmGjaDj.s
+7F0 cinit CODE >459:/tmp/xcAmGjaDj.s
+7F5 cinit CODE >460:/tmp/xcAmGjaDj.s
+7F6 cinit CODE >461:/tmp/xcAmGjaDj.s
+7FB cinit CODE >462:/tmp/xcAmGjaDj.s
+7FC cinit CODE >468:/tmp/xcAmGjaDj.s
+7FC cinit CODE >470:/tmp/xcAmGjaDj.s
+7FD cinit CODE >471:/tmp/xcAmGjaDj.s
+75D text1 CODE >4:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/Umul8.c
+75E text1 CODE >6:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/Umul8.c
+75F text1 CODE >43:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/Umul8.c
+763 text1 CODE >44:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/Umul8.c
+767 text1 CODE >45:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/Umul8.c
+769 text1 CODE >46:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/Umul8.c
+76B text1 CODE >47:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/Umul8.c
+770 text1 CODE >50:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/Umul8.c
+771 text1 CODE >51:/Applications/microchip/xc8/v2.20/pic/sources/c90/common/Umul8.c
+772 maintext CODE >78:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+772 maintext CODE >80:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+775 maintext CODE >81:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+776 maintext CODE >83:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+776 maintext CODE >85:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+777 maintext CODE >87:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+778 maintext CODE >89:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+77C maintext CODE >91:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+77D maintext CODE >93:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+794 maintext CODE >94:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+79C maintext CODE >96:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+7A2 maintext CODE >97:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+7AD maintext CODE >99:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+7B8 maintext CODE >101:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+7B9 maintext CODE >102:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+7BB maintext CODE >103:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+7C7 maintext CODE >104:/Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+74A inittext CODE >416:/tmp/xcAmGjaDj.s
+74A inittext CODE >417:/tmp/xcAmGjaDj.s
+74B inittext CODE >418:/tmp/xcAmGjaDj.s
+74C inittext CODE >419:/tmp/xcAmGjaDj.s
+74D inittext CODE >420:/tmp/xcAmGjaDj.s
+74E inittext CODE >427:/tmp/xcAmGjaDj.s
+74E inittext CODE >428:/tmp/xcAmGjaDj.s
+753 inittext CODE >429:/tmp/xcAmGjaDj.s
+754 inittext CODE >430:/tmp/xcAmGjaDj.s
+755 inittext CODE >431:/tmp/xcAmGjaDj.s
+756 inittext CODE >432:/tmp/xcAmGjaDj.s
+757 inittext CODE >433:/tmp/xcAmGjaDj.s
+758 inittext CODE >434:/tmp/xcAmGjaDj.s
+759 inittext CODE >435:/tmp/xcAmGjaDj.s
+75A inittext CODE >436:/tmp/xcAmGjaDj.s
+75B inittext CODE >437:/tmp/xcAmGjaDj.s
+75C inittext CODE >438:/tmp/xcAmGjaDj.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 2 0 ABS 0 - dist/default/production/matrixLedDriving.X.production.o
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__Hspace_0 800 0 ABS 0 - -
+__Hspace_1 7E 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 400F 0 ABS 0 - -
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+main@i 79 0 COMMON 1 cstackCOMMON dist/default/production/matrixLedDriving.X.production.o
+__Hstrings 0 0 ABS 0 strings -
+___sp 0 0 STACK 2 stack /tmp/xce0GUdzU.o
+_main EE4 0 CODE 0 maintext dist/default/production/matrixLedDriving.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production/matrixLedDriving.X.production.o
+start 0 0 CODE 0 init /tmp/xce0GUdzU.o
+__size_of_main 0 0 ABS 0 - dist/default/production/matrixLedDriving.X.production.o
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__Hpowerup 0 0 CODE 0 powerup -
+__HdataCOMMON 0 0 ABS 0 dataCOMMON -
+intlevel0 0 0 ENTRY 0 functab /tmp/xce0GUdzU.o
+intlevel1 0 0 ENTRY 0 functab /tmp/xce0GUdzU.o
+intlevel2 0 0 ENTRY 0 functab /tmp/xce0GUdzU.o
+intlevel3 0 0 ENTRY 0 functab /tmp/xce0GUdzU.o
+intlevel4 0 0 ENTRY 0 functab /tmp/xce0GUdzU.o
+intlevel5 0 0 ENTRY 0 functab /tmp/xce0GUdzU.o
+___bmul@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production/matrixLedDriving.X.production.o
+wtemp0 7E 0 ABS 0 - dist/default/production/matrixLedDriving.X.production.o
+__Hfunctab 0 0 ENTRY 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+__pidataCOMMON E6E 0 CODE 0 idataCOMMON dist/default/production/matrixLedDriving.X.production.o
+__LdataCOMMON 0 0 ABS 0 dataCOMMON -
+__end_of___bmul EE4 0 CODE 0 text1 dist/default/production/matrixLedDriving.X.production.o
+__Lmaintext 0 0 ABS 0 maintext -
+___bmul@multiplier 73 0 COMMON 1 cstackCOMMON dist/default/production/matrixLedDriving.X.production.o
+___stackhi 0 0 ABS 0 - /tmp/xce0GUdzU.o
+___stacklo 0 0 ABS 0 - /tmp/xce0GUdzU.o
+__LidataCOMMON 0 0 ABS 0 idataCOMMON -
+start_initialization FAC 0 CODE 0 cinit dist/default/production/matrixLedDriving.X.production.o
+___int_sp 0 0 STACK 2 stack /tmp/xce0GUdzU.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hcinit 1000 0 CODE 0 cinit -
+__Hstack 0 0 STACK 2 stack -
+__Hmaintext 0 0 ABS 0 maintext -
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4010 0 CONFIG 4 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lcinit FAC 0 CODE 0 cinit -
+__Lstack 0 0 STACK 2 stack -
+__Linittext 0 0 ABS 0 inittext -
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 0 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 0 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
+___bmul EBA 0 CODE 0 text1 dist/default/production/matrixLedDriving.X.production.o
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__S0 800 0 ABS 0 - -
+__S1 7E 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__HidataCOMMON 0 0 ABS 0 idataCOMMON -
+__Lintentry 0 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec /tmp/xce0GUdzU.o
+__pdataBANK0 20 0 BANK0 1 dataBANK0 dist/default/production/matrixLedDriving.X.production.o
+main@letterIndex 78 0 COMMON 1 cstackCOMMON dist/default/production/matrixLedDriving.X.production.o
+__size_of___bmul 0 0 ABS 0 - dist/default/production/matrixLedDriving.X.production.o
+_letter 20 0 BANK0 1 dataBANK0 dist/default/production/matrixLedDriving.X.production.o
+__pmaintext EE4 0 CODE 0 maintext dist/default/production/matrixLedDriving.X.production.o
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
+__Hinittext 0 0 ABS 0 inittext -
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+init_fetch0 E94 0 CODE 0 inittext dist/default/production/matrixLedDriving.X.production.o
+__Lend_init 0 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization FF8 0 CODE 0 cinit dist/default/production/matrixLedDriving.X.production.o
+__Hintentry 0 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__ptext1 EBA 0 CODE 0 text1 dist/default/production/matrixLedDriving.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__end_of__initialization FF8 0 CODE 0 cinit dist/default/production/matrixLedDriving.X.production.o
+main@repeat 77 0 COMMON 1 cstackCOMMON dist/default/production/matrixLedDriving.X.production.o
+__Lfunctab 0 0 ENTRY 0 functab -
+__pidataBANK0 E76 0 CODE 0 idataBANK0 dist/default/production/matrixLedDriving.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production/matrixLedDriving.X.production.o
+_message 7A 0 COMMON 1 dataCOMMON dist/default/production/matrixLedDriving.X.production.o
+__Hend_init 6 0 CODE 0 end_init -
+init_ram0 E9C 0 CODE 0 inittext dist/default/production/matrixLedDriving.X.production.o
+__end_of_main FAC 0 CODE 0 maintext dist/default/production/matrixLedDriving.X.production.o
+_PORTB 6 0 ABS 0 - dist/default/production/matrixLedDriving.X.production.o
+_PORTC 7 0 ABS 0 - dist/default/production/matrixLedDriving.X.production.o
+_TRISB 86 0 ABS 0 - dist/default/production/matrixLedDriving.X.production.o
+_TRISC 87 0 ABS 0 - dist/default/production/matrixLedDriving.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__initialization FAC 0 CODE 0 cinit dist/default/production/matrixLedDriving.X.production.o
+___bmul@product 72 0 COMMON 1 cstackCOMMON dist/default/production/matrixLedDriving.X.production.o
+__pdataCOMMON 7A 0 COMMON 1 dataCOMMON dist/default/production/matrixLedDriving.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7D6 FAC 2A 2
+text1 0 75D EBA 15 2
+idataCOMMON 0 737 E6E 4 2
+maintext 0 772 EE4 64 2
+cstackCOMMON 1 70 70 E 1
+inittext 0 74A E94 13 2
+reset_vec 0 0 0 3 2
+idataBANK0 0 73B E76 F 2
+dataBANK0 1 20 20 F 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

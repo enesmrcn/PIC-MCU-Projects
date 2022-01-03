@@ -1,0 +1,38 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F628A ]
+[d frameptr 0 ]
+"10 /Applications/microchip/xc8/v2.20/pic/sources/c90/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /Applications/microchip/xc8/v2.20/pic/sources/c90/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /Applications/microchip/xc8/v2.20/pic/sources/c90/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"25 /Users/enesmercan/MPLABXProjects/github_project/4_LedButton.X/main.c
+[v _main main `(v  1 e 1 0 ]
+"166 /Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f628a.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"228
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"767
+[v _CMCON CMCON `VEuc  1 e 1 @31 ]
+"907
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"969
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1458
+[v _RA0 RA0 `VEb  1 e 0 @40 ]
+"1461
+[v _RA1 RA1 `VEb  1 e 0 @41 ]
+"1482
+[v _RB0 RB0 `VEb  1 e 0 @48 ]
+"1485
+[v _RB1 RB1 `VEb  1 e 0 @49 ]
+"25 /Users/enesmercan/MPLABXProjects/github_project/4_LedButton.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"62
+} 0

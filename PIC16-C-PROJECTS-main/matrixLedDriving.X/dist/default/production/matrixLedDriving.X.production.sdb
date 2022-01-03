@@ -1,0 +1,53 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"10 /Applications/microchip/xc8/v2.20/pic/sources/c90/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /Applications/microchip/xc8/v2.20/pic/sources/c90/common/Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"4 /Applications/microchip/xc8/v2.20/pic/sources/c90/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /Applications/microchip/xc8/v2.20/pic/sources/c90/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"78 /Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+[v _main main `(v  1 e 1 0 ]
+"216 /Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f877a.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"278
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"1375
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"71 /Users/enesmercan/MPLABXProjects/github2/matrixLedDriving.X/main.c
+[v _letter letter `[3][5]uc  1 e 15 0 ]
+"74
+[v _message message `[4]uc  1 e 4 0 ]
+"78
+[v _main main `(v  1 e 1 0 ]
+{
+"91
+[v main@i i `c  1 a 1 9 ]
+"87
+[v main@repeat repeat `c  1 a 1 7 ]
+"85
+[v main@letterIndex letterIndex `c  1 a 1 8 ]
+"108
+} 0
+"4 /Applications/microchip/xc8/v2.20/pic/sources/c90/common/Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 2 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
+"51
+} 0

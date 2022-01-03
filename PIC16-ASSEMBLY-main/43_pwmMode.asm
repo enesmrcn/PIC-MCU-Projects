@@ -1,0 +1,69 @@
+; rb3 ucuna bagli bir led'in (veya transistor-motor devresinin) 
+; pwm sinyali ile hiz/siddet kontrolu
+    
+LIST P =16F628A
+#include "p16f628a.inc"
+
+; CONFIG
+; __config 0x3F38
+ __CONFIG _FOSC_INTOSCIO & _WDTE_OFF & _PWRTE_OFF & _MCLRE_ON &
+    _BOREN_OFF & _LVP_OFF & _CPD_OFF & _CP_OFF
+
+SAYAC1	EQU H'20'
+SAYAC2	EQU H'21'
+	
+	ORG	H'0000'
+	CLRF	PORTB
+	BANKSEL	PR2
+	MOVLW	H'FF'
+	MOVWF	PR2	;   PWM PERIODU BELIRLEMEK
+	
+	CLRF	TRISB
+	BANKSEL	PORTB
+	MOVLW	H'0C'	;   CCP1M3~CCP1M0 = 11xx (FOR PWM MODE)
+	MOVWF	CCP1CON
+	
+	MOVLW	H'01'	;   Sinyal doluluk orani
+	MOVWF	CCPR1L
+	
+	BSF	T2CON,2 ;   TMR2 yi calismaya baslat
+	
+	
+    ARTIR
+	INCF	CCPR1L,F    ; CCPR1L = CCPR1L + 1
+	CALL	DELAY
+	MOVLW	H'FE'
+	SUBWF	CCPR1L,W    ; W = CCPR1L - W
+	BTFSC	STATUS,C    ; W < CCPR1L ?
+	GOTO	AZALT
+	GOTO	ARTIR
+	
+    AZALT
+	DECF	CCPR1L,F
+	CALL	DELAY
+	MOVLW	H'01'
+	SUBWF	CCPR1L,W    ;	W = CCPR1L - W
+	BTFSS	STATUS,C    ;	W < CCPR1L ?
+	GOTO	ARTIR
+	GOTO	AZALT
+	
+	
+	
+    DELAY
+	MOVLW	H'30'
+	MOVWF	SAYAC1
+	
+	LOOP1
+	MOVLW	H'60'
+	MOVWF	SAYAC2
+	
+	LOOP2
+	BTFSC	SAYAC2,F
+	GOTO	LOOP2
+	BTFSC	SAYAC1,F
+	GOTO	LOOP1
+	
+    RETURN
+    
+    
+    END

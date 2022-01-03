@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production\binary-counter-using-timer1_PIC18LF46J53.X.production.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>65528</length>
+      <used>204</used>
+      <free>65324</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>3760</length>
+      <used>6</used>
+      <free>3754</free>
+    </memory>
+  </executable>
+</project>

@@ -1,0 +1,315 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+"629 /Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 629: extern volatile __bit GIE __attribute__((address(0x5F)));
+[v _GIE `Vb ~T0 @X0 0 e@95 ]
+"695
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 695: extern volatile __bit RBIE __attribute__((address(0x5B)));
+[v _RBIE `Vb ~T0 @X0 0 e@91 ]
+"498
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 498: extern volatile unsigned char TRISB __attribute__((address(0x086)));
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"671
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 671: extern volatile __bit RB0 __attribute__((address(0x30)));
+[v _RB0 `Vb ~T0 @X0 0 e@48 ]
+[v F212 `(v ~T0 @X0 1 tf1`ul ]
+"92 /Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/pic.h
+[v __delay `JF212 ~T0 @X0 0 e ]
+[p i __delay ]
+[t ~ __interrupt . k ]
+[t T2 __interrupt ]
+"312 /Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 312:     struct {
+[s S12 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S12 . RBIF INTF T0IF RBIE INTE T0IE EEIE GIE ]
+"322
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 322:     struct {
+[s S13 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S13 . . TMR0IF . TMR0IE ]
+"311
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 311: typedef union {
+[u S11 `S12 1 `S13 1 ]
+[n S11 . . . ]
+"329
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 329: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS11 ~T0 @X0 0 e@11 ]
+"683
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 683: extern volatile __bit RB4 __attribute__((address(0x34)));
+[v _RB4 `Vb ~T0 @X0 0 e@52 ]
+"686
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 686: extern volatile __bit RB5 __attribute__((address(0x35)));
+[v _RB5 `Vb ~T0 @X0 0 e@53 ]
+"698
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 698: extern volatile __bit RBIF __attribute__((address(0x58)));
+[v _RBIF `Vb ~T0 @X0 0 e@88 ]
+"10 ./configuration.h
+[p x FOSC = XT ]
+"11
+[p x WDTE = OFF ]
+"12
+[p x PWRTE = OFF ]
+"13
+[p x CP = OFF ]
+"54 /Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"212
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 212: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"274
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 274: __asm("EEDATA equ 08h");
+[; <" EEDATA equ 08h ;# ">
+"281
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 281: __asm("EEADR equ 09h");
+[; <" EEADR equ 09h ;# ">
+"288
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 288: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"308
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 308: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"386
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 386: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"456
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 456: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"500
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 500: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"562
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 562: __asm("EECON1 equ 088h");
+[; <" EECON1 equ 088h ;# ">
+"606
+[; ;/Applications/microchip/mplabx/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f84a.h: 606: __asm("EECON2 equ 089h");
+[; <" EECON2 equ 089h ;# ">
+"16 main.c
+[; ;main.c: 16: uint8_t dutyControl = 0;
+[v _dutyControl `uc ~T0 @X0 1 e ]
+[i _dutyControl
+-> -> 0 `i `uc
+]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"18
+[; ;main.c: 18: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"20
+[; ;main.c: 20:     GIE = 1;
+[e = _GIE -> -> 1 `i `b ]
+"21
+[; ;main.c: 21:     RBIE = 1;
+[e = _RBIE -> -> 1 `i `b ]
+"23
+[; ;main.c: 23:     TRISB = 0b00110000;
+[e = _TRISB -> -> 48 `i `uc ]
+"26
+[; ;main.c: 26:     while (1)
+[e :U 25 ]
+"27
+[; ;main.c: 27:     {
+{
+"28
+[; ;main.c: 28:         switch (dutyControl)
+[e $U 28  ]
+"29
+[; ;main.c: 29:         {
+{
+"30
+[; ;main.c: 30:             case 1 : RB0 = 1; _delay((unsigned long)((1)*(4000000/4000.0))); RB0 = 0; _delay((unsigned long)((19)*(4000000/4000.0))); break;
+[e :U 29 ]
+[e = _RB0 -> -> 1 `i `b ]
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e = _RB0 -> -> 0 `i `b ]
+[e ( __delay (1 -> * -> -> 19 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e $U 27  ]
+"31
+[; ;main.c: 31:             case 2 : RB0 = 1; _delay((unsigned long)((1.1)*(4000000/4000.0))); RB0 = 0; _delay((unsigned long)((18.9)*(4000000/4000.0))); break;
+[e :U 30 ]
+[e = _RB0 -> -> 1 `i `b ]
+[e ( __delay (1 -> * .1.1 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e = _RB0 -> -> 0 `i `b ]
+[e ( __delay (1 -> * .18.9 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e $U 27  ]
+"32
+[; ;main.c: 32:             case 3 : RB0 = 1; _delay((unsigned long)((1.2)*(4000000/4000.0))); RB0 = 0; _delay((unsigned long)((18.8)*(4000000/4000.0))); break;
+[e :U 31 ]
+[e = _RB0 -> -> 1 `i `b ]
+[e ( __delay (1 -> * .1.2 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e = _RB0 -> -> 0 `i `b ]
+[e ( __delay (1 -> * .18.8 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e $U 27  ]
+"33
+[; ;main.c: 33:             case 4 : RB0 = 1; _delay((unsigned long)((1.3)*(4000000/4000.0))); RB0 = 0; _delay((unsigned long)((18.7)*(4000000/4000.0))); break;
+[e :U 32 ]
+[e = _RB0 -> -> 1 `i `b ]
+[e ( __delay (1 -> * .1.3 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e = _RB0 -> -> 0 `i `b ]
+[e ( __delay (1 -> * .18.7 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e $U 27  ]
+"34
+[; ;main.c: 34:             case 5 : RB0 = 1; _delay((unsigned long)((1.4)*(4000000/4000.0))); RB0 = 0; _delay((unsigned long)((18.6)*(4000000/4000.0))); break;
+[e :U 33 ]
+[e = _RB0 -> -> 1 `i `b ]
+[e ( __delay (1 -> * .1.4 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e = _RB0 -> -> 0 `i `b ]
+[e ( __delay (1 -> * .18.6 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e $U 27  ]
+"35
+[; ;main.c: 35:             case 6 : RB0 = 1; _delay((unsigned long)((1.5)*(4000000/4000.0))); RB0 = 0; _delay((unsigned long)((18.5)*(4000000/4000.0))); break;
+[e :U 34 ]
+[e = _RB0 -> -> 1 `i `b ]
+[e ( __delay (1 -> * .1.5 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e = _RB0 -> -> 0 `i `b ]
+[e ( __delay (1 -> * .18.5 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e $U 27  ]
+"36
+[; ;main.c: 36:             case 7 : RB0 = 1; _delay((unsigned long)((1.6)*(4000000/4000.0))); RB0 = 0; _delay((unsigned long)((18.4)*(4000000/4000.0))); break;
+[e :U 35 ]
+[e = _RB0 -> -> 1 `i `b ]
+[e ( __delay (1 -> * .1.6 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e = _RB0 -> -> 0 `i `b ]
+[e ( __delay (1 -> * .18.4 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e $U 27  ]
+"37
+[; ;main.c: 37:             case 8 : RB0 = 1; _delay((unsigned long)((1.7)*(4000000/4000.0))); RB0 = 0; _delay((unsigned long)((18.3)*(4000000/4000.0))); break;
+[e :U 36 ]
+[e = _RB0 -> -> 1 `i `b ]
+[e ( __delay (1 -> * .1.7 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e = _RB0 -> -> 0 `i `b ]
+[e ( __delay (1 -> * .18.3 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e $U 27  ]
+"38
+[; ;main.c: 38:             case 9 : RB0 = 1; _delay((unsigned long)((1.8)*(4000000/4000.0))); RB0 = 0; _delay((unsigned long)((18.2)*(4000000/4000.0))); break;
+[e :U 37 ]
+[e = _RB0 -> -> 1 `i `b ]
+[e ( __delay (1 -> * .1.8 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e = _RB0 -> -> 0 `i `b ]
+[e ( __delay (1 -> * .18.2 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e $U 27  ]
+"39
+[; ;main.c: 39:             case 10 : RB0 = 1; _delay((unsigned long)((1.9)*(4000000/4000.0))); RB0 = 0; _delay((unsigned long)((18.1)*(4000000/4000.0))); break;
+[e :U 38 ]
+[e = _RB0 -> -> 1 `i `b ]
+[e ( __delay (1 -> * .1.9 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e = _RB0 -> -> 0 `i `b ]
+[e ( __delay (1 -> * .18.1 / -> -> 4000000 `l `d .4000.0 `ul ]
+[e $U 27  ]
+"40
+[; ;main.c: 40:             case 11 : RB0 = 1; _delay((unsigned long)((2)*(4000000/4000.0))); RB0 = 0; _delay((unsigned long)((18)*(4000000/4000.0))); break;
+[e :U 39 ]
+[e = _RB0 -> -> 1 `i `b ]
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e = _RB0 -> -> 0 `i `b ]
+[e ( __delay (1 -> * -> -> 18 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e $U 27  ]
+"41
+[; ;main.c: 41:         }
+}
+[e $U 27  ]
+[e :U 28 ]
+[e [\ -> _dutyControl `i , $ -> 1 `i 29
+ , $ -> 2 `i 30
+ , $ -> 3 `i 31
+ , $ -> 4 `i 32
+ , $ -> 5 `i 33
+ , $ -> 6 `i 34
+ , $ -> 7 `i 35
+ , $ -> 8 `i 36
+ , $ -> 9 `i 37
+ , $ -> 10 `i 38
+ , $ -> 11 `i 39
+ 27 ]
+[e :U 27 ]
+"42
+[; ;main.c: 42:     }
+}
+[e :U 24 ]
+[e $U 25  ]
+[e :U 26 ]
+"44
+[; ;main.c: 44:     return;
+[e $UE 23  ]
+"45
+[; ;main.c: 45: }
+[e :UE 23 ]
+}
+[v $root$_myIntHandler `(v ~T0 @X0 0 e ]
+"47
+[; ;main.c: 47: void __attribute__((picinterrupt(("")))) myIntHandler()
+[v _myIntHandler `(v ~T2 @X0 1 ef ]
+"48
+[; ;main.c: 48: {
+{
+[e :U _myIntHandler ]
+[f ]
+"49
+[; ;main.c: 49:     if (INTCONbits.RBIF)
+[e $ ! != -> . . _INTCONbits 0 0 `i -> 0 `i 41  ]
+"50
+[; ;main.c: 50:     {
+{
+"51
+[; ;main.c: 51:         if (RB4)
+[e $ ! _RB4 42  ]
+"52
+[; ;main.c: 52:         {
+{
+"53
+[; ;main.c: 53:             if (dutyControl != 11)
+[e $ ! != -> _dutyControl `i -> 11 `i 43  ]
+"54
+[; ;main.c: 54:             dutyControl+=1;
+[e =+ _dutyControl -> -> 1 `i `uc ]
+[e :U 43 ]
+"55
+[; ;main.c: 55:         }
+}
+[e $U 44  ]
+"56
+[; ;main.c: 56:         else if (RB5)
+[e :U 42 ]
+[e $ ! _RB5 45  ]
+"57
+[; ;main.c: 57:         {
+{
+"58
+[; ;main.c: 58:             if (dutyControl != 0)
+[e $ ! != -> _dutyControl `i -> 0 `i 46  ]
+"59
+[; ;main.c: 59:             dutyControl-=1;
+[e =- _dutyControl -> -> 1 `i `uc ]
+[e :U 46 ]
+"60
+[; ;main.c: 60:         }
+}
+[e :U 45 ]
+[e :U 44 ]
+"62
+[; ;main.c: 62:         RBIF = 0;
+[e = _RBIF -> -> 0 `i `b ]
+"63
+[; ;main.c: 63:     }
+}
+[e :U 41 ]
+"64
+[; ;main.c: 64: }
+[e :UE 40 ]
+}
