@@ -39,7 +39,7 @@
 - <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Seven%20Segment%20-%20PIC18F2220/seven_segment.X">  Seven Segment - PIC18F2220 </a></br>
 - <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Seven%20Segment%20-%20PIC18LF46J53">  Seven Segment - PIC18LF46J53 </a></br>
 - <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Timer0%2016bit%20-%20PIC18F4550">  Timer 0 16bit - PIC18F4550 </a></br>
-- <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Timer0%208bit%20-%20PIC18f4550">  Timer 0 8bit - PIC18f4550 </a></br>
+- <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Timer0%208bit%20-%20PIC18F4550">  Timer 0 8bit - PIC18F4550 </a></br>
 - <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Timer0%20Interrupt%20-%20PIC18F4520">  Timer 0 Interrupt - PIC18F4520 </a></br>
 - <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Timer1%20Binary%20Counter%20-%20PIC18LF46J53">  Timer 1 Binary Counter - PIC18LF46J53 </a></br>
 - <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Timer2%20Counter%20-%20PIC18LF46J53">  Timer 2 Counter - PIC18LF46J53 </a></br>
@@ -64,7 +64,7 @@
     <br/>
     <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/UART%20Full-Dublex%20Project%20-%20PIC18F4520"> SatWare (Satellite Control PCB) </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/UART%20Full-Dublex%20Project%20-%20PIC18F4520"> UART Full-Dublex Project </a>
     <br/>
     <br/>
     <br/>
@@ -85,42 +85,19 @@
 
 <!-- AÇILIŞ -->
 <h2> 
-  </br>
-  </br>
-  </br>
+  <br/>
+    <br/>
+    <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PCB-Design/tree/main/Security%20Board"> Security Board </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Cascaded%207-Segment%20Displays%20-%20PIC18LF46J53"> Cascaded 7-Segment Displays </a>
     <br/>
     <br/>
     <br/>
-  <a href="https://github.com/enesmrcn/PCB-Design/tree/main/Security%20Board"> <img src="./Security Board/Images/Top View 3D.png"> </a>
+  <img src="./Cascaded 7-Segment Displays - PIC18LF46J53/Images/cascaded_7Seg_display_PIC18LF46J53.png">
 
 
 <br/>
-  
-  </p>
-</h2>
-
-<!-- KAPANIŞ -->
-
-
-
-
-<!-- AÇILIŞ -->
-<h2> 
-  </br>
-  </br>
-  </br>
-  <p align="center">
-  <a href="https://github.com/enesmrcn/PCB-Design/tree/main/iMX6%20Main%20Board"> iMX6 Main Board </a>
-    <br/>
-    <br/>
-    <br/>
-  <a href="https://github.com/enesmrcn/PCB-Design/tree/main/iMX6%20Main%20Board"> <img src="./iMX6 Main Board/Images/Top View 3D.png"> </a>
-
-
-<br/>
-<br/>
+</br>
   
   </p>
 </h2>
@@ -133,63 +110,120 @@
 
 <!-- AÇILIŞ -->
 <h2> 
-  </br>
-  </br>
-  </br>
+  <br/>
+    <br/>
+    <br/>
   <p align="center">
-      <a href="https://github.com/enesmrcn/PCB-Design/tree/main/L86M33%20Breakout%20Board"> L86M33 Breakout Board </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/I2C%20DS1307%20-%20PIC18F4520"> I2C DS1307 - PIC18F4520 </a>
     <br/>
     <br/>
     <br/>
-  <a href="https://github.com/enesmrcn/PCB-Design/tree/main/L86M33%20Breakout%20Board"> <img src="./L86M33 Breakout Board/Images/Top View 3D.png"> </a>
-  
+  <img src="./I2C DS1307 - PIC18F4520/Images/ds1307_lcd_PIC18F4520.png">
+
+
 <br/>
-<br/>
+</br>
   
   </p>
 </h2>
 
 <!-- KAPANIŞ -->
+
+
+
 
 <!-- AÇILIŞ -->
 <h2> 
-  </br>
-  </br>
-  </br>
+  <br/>
+    <br/>
+    <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PCB-Design/tree/main/Neo-7M%20GNSS%20Evaluation%20Board"> Neo-7M GNSS Evaluation Board </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Counting%20to%2099%20-%20PIC18LF46J53"> Counting to 99 - PIC18LF46J53 </a>
     <br/>
     <br/>
     <br/>
-  <a href="https://github.com/enesmrcn/PCB-Design/tree/main/Neo-7M%20GNSS%20Evaluation%20Board"> <img src="./Neo-7M GNSS Evaluation Board/Images/Top View.png"> </a>
+  <img src="./Counting to 99 - PIC18LF46J53/Images/counting_99_PIC18LF46J53.png">
 
 
 <br/>
+</br>
   
   </p>
 </h2>
 
 <!-- KAPANIŞ -->
+
+
 
 <!-- AÇILIŞ -->
 <h2> 
-  </br>
-  </br>
-  </br>
+  <br/>
+    <br/>
+    <br/>
   <p align="center">
-  <a href="https://github.com/enesmrcn/PCB-Design/tree/main/PSU"> LM2596 Breakout Module </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/PWM%20Forward%20Wave%20-%20PIC18LF46J53"> PWM Forward Wave - PIC18LF46J53 </a>
     <br/>
     <br/>
     <br/>
-  <a href="https://github.com/enesmrcn/PCB-Design/tree/main/PSU"> <img src="./PSU/Screenshots/top-3d-view.png"> </a>
+  <img src="./PWM Forward Wave - PIC18LF46J53/Images/pwm_forward_wave_PIC18LF46J53.png">
 
 
 <br/>
+</br>
   
   </p>
 </h2>
 
 <!-- KAPANIŞ -->
+
+
+
+<!-- AÇILIŞ -->
+<h2> 
+  <br/>
+    <br/>
+    <br/>
+  <p align="center">
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Timer1%20Binary%20Counter%20-%20PIC18LF46J53"> Timer1 Binary Counter - PIC18LF46J53 </a>
+    <br/>
+    <br/>
+    <br/>
+  <img src="./Timer1 Binary Counter - PIC18LF46J53/Images/pwm_forward_wave_PIC18LF46J53.png">
+
+
+<br/>
+</br>
+  
+  </p>
+</h2>
+
+<!-- KAPANIŞ -->
+
+
+
+
+<!-- AÇILIŞ -->
+<h2> 
+  <br/>
+    <br/>
+    <br/>
+  <p align="center">
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/USART%20-%20PIC18f4520"> USART - PIC18f4520 </a>
+    <br/>
+    <br/>
+    <br/>
+  <img src="./USART - PIC18f4520/Images/usart_PIC18F420.png">
+
+
+<br/>
+</br>
+  
+  </p>
+</h2>
+
+<!-- KAPANIŞ -->
+
+
 
 
 <!-- SHIELDS -->
