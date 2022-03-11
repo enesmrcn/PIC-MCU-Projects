@@ -188,7 +188,7 @@
     <br/>
     <br/>
     <br/>
-  <img src="./Timer1 Binary Counter - PIC18LF46J53/Images/pwm_forward_wave_PIC18LF46J53.png">
+  <img src="./Timer1 Binary Counter - PIC18LF46J53/Images/timer1_binary-counter_PIC18LF46J53.png">
 
 
 <br/>
@@ -208,11 +208,11 @@
     <br/>
     <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/USART%20-%20PIC18f4520"> USART - PIC18f4520 </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/USART%20-%20PIC18F4520"> USART - PIC18f4520 </a>
     <br/>
     <br/>
     <br/>
-  <img src="./USART - PIC18f4520/Images/usart_PIC18F420.png">
+  <img src="./USART - PIC18F4520/Images/usart_PIC18F420.png">
 
 
 <br/>
@@ -227,7 +227,7 @@
 
 
 <!-- SHIELDS -->
-![GitHub Repo stars](https://img.shields.io/github/stars/enesmrcn/PCB-Design?style=social)
-![GitHub last commit](https://img.shields.io/github/last-commit/enesmrcn/PCB-Design)
-![GitHub repo size](https://img.shields.io/github/repo-size/enesmrcn/PCB-Design)
-![GitHub](https://img.shields.io/github/license/enesmrcn/PCB-Design)
+![GitHub Repo stars](https://img.shields.io/github/stars/enesmrcn/PIC-MCU-Projects?style=social)
+![GitHub last commit](https://img.shields.io/github/last-commit/enesmrcn/PIC-MCU-Projects)
+![GitHub repo size](https://img.shields.io/github/repo-size/enesmrcn/PIC-MCU-Projects)
+![GitHub](https://img.shields.io/github/license/enesmrcn/PIC-MCU-Projects)
