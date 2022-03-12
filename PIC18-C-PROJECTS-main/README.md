@@ -20,8 +20,8 @@
 <h4> Navigation : </h4> 
 - <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/ADC%20Introduction%20-%20PIC18F4520">  ADC Introduction - PIC18F4520 </a></br>
 - <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Bit%20Shifting%20-%20PIC18LF47J53">  Bit Shifting - PIC18LF47J53 </a></br>
-- <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Button%20Read%20-%20PIC18F4520/button_read.X">  Blinky - PIC18F4520 </a></br>
-- <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Button%20Read%20-%20PIC18F4520/button_read.X">  Button Read - PIC18F4520 </a></br>
+- <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Blinky%20-%20PIC18F4520">  Blinky - PIC18F4520 </a></br>
+- <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Button%20Read%20-%20PIC18F4520/Source%20Files/button_read.X">  Button Read - PIC18F4520 </a></br>
 - <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Cascaded%207-Segment%20Displays%20-%20PIC18LF46J53">  Cascaded 7-Segment Displays - PIC18LF46J53 </a></br>
 - <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Clock%20-%20PIC18F4520/clock.X">  Clock - PIC18F4520 </a></br>
 - <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/Counting%20to%2099%20-%20PIC18LF46J53">  Counting to 99 - PIC18LF46J53 </a></br>
