@@ -165,7 +165,7 @@
     <br/>
     <br/>
     <br/>
-  <img src="./PWM Forward Wave - PIC18LF46J53/Images/pwm_forward_wave_PIC18LF46J53.png">
+  <img src="https://github.com/enesmrcn/PIC-MCU-Projects/blob/main/PIC16-C-PROJECTS-main/30_pwmSquareWave/Images/pwmSquareWave.png">
 
 
 <br/>
