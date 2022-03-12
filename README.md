@@ -153,3 +153,6 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/enesmrcn/PCB-Design)
 ![GitHub repo size](https://img.shields.io/github/repo-size/enesmrcn/PCB-Design)
 ![GitHub](https://img.shields.io/github/license/enesmrcn/PCB-Design)
+
+  <!-- Visitors badge: -->
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=enesmrcn.enesmrcn)  [![GitHub Enes](https://img.shields.io/github/followers/enesmrcn?label=follow&style=social)](https://github.com/enesmrcn)
