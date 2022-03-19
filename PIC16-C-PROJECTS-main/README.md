@@ -151,7 +151,7 @@
     <br/>
     <br/>
     <br/>
-  <img src="./12_interruptExternal.png/Images/12_interruptExternal.png">
+  <img src="./12_interruptExternal/Images/12_interruptExternal.png">
 
 
 <br/>
@@ -357,7 +357,7 @@
     <br/>
     <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/32_segment7Counter"> 7-Segment Display Driving (Scanning Methode)</a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/32_segment7Counter"> 7-Segment Driving (Scanning Methode)</a>
     <br/>
     <br/>
     <br/>
