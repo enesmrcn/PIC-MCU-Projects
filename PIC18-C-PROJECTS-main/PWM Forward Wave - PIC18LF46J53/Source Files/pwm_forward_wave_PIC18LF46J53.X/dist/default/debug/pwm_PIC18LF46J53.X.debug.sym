@@ -1,6 +1,6 @@
 _PR2 FCB 0 ABS 0
-__S0 100 0 ABS 0
-__S1 8 0 ABS 0
+__S0 C6 0 ABS 0
+__S1 7 0 ABS 0
 __S2 0 0 ABS 0
 __S4 0 0 ABS 0
 __Hintentry 0 0 ABS 0
@@ -8,17 +8,17 @@ __Lintentry 0 0 ABS 0
 _LATB F8A 0 ABS 0
 _main 12 0 CODE 0
 ___sp 0 0 STACK 2
-btemp 7 0 COMRAM 1
+btemp 6 0 COMRAM 1
 start E 0 CODE 0
 _TRISB F93 0 ABS 0
 __Hirdata 0 0 CODE 0
 __Lirdata 0 0 CODE 0
 __HRAM 0 0 ABS 0
 __LRAM 1 0 ABS 0
-ttemp5 8 0 COMRAM 1
-ttemp6 B 0 COMRAM 1
-ttemp7 F 0 COMRAM 1
-wtemp8 8 0 COMRAM 1
+ttemp5 7 0 COMRAM 1
+ttemp6 A 0 COMRAM 1
+ttemp7 E 0 COMRAM 1
+wtemp8 7 0 COMRAM 1
 __Hconfig 10000 0 CONFIG 4
 __Lconfig 0 0 CONFIG 4
 __Hbigram 0 0 ABS 0
@@ -36,7 +36,7 @@ __Lbss 0 0 RAM 1
 ___param_bank 0 0 ABS 0
 __Hnvrram 0 0 COMRAM 1
 __Lnvrram 0 0 COMRAM 1
-int$flags 7 0 COMRAM 1
+int$flags 6 0 COMRAM 1
 __Hintsave_regs 0 0 BIGRAM 1
 __Lintsave_regs 0 0 BIGRAM 1
 _CCPR4L F13 0 ABS 0
@@ -64,12 +64,12 @@ __Labs1 0 0 ABS 0
 __HnvFARRAM 0 0 FARRAM 0
 __LnvFARRAM 0 0 FARRAM 0
 __end_of_myInterruptHandler E 0 CODE 0
-_setPWM DC 0 CODE 0
+_setPWM A2 0 CODE 0
 __Hdata 0 0 ABS 0
 __Ldata 0 0 ABS 0
 stackhi EAF 0 ABS 0
-__Htemp 8 0 COMRAM 1
-__Ltemp 7 0 COMRAM 1
+__Htemp 7 0 COMRAM 1
+__Ltemp 6 0 COMRAM 1
 stacklo 60 0 ABS 0
 __Hrbit 0 0 COMRAM 1
 __Lrbit 0 0 COMRAM 1
@@ -78,11 +78,11 @@ __Linit E 0 CODE 0
 __Hintcodelo E 0 CODE 0
 __Lintcodelo E 0 CODE 0
 __Hrbss 0 0 COMRAM 1
-__end_of_main DC 0 CODE 0
+__end_of_main A2 0 CODE 0
 __Lrbss 0 0 COMRAM 1
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
-end_of_initialization F6 0 CODE 0
+end_of_initialization BC 0 CODE 0
 _T2CONbits FCA 0 ABS 0
 _myInterruptHandler 8 0 CODE 0
 __Hibigdata 0 0 CODE 0
@@ -117,14 +117,13 @@ __Lbank9 0 0 ABS 0
 __Htext1 0 0 ABS 0
 __Ltext1 0 0 ABS 0
 __ptext0 12 0 CODE 0
-__ptext1 DC 0 CODE 0
+__ptext1 A2 0 CODE 0
 __HbssCOMRAM 0 0 ABS 0
 __LbssCOMRAM 0 0 ABS 0
-__pbssCOMRAM 5 0 COMRAM 1
+__pbssCOMRAM 4 0 COMRAM 1
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
-__end_of__initialization F6 0 CODE 0
-_CCP4CONbits F12 0 ABS 0
+__end_of__initialization BC 0 CODE 0
 ___rparam_used 1 0 ABS 0
 __Hidata 0 0 CODE 0
 __Lidata 0 0 CODE 0
@@ -141,7 +140,7 @@ __HcstackCOMRAM 0 0 ABS 0
 __Lspace_0 0 0 ABS 0
 __LcstackCOMRAM 0 0 ABS 0
 __pcstackCOMRAM 1 0 COMRAM 1
-__Hspace_1 8 0 ABS 0
+__Hspace_1 7 0 ABS 0
 __Lspace_1 0 0 ABS 0
 __Hsmallconst 0 0 SMALLCONST 0
 __Lsmallconst 0 0 SMALLCONST 0
@@ -153,7 +152,7 @@ __size_of_setPWM 0 0 ABS 0
 __Hcinit 0 0 ABS 0
 __Lcinit 0 0 ABS 0
 __size_of_myInterruptHandler 0 0 ABS 0
-__pcinit F2 0 CODE 0
+__pcinit B8 0 CODE 0
 __ramtop F00 0 RAM 0
 __mediumconst 0 0 MEDIUMCONST 0
 __size_of_main 0 0 ABS 0
@@ -172,12 +171,12 @@ __Lbank13 0 0 ABS 0
 __Hbank14 0 0 ABS 0
 __Lbank14 0 0 ABS 0
 ___inthi_sp 0 0 STACK 2
-_pwmDutyCycle 5 0 COMRAM 1
+_pwmDutyCycle 4 0 COMRAM 1
 ___intlo_sp 0 0 STACK 2
 __Hjflash_buffer F800 0 CODE 0
 __Ljflash_buffer F800 0 CODE 0
 __smallconst 0 0 SMALLCONST 0
-__end_of_setPWM F2 0 CODE 0
+__end_of_setPWM B8 0 CODE 0
 __Hreset_vec 4 0 CODE 0
 __Lreset_vec 0 0 CODE 0
 __accesstop 60 0 ABS 0
@@ -187,56 +186,50 @@ intlevel0 0 0 CODE 0
 intlevel1 0 0 CODE 0
 intlevel2 0 0 CODE 0
 intlevel3 0 0 CODE 0
-start_initialization F2 0 CODE 0
-__initialization F2 0 CODE 0
+start_initialization B8 0 CODE 0
+__initialization B8 0 CODE 0
 __activetblptr 0 0 ABS 0
 %segments
 reset_vec 0 3 CODE 0 0
-intcode 8 FF CODE 8 0
-cstackCOMRAM 1 7 COMRAM 1 1
+intcode 8 C5 CODE 8 0
+cstackCOMRAM 1 6 COMRAM 1 1
 %locals
-dist/default/production\pwm_forward_wave_PIC18LF46J53.X.production.o
-C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic18lf46j53.h
-C:\Users\enes\AppData\Local\Temp\sdec.s
-852 F2 0 CODE 0
-854 F2 0 CODE 0
-857 F2 0 CODE 0
-869 F2 0 CODE 0
-870 F4 0 CODE 0
-876 F6 0 CODE 0
-878 F6 0 CODE 0
-879 F8 0 CODE 0
-880 FA 0 CODE 0
-881 FC 0 CODE 0
+dist/default/debug\pwm_PIC18LF46J53.X.debug.o
+C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-J_DFP/1.3.35/xc8\pic\include\proc\pic18lf46j53.h
+C:\Users\enes\AppData\Local\Temp\s18g.s
+850 B8 0 CODE 0
+852 B8 0 CODE 0
+855 B8 0 CODE 0
+867 B8 0 CODE 0
+868 BA 0 CODE 0
+874 BC 0 CODE 0
+876 BC 0 CODE 0
+877 BE 0 CODE 0
+878 C0 0 CODE 0
+879 C2 0 CODE 0
 main.c
 60 12 0 CODE 0
 62 12 0 CODE 0
 63 16 0 CODE 0
 69 1A 0 CODE 0
-71 1E 0 CODE 0
-73 22 0 CODE 0
-74 4C 0 CODE 0
-75 54 0 CODE 0
-76 54 0 CODE 0
-78 58 0 CODE 0
-79 82 0 CODE 0
-80 88 0 CODE 0
-81 88 0 CODE 0
-83 8A 0 CODE 0
-84 B4 0 CODE 0
-86 BC 0 CODE 0
+70 1E 0 CODE 0
+71 40 0 CODE 0
+73 60 0 CODE 0
+75 64 0 CODE 0
+76 7A 0 CODE 0
+78 82 0 CODE 0
 main.c
-95 DC 0 CODE 0
-97 DC 0 CODE 0
-98 DE 0 CODE 0
-99 E2 0 CODE 0
-100 E4 0 CODE 0
-101 E6 0 CODE 0
-102 E8 0 CODE 0
-103 EA 0 CODE 0
-105 F0 0 CODE 0
-C:\Users\enes\AppData\Local\Temp\sdec.s
-1460 8 0 CODE 0
+87 A2 0 CODE 0
+89 A2 0 CODE 0
+90 A4 0 CODE 0
+91 A8 0 CODE 0
+92 AA 0 CODE 0
+93 AC 0 CODE 0
+94 AE 0 CODE 0
+95 B0 0 CODE 0
+97 B6 0 CODE 0
+C:\Users\enes\AppData\Local\Temp\s18g.s
+1412 8 0 CODE 0
 main.c
-108 8 0 CODE 0
-112 A 0 CODE 0
+100 8 0 CODE 0
+104 A 0 CODE 0

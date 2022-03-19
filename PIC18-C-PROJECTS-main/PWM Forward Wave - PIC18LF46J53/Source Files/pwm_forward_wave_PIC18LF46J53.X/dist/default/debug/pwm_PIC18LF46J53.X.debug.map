@@ -3,21 +3,19 @@ Microchip MPLAB XC8 Compiler V2.31
 Linker command line:
 
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
-  -h+dist/default/production\pwm_forward_wave_PIC18LF46J53.X.production.sym \
-  --cmf=dist/default/production\pwm_forward_wave_PIC18LF46J53.X.production.cmf \
-  -z -Q18LF46J53 -oC:\Users\enes\AppData\Local\Temp\sdec.2 \
-  --defsym=__MPLAB_BUILD=1 \
-  -Mdist/default/production/pwm_forward_wave_PIC18LF46J53.X.production.map \
-  -E1 -ver=XC8 Compiler --acfsm=1493 -ASTACK=060h-0EAFh -pstack=STACK \
-  -ACODE=00h-0FFF7h -ACONST=00h-0FFF7h \
-  -ASMALLCONST=0F00h-0FFFhx240,0FF00h-0FFF7h -AMEDIUMCONST=0F00h-0FFF7h \
-  -ACOMRAM=01h-05Fh -AABS1=00h-0EAFh -ABIGRAM=01h-0EAFh \
-  -ARAM=060h-0FFh,0100h-01FFhx13,0E00h-0EAFh -ABANK0=060h-0FFh \
-  -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh -ABANK3=0300h-03FFh \
-  -ABANK4=0400h-04FFh -ABANK5=0500h-05FFh -ABANK6=0600h-06FFh \
-  -ABANK7=0700h-07FFh -ABANK8=0800h-08FFh -ABANK9=0900h-09FFh \
-  -ABANK10=0A00h-0AFFh -ABANK11=0B00h-0BFFh -ABANK12=0C00h-0CFFh \
-  -ABANK13=0D00h-0DFFh -ABANK14=0E00h-0EAFh \
+  -h+dist/default/debug\pwm_PIC18LF46J53.X.debug.sym \
+  --cmf=dist/default/debug\pwm_PIC18LF46J53.X.debug.cmf -z -Q18LF46J53 \
+  -oC:\Users\enes\AppData\Local\Temp\s18g.2 --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/debug/pwm_PIC18LF46J53.X.debug.map -E1 -ver=XC8 Compiler \
+  --acfsm=1493 -ASTACK=060h-0EAFh -pstack=STACK -ACODE=00h-0FFF7h \
+  -ACONST=00h-0FFF7h -ASMALLCONST=0F00h-0FFFhx240,0FF00h-0FFF7h \
+  -AMEDIUMCONST=0F00h-0FFF7h -ACOMRAM=01h-05Fh -AABS1=00h-0EAFh \
+  -ABIGRAM=01h-0EAFh -ARAM=060h-0FFh,0100h-01FFhx13,0E00h-0EAFh \
+  -ABANK0=060h-0FFh -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh \
+  -ABANK3=0300h-03FFh -ABANK4=0400h-04FFh -ABANK5=0500h-05FFh \
+  -ABANK6=0600h-06FFh -ABANK7=0700h-07FFh -ABANK8=0800h-08FFh \
+  -ABANK9=0900h-09FFh -ABANK10=0A00h-0AFFh -ABANK11=0B00h-0BFFh \
+  -ABANK12=0C00h-0CFFh -ABANK13=0D00h-0DFFh -ABANK14=0E00h-0EAFh \
   -ASFR=0EB0h-0EFFh,0F00h-0F5Fh,0F60h-0FFFh -ACONFIG=0FFF8h-0FFFFh \
   -preset_vec=00h,intcode=08h,intcodelo,powerup,init -pramtop=0F00h \
   -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST -pconst=CONST \
@@ -26,8 +24,8 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\enes\AppData\Local\Temp\sdec.o \
-  dist/default/production\pwm_forward_wave_PIC18LF46J53.X.production.o 
+  C:\Users\enes\AppData\Local\Temp\s18g.o \
+  dist/default/debug\pwm_PIC18LF46J53.X.debug.o 
 
 Object code version is 3.11
 
@@ -36,19 +34,19 @@ Machine type is 18LF46J53
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\enes\AppData\Local\Temp\sdec.o
+C:\Users\enes\AppData\Local\Temp\s18g.o
                 config                             FFF8     FFF8        8        0       4
                 init                                  E        E        4        4       0
                 reset_vec                             0        0        4        0       0
-dist/default/production\pwm_forward_wave_PIC18LF46J53.X.production.o
+dist/default/debug\pwm_PIC18LF46J53.X.debug.o
                 intcode                               8        8        6        4       0
                 config                             FFF8     FFF8        8        0       4
-                temp                                  7        7        1        1       1
-                text1                                DC       DC       16        4       0
-                text0                                12       12       CA        4       0
-                cstackCOMRAM                          1        1        4        1       1
-                bssCOMRAM                             5        5        2        1       1
-                cinit                                F2       F2        E        4       0
+                temp                                  6        6        1        1       1
+                text1                                A2       A2       16        4       0
+                text0                                12       12       90        4       0
+                cstackCOMRAM                          1        1        3        1       1
+                bssCOMRAM                             4        4        2        1       1
+                cinit                                B8       B8        E        4       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -57,9 +55,9 @@ TOTAL           Name                               Link     Load   Length     Sp
                 intcode                               8        8        6         0
                 init                                  E        E        4         0
                 reset_vec                             0        0        4         0
-                text1                                DC       DC       16         0
-                text0                                12       12       CA         0
-                cinit                                F2       F2        E         0
+                text1                                A2       A2       16         0
+                text0                                12       12       90         0
+                cinit                                B8       B8        E         0
 
         CLASS   CONST          
 
@@ -68,9 +66,9 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   MEDIUMCONST    
 
         CLASS   COMRAM         
-                temp                                  7        7        1         1
-                cstackCOMRAM                          1        1        4         1
-                bssCOMRAM                             5        5        2         1
+                temp                                  6        6        1         1
+                cstackCOMRAM                          1        1        3         1
+                bssCOMRAM                             4        4        2         1
 
         CLASS   ABS1           
 
@@ -122,8 +120,8 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
-                cstackCOMRAM                   000001  000007  000008         1       1  COMRAM  
-                intcode                        000008  0000F8  000100         4       0  CODE    
+                cstackCOMRAM                   000001  000006  000007         1       1  COMRAM  
+                intcode                        000008  0000BE  0000C6         4       0  CODE    
 
 
 UNUSED ADDRESS RANGES
@@ -144,12 +142,12 @@ UNUSED ADDRESS RANGES
         BANK7            00700-007FF             100
         BANK8            00800-008FF             100
         BANK9            00900-009FF             100
-        BIGRAM           00008-00EAF             EA8
+        BIGRAM           00007-00EAF             EA9
         CODE             00004-00007               4
-                         00100-0FFF7            FEF8
-        COMRAM           00008-0005F              58
+                         000C6-0FFF7            FF32
+        COMRAM           00007-0005F              59
         CONST            00004-00007               4
-                         00100-0FFF7            FEF8
+                         000C6-0FFF7            FF32
         MEDIUMCONST      00F00-0FFF7            F0F8
         RAM              00060-00EAF             100
         SFR              00EB0-00FFF              60
@@ -159,7 +157,6 @@ UNUSED ADDRESS RANGES
                                   Symbol Table
 
 _CCP4CON                     (abs)         00F12
-_CCP4CONbits                 (abs)         00F12
 _CCPR4L                      (abs)         00F13
 _LATB                        (abs)         00F8A
 _PR2                         (abs)         00FCB
@@ -225,12 +222,12 @@ __Hrparam                    rparam        00000
 __Hsfr                       sfr           00000
 __Hsmallconst                smallconst    00000
 __Hspace_0                   (abs)         0F800
-__Hspace_1                   (abs)         00008
+__Hspace_1                   (abs)         00007
 __Hspace_2                   (abs)         00000
 __Hspace_4                   (abs)         1FFF8
 __Hstack                     stack         00000
 __Hstruct                    struct        00000
-__Htemp                      temp          00008
+__Htemp                      temp          00007
 __Htext                      text          00000
 __Htext0                     text0         00000
 __Htext1                     text1         00000
@@ -299,12 +296,12 @@ __Lspace_2                   (abs)         00000
 __Lspace_4                   (abs)         00000
 __Lstack                     stack         00000
 __Lstruct                    struct        00000
-__Ltemp                      temp          00007
+__Ltemp                      temp          00006
 __Ltext                      text          00000
 __Ltext0                     text0         00000
 __Ltext1                     text1         00000
-__S0                         (abs)         00100
-__S1                         (abs)         00008
+__S0                         (abs)         000C6
+__S1                         (abs)         00007
 __S2                         (abs)         00000
 __S4                         (abs)         00000
 ___inthi_sp                  stack         00000
@@ -314,18 +311,18 @@ ___rparam_used               (abs)         00001
 ___sp                        stack         00000
 __accesstop                  (abs)         00060
 __activetblptr               (abs)         00000
-__end_of__initialization     cinit         000F6
-__end_of_main                text0         000DC
+__end_of__initialization     cinit         000BC
+__end_of_main                text0         000A2
 __end_of_myInterruptHandler  intcode       0000E
-__end_of_setPWM              text1         000F2
-__initialization             cinit         000F2
+__end_of_setPWM              text1         000B8
+__initialization             cinit         000B8
 __mediumconst                mediumconst   00000
-__pbssCOMRAM                 bssCOMRAM     00005
-__pcinit                     cinit         000F2
+__pbssCOMRAM                 bssCOMRAM     00004
+__pcinit                     cinit         000B8
 __pcstackCOMRAM              cstackCOMRAM  00001
 __pintcode                   intcode       00008
 __ptext0                     text0         00012
-__ptext1                     text1         000DC
+__ptext1                     text1         000A2
 __ramtop                     ramtop        00F00
 __size_of_main               (abs)         00000
 __size_of_myInterruptHandler (abs)         00000
@@ -333,11 +330,11 @@ __size_of_setPWM             (abs)         00000
 __smallconst                 smallconst    00000
 _main                        text0         00012
 _myInterruptHandler          intcode       00008
-_pwmDutyCycle                bssCOMRAM     00005
-_setPWM                      text1         000DC
-btemp                        temp          00007
-end_of_initialization        cinit         000F6
-int$flags                    temp          00007
+_pwmDutyCycle                bssCOMRAM     00004
+_setPWM                      text1         000A2
+btemp                        temp          00006
+end_of_initialization        cinit         000BC
+int$flags                    temp          00006
 intlevel0                    text          00000
 intlevel1                    text          00000
 intlevel2                    text          00000
@@ -345,11 +342,11 @@ intlevel3                    text          00000
 stackhi                      (abs)         00EAF
 stacklo                      (abs)         00060
 start                        init          0000E
-start_initialization         cinit         000F2
-ttemp5                       temp          00008
-ttemp6                       temp          0000B
-ttemp7                       temp          0000F
-wtemp8                       temp          00008
+start_initialization         cinit         000B8
+ttemp5                       temp          00007
+ttemp6                       temp          0000A
+ttemp7                       temp          0000E
+wtemp8                       temp          00007
 
 
 FUNCTION INFORMATION:
@@ -372,9 +369,9 @@ FUNCTION INFORMATION:
  Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
       Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
       Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          4       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        4 bytes
+      Temps:          3       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        3 bytes
  Hardware stack levels required when called:    2
  This function calls:
 		_setPWM
@@ -385,7 +382,7 @@ Total ram usage:        4 bytes
 
  *************** function _setPWM *****************
  Defined at:
-		line 95 in file "main.c"
+		line 87 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -415,7 +412,7 @@ Total ram usage:        0 bytes
 
  *************** function _myInterruptHandler *****************
  Defined at:
-		line 108 in file "main.c"
+		line 100 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -447,14 +444,14 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 shared
-		__initialization		CODE           	00F2	0000	4
+		__initialization		CODE           	00B8	0000	4
 
 shared estimated size: 4
 
 main.c
 		_myInterruptHandler		CODE           	0008	0000	6
-		_main          		CODE           	0012	0000	202
-		_setPWM        		CODE           	00DC	0000	22
+		_main          		CODE           	0012	0000	144
+		_setPWM        		CODE           	00A2	0000	22
 
-main.c estimated size: 230
+main.c estimated size: 172
 

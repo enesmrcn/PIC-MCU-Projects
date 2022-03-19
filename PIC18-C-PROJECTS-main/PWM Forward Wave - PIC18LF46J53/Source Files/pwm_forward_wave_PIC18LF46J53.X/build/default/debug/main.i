@@ -11672,23 +11672,15 @@ void main(void) {
     {
 
         CCPR4L = (uint8_t) pwmDutyCycle;
+        CCP4CON ^= ~((pwmDutyCycle & 0x0200) >> 4);
+        CCP4CON ^= ~((pwmDutyCycle & 0x0100) >> 4);
 
         pwmDutyCycle++;
 
-        if ( (pwmDutyCycle & 0x0200) == 1)
-            CCP4CONbits.DC4B1 = 1;
-        else
-            CCP4CONbits.DC4B1 = 0;
+        if (pwmDutyCycle == 0x03FF)
+            pwmDutyCycle = 0;
 
-        if ( (pwmDutyCycle & 0x0100) == 1)
-            CCP4CONbits.DC4B0 = 1;
-        else
-            CCP4CONbits.DC4B0 = 0;
-
-        if ( (pwmDutyCycle & 0x0400) == 1)
-            pwmDutyCycle = 1;
-
-        _delay((unsigned long)((50)*(16000000/4000.0)));
+        _delay((unsigned long)((200)*(16000000/4000.0)));
 
     }
 
