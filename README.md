@@ -4,15 +4,20 @@
 <!-- BAŞLIK -->
 <h1> 
   <p align="center">
-     Embedded Design Project with Microchip MCUs PIC16FXXXA and PIC18FXXXA (C/Assembly)
+     Embedded Design Projects</br> (Microchip Microcontrollers)
   </p>
 </h1>
 
 <br/>
 </br>
+
+
+![C](https://img.shields.io/badge/-Embedded%20C-000000?style=flat&logo=C)
+![Assembly](https://img.shields.io/badge/-Assembly-000000?style=flat&logo=assemblyscript)
+![PIC16FXXXA](https://img.shields.io/badge/-PIC16FXXXA-000000?style=flat)
+![PIC18FXXXA](https://img.shields.io/badge/-PIC18FXXXA-000000?style=flat)
+
 </br>
-
-
 <!-- PIC18FXXXA PROJECTS -->
                         
 
