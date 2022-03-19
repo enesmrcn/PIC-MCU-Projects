@@ -151,7 +151,7 @@
     <br/>
     <br/>
     <br/>
-  <img src="./12_interruptExternal.png/Images/12_interruptExternal.png">
+  <img src="./12_interruptExternal/Images/12_interruptExternal.png">
 
 
 <br/>
@@ -357,7 +357,7 @@
     <br/>
     <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/32_segment7Counter"> 7-Segment Display Driving (Scanning Methode)</a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/32_segment7Counter"> 7-Segment Driving (Scanning Methode)</a>
     <br/>
     <br/>
     <br/>
@@ -381,11 +381,11 @@
     <br/>
     <br/>
   <p align="center">
-     <a href=""> a </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/33_segment7DrivingTransistor"> 7-Segment with Transistor </a>
     <br/>
     <br/>
     <br/>
-  <img src="./X/Images/X">
+  <img src="./33_segment7DrivingTransistor/Images/segment7DrivingTransistor.png">
 
 
 <br/>
@@ -405,11 +405,11 @@
     <br/>
     <br/>
   <p align="center">
-     <a href=""> a </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/34_servoDrivingBasics"> Servo Driving </a>
     <br/>
     <br/>
     <br/>
-  <img src="./X/Images/X">
+  <img src="./34_servoDrivingBasics/Images/servoDrivingBasics.png">
 
 
 <br/>
@@ -423,26 +423,6 @@
 
 
 
-<!-- AÇILIŞ -->
-<h2> 
-  <br/>
-    <br/>
-    <br/>
-  <p align="center">
-     <a href=""> a </a>
-    <br/>
-    <br/>
-    <br/>
-  <img src="./X/Images/X">
-
-
-<br/>
-</br>
-  
-  </p>
-</h2>
-
-<!-- KAPANIŞ -->
 
 <!-- SHIELDS -->
 ![GitHub Repo stars](https://img.shields.io/github/stars/enesmrcn/PIC-MCU-Projects?style=social)
