@@ -178,6 +178,31 @@
 
 
 
+
+<!-- AÇILIŞ -->
+<h2> 
+  <br/>
+    <br/>
+    <br/>
+  <p align="center">
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/ADC%20Introduction%20-%20PIC18F4520"> Introduction to Analog Read (ADC) </a>
+    <br/>
+    <br/>
+    <br/>
+  <img src="./ADC Introduction - PIC18F4520/Images/adc_introduction_PIC18F4520.png">
+
+
+<br/>
+</br>
+  
+  </p>
+</h2>
+
+<!-- KAPANIŞ -->
+
+
+
+
 <!-- AÇILIŞ -->
 <h2> 
   <br/>
