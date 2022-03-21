@@ -124,7 +124,7 @@
 <!-- BAŞLIK -->
 <h1> 
   <p align="center">
-     PIC18 Project Images
+     PIC18 Projects
   </p>
 </h1>
 
@@ -339,7 +339,7 @@
 <!-- BAŞLIK -->
 <h1> 
   <p align="center">
-     PIC16 Project Images
+     PIC16 Projects
   </p>
 </h1>
 
