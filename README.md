@@ -305,11 +305,11 @@
     <br/>
     <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/USART%20-%20PIC18F4520"> USART - PIC18f4520 </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS/USART%20-%20PIC18F4520"> USART - PIC18f4520 </a>
     <br/>
     <br/>
     <br/>
-  <img src="./PIC18-C-PROJECTS-main/USART - PIC18F4520/Images/usart_PIC18F420.png">
+  <img src="./PIC18-C-PROJECTS/USART - PIC18F4520/Images/usart_PIC18F420.png">
 
 
 <br/>
@@ -350,11 +350,11 @@
     <br/>
     <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS-main/UART%20Full-Dublex%20Project%20-%20PIC18F4520"> Hello World </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC18-C-PROJECTS/UART%20Full-Dublex%20Project%20-%20PIC18F4520"> Hello World </a>
     <br/>
     <br/>
     <br/>
-  <img src="./PIC16-C-PROJECTS-main/00_helloWorldLED/Images/helloWorldLED.png">
+  <img src="./PIC16-C-PROJECTS/00_helloWorldLED/Images/helloWorldLED.png">
 
 
 <br/>
@@ -375,11 +375,11 @@
     <br/>
     <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/05_readingPins_v1.0"> Port Reading </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS/05_readingPins_v1.0"> Port Reading </a>
     <br/>
     <br/>
     <br/>
-  <img src="./PIC16-C-PROJECTS-main/05_readingPins_v1.0/Images/5_readingPorts_v1.0.png">
+  <img src="./PIC16-C-PROJECTS/05_readingPins_v1.0/Images/5_readingPorts_v1.0.png">
 
 
 <br/>
@@ -400,11 +400,11 @@
     <br/>
     <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/11_kinghtRider_v2.0"> Kinght Rider v2 </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS/11_kinghtRider_v2.0"> Kinght Rider v2 </a>
     <br/>
     <br/>
     <br/>
-  <img src="./PIC16-C-PROJECTS-main/11_kinghtRider_v2.0/Images/11_kinghtRider_v2.0.png">
+  <img src="./PIC16-C-PROJECTS/11_kinghtRider_v2.0/Images/11_kinghtRider_v2.0.png">
 
 
 <br/>
@@ -424,11 +424,11 @@
     <br/>
     <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/12_interruptExternal"> External Interrupt </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS/12_interruptExternal"> External Interrupt </a>
     <br/>
     <br/>
     <br/>
-  <img src="./PIC16-C-PROJECTS-main/12_interruptExternal/Images/12_interruptExternal.png">
+  <img src="./PIC16-C-PROJECTS/12_interruptExternal/Images/12_interruptExternal.png">
 
 
 <br/>
@@ -447,35 +447,11 @@
     <br/>
     <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/13_interruptPortB"> Port-B Interrupts </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS/13_interruptPortB"> Port-B Interrupts </a>
     <br/>
     <br/>
     <br/>
-  <img src="./PIC16-C-PROJECTS-main/13_interruptPortB/Images/13_interruptPortB.png">
-
-
-<br/>
-</br>
-  
-  </p>
-</h2>
-
-<!-- KAPANIŞ -->
-
-
-
-
-<!-- AÇILIŞ -->
-<h2> 
-  <br/>
-    <br/>
-    <br/>
-  <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/15_interruptRB0"> RB0 Interrupts </a>
-    <br/>
-    <br/>
-    <br/>
-  <img src="./PIC16-C-PROJECTS-main/15_interruptRB0/Images/interruptRB0.png">
+  <img src="./PIC16-C-PROJECTS/13_interruptPortB/Images/13_interruptPortB.png">
 
 
 <br/>
@@ -495,11 +471,11 @@
     <br/>
     <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/16_timer0"> Timer-0  </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS/15_interruptRB0"> RB0 Interrupts </a>
     <br/>
     <br/>
     <br/>
-  <img src="./PIC16-C-PROJECTS-main/16_timer0/Images/14_timer0.png">
+  <img src="./PIC16-C-PROJECTS/15_interruptRB0/Images/interruptRB0.png">
 
 
 <br/>
@@ -519,102 +495,11 @@
     <br/>
     <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/25_dcMotorDriving"> DC Motor Driving </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS/16_timer0"> Timer-0  </a>
     <br/>
     <br/>
     <br/>
-  <img src="./PIC16-C-PROJECTS-main/25_dcMotorDriving/Images/dcMotorDriving.png">
-
-
-<br/>
-</br>
-  
-  </p>
-</h2>
-
-<!-- KAPANIŞ -->
-
-
-<!-- AÇILIŞ -->
-<h2> 
-  <br/>
-    <br/>
-    <br/>
-  <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/27_drivingStep"> Stepper Motor Driving </a>
-    <br/>
-    <br/>
-    <br/>
-  <img src="./PIC16-C-PROJECTS-main/27_drivingStep/Images/drivingStepperMotor.png">
-
-
-<br/>
-</br>
-  
-  </p>
-</h2>
-
-<!-- KAPANIŞ -->
-
-
-
-<!-- AÇILIŞ -->
-<h2> 
-  <br/>
-    <br/>
-    <br/>
-  <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/29_matrixLedDriving"> Matrix Led Driving </a>
-    <br/>
-    <br/>
-    <br/>
-  <img src="./PIC16-C-PROJECTS-main/29_matrixLedDriving/Images/matrixLedDriving.png">
-
-
-<br/>
-</br>
-  
-  </p>
-</h2>
-
-<!-- KAPANIŞ -->
-
-
-
-<!-- AÇILIŞ -->
-<h2> 
-  <br/>
-    <br/>
-    <br/>
-  <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/30_pwmSquareWave"> PWM Generation </a>
-    <br/>
-    <br/>
-    <br/>
-  <img src="./PIC16-C-PROJECTS-main/30_pwmSquareWave/Images/pwmSquareWave.png">
-
-
-<br/>
-</br>
-  
-  </p>
-</h2>
-
-<!-- KAPANIŞ -->
-
-
-
-<!-- AÇILIŞ -->
-<h2> 
-  <br/>
-    <br/>
-    <br/>
-  <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/31_segment7Driving"> Generic 7-Segment Driving </a>
-    <br/>
-    <br/>
-    <br/>
-  <img src="./PIC16-C-PROJECTS-main/31_segment7Driving/Images/segment7Driving.png">
+  <img src="./PIC16-C-PROJECTS/16_timer0/Images/14_timer0.png">
 
 
 <br/>
@@ -634,11 +519,126 @@
     <br/>
     <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/32_segment7Counter"> 7-Segment Driving (Scanning Methode)</a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS/25_dcMotorDriving"> DC Motor Driving </a>
     <br/>
     <br/>
     <br/>
-  <img src="./PIC16-C-PROJECTS-main/32_segment7Counter/Images/segment7Counter.png">
+  <img src="./PIC16-C-PROJECTS/25_dcMotorDriving/Images/dcMotorDriving.png">
+
+
+<br/>
+</br>
+  
+  </p>
+</h2>
+
+<!-- KAPANIŞ -->
+
+
+<!-- AÇILIŞ -->
+<h2> 
+  <br/>
+    <br/>
+    <br/>
+  <p align="center">
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS/27_drivingStep"> Stepper Motor Driving </a>
+    <br/>
+    <br/>
+    <br/>
+  <img src="./PIC16-C-PROJECTS/27_drivingStep/Images/drivingStepperMotor.png">
+
+
+<br/>
+</br>
+  
+  </p>
+</h2>
+
+<!-- KAPANIŞ -->
+
+
+
+<!-- AÇILIŞ -->
+<h2> 
+  <br/>
+    <br/>
+    <br/>
+  <p align="center">
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS/29_matrixLedDriving"> Matrix Led Driving </a>
+    <br/>
+    <br/>
+    <br/>
+  <img src="./PIC16-C-PROJECTS/29_matrixLedDriving/Images/matrixLedDriving.png">
+
+
+<br/>
+</br>
+  
+  </p>
+</h2>
+
+<!-- KAPANIŞ -->
+
+
+
+<!-- AÇILIŞ -->
+<h2> 
+  <br/>
+    <br/>
+    <br/>
+  <p align="center">
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS/30_pwmSquareWave"> PWM Generation </a>
+    <br/>
+    <br/>
+    <br/>
+  <img src="./PIC16-C-PROJECTS/30_pwmSquareWave/Images/pwmSquareWave.png">
+
+
+<br/>
+</br>
+  
+  </p>
+</h2>
+
+<!-- KAPANIŞ -->
+
+
+
+<!-- AÇILIŞ -->
+<h2> 
+  <br/>
+    <br/>
+    <br/>
+  <p align="center">
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS/31_segment7Driving"> Generic 7-Segment Driving </a>
+    <br/>
+    <br/>
+    <br/>
+  <img src="./PIC16-C-PROJECTS/31_segment7Driving/Images/segment7Driving.png">
+
+
+<br/>
+</br>
+  
+  </p>
+</h2>
+
+<!-- KAPANIŞ -->
+
+
+
+
+<!-- AÇILIŞ -->
+<h2> 
+  <br/>
+    <br/>
+    <br/>
+  <p align="center">
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS/32_segment7Counter"> 7-Segment Driving (Scanning Methode)</a>
+    <br/>
+    <br/>
+    <br/>
+  <img src="./PIC16-C-PROJECTS/32_segment7Counter/Images/segment7Counter.png">
 
 <br/>
 </br>
@@ -658,11 +658,11 @@
     <br/>
     <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/33_segment7DrivingTransistor"> 7-Segment with Transistor </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS/33_segment7DrivingTransistor"> 7-Segment with Transistor </a>
     <br/>
     <br/>
     <br/>
-  <img src="./PIC16-C-PROJECTS-main/33_segment7DrivingTransistor/Images/segment7DrivingTransistor.png">
+  <img src="./PIC16-C-PROJECTS/33_segment7DrivingTransistor/Images/segment7DrivingTransistor.png">
 
 
 <br/>
@@ -682,11 +682,11 @@
     <br/>
     <br/>
   <p align="center">
-     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS-main/34_servoDrivingBasics"> Servo Driving </a>
+     <a href="https://github.com/enesmrcn/PIC-MCU-Projects/tree/main/PIC16-C-PROJECTS/34_servoDrivingBasics"> Servo Driving </a>
     <br/>
     <br/>
     <br/>
-  <img src="./PIC16-C-PROJECTS-main/34_servoDrivingBasics/Images/servoDrivingBasics.png">
+  <img src="./PIC16-C-PROJECTS/34_servoDrivingBasics/Images/servoDrivingBasics.png">
 
 
 <br/>
