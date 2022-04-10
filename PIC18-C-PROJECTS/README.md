@@ -165,7 +165,7 @@
     <br/>
     <br/>
     <br/>
-  <img src="https://github.com/enesmrcn/PIC-MCU-Projects/blob/main/PIC16-C-PROJECTS-main/30_pwmSquareWave/Images/pwmSquareWave.png">
+  <img src="https://github.com/enesmrcn/PIC-MCU-Projects/blob/main/PIC16-C-PROJECTS/30_pwmSquareWave/Images/pwmSquareWave.png">
 
 
 <br/>
